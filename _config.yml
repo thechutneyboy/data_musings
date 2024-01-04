@@ -21,7 +21,7 @@
 title: Data Musings
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A good graphic tells a story better than words; revealing surprising, unexpected truths.
+  A good graphic tells a story better than words. It reveals surprising and unexpected truths.
 baseurl: /data_musings # the subpath of your site, e.g. /blog
 url: https://thechutneyboy.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: TheChutneyBoy
