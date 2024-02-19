@@ -11,12 +11,16 @@ layout: default
 
 # India
 
+## Politics
+- General Elections 2019 - [Interactive](./_pages/india_lok_sabha_2019.html)
+- Women in Parliament (Lok Sabha)
+  ![Trend of percentage of women in Lok Sabha](/docs/assets/images/women_in_parliament.png)
+
+
 ## Economy
 
 - Evolution of Indian States' Economies since 1999 - [Animated Essay](./_pages/india_states_nsdp.html)
   ![Bubble chart of states' NSDP vs population across time](/docs/assets/images/indian_states_nsdp_per_capita.png)
-- Women in Parliament (Lok Sabha)
-  ![Trend of percentage of women in Lok Sabha](/docs/assets/images/women_in_parliament.png)
 
 # Environment
 

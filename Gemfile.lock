@@ -272,6 +272,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-mentions (~> 1.6)
   jekyll-redirect-from
+  jekyll-seo-tag
   jekyll-sitemap
   jemoji
   tzinfo (>= 1, < 3)

@@ -1,0 +1,296 @@
+---
+permalink: /india_lok_sabha_2019.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India: Lok Sabha Elections 2019</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Include D3.js library -->
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Include TopoJSON library -->
+    <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script>
+    <style>
+        body {
+            padding-top: 56px;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+        }
+
+        footer {
+            font-size: smaller;
+        }
+
+        .feature.highlighted {
+            fill: gold;
+        }
+    </style>
+    {% seo %}
+</head>
+
+<body class="d-flex flex-column">
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <div class="container-fluid">
+            <div style="display: inline-flex;">
+                <span class="navbar-brand ms-3 me-2" href="#">Lok Sabha Elections 2019</span>
+            </div>
+            <button class="navbar-toggler mx-3 my-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse align-items-end flex-column" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item active">
+                            <a class="nav-link" href="https://github.com/thechutneyboy/saras/blob/main/README.md">About <i
+                                    class="bi bi-box-arrow-up-right"></i></a>
+                             <span class="sr-only">(current)</span>
+                        </li> -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://github.com/thechutneyboy/data_musings"><i
+                                class="bi bi-github"></i>
+                            GitHub Project
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container m-3 text-center align-self-center flex-grow-1">
+        <nav class="nav nav-pills nav-justified">
+            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="tab">Party</a>
+            <a class="nav-link disabled" data-bs-toggle="tab">Margin</a>
+            <li class="nav-item dropdown disabled">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Voter</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Turnout</a></li>
+                    <li><a class="dropdown-item" href="#">Electorate</a></li>
+                    <li><a class="dropdown-item" href="#">NOTA</a></li>
+                </ul>
+            </li>
+            <a class="nav-link disabled" href="#" data-bs-toggle="tab">Women</a>
+        </nav>
+        <!-- <div class="position-relative "> -->
+        <div id="map" class="position-relative top-50 start-50 translate-middle"></div>
+        <!-- </div> -->
+    </div>
+    <footer class="text-muted">
+        <p class="text-center">Credits: <i class="bi bi-twitter-x"></i> <a class="text-decoration-none text-primary"
+                href="https://twitter.com/thechutneyboy">thechutneyboy</a> |
+            <a rel="license" class="text-decoration-none text-muted"
+                href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU
+                GPL-3.0</a>
+        </p>
+    </footer>
+
+    <!-- Include Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Include SheetJS library -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+
+    <script type="text/javascript">
+        async function readExcel() {
+
+            try {
+                let response = await fetch('{{site.baseurl}}/docs/assets/data/lok_sabha_2019/summary.xlsx');
+                let data = await response.arrayBuffer();
+
+                let workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
+                let sheet = workbook.Sheets['summary'];
+
+                // Parse the sheet data
+                let jsonData = XLSX.utils.sheet_to_json(sheet);
+                // console.log(jsonData)
+                let dataObject = jsonData.reduce(function (result, item) {
+                    let key = [item.state_code, item.const_code];
+                    delete item.state_code
+                    delete item.const_code
+                    result[key] = item;
+                    return result
+                }, {});
+
+                // console.log(dataObject);
+                return dataObject;
+            } catch (error) {
+                console.error('Error reading file:', error);
+                return null
+            }
+        }
+
+        function hoverDetail(mode, data) {
+            return data[mode]
+        }
+
+        function fill(mode, range) {
+
+        }
+
+        function legend() {
+
+        }
+
+        function computeRange(mode, data) {
+            let max = data[Object.keys(data)[0]][mode];
+            let min = data[Object.keys(data)[0]][mode];
+
+            for (const key in data) {
+                if (data[key][mode] > max) {
+                    max = data[key][mode]
+                }
+                if (data[key][mode] < min) {
+                    min = data[key][mode]
+                }
+            }
+            return [min, max];
+        }
+    </script>
+    <script>
+        async function drawSVG() {
+            let data = await readExcel();
+            console.log(data);
+
+            let mode = 'party';
+
+            let range = computeRange('vote_margin_pct', data);
+            console.log(range);
+
+            let WIDTH = document.getElementById('map').offsetWidth
+            let HEIGHT = WIDTH
+
+            let svg = d3.select('#map').append('svg')
+                .attr('width', WIDTH)
+                .attr('height', HEIGHT)
+                .attr('id', 'svgMap')
+
+            d3.json('{{site.baseurl}}/docs/assets/data/lok_sabha_2019/tilegrams_topo.json', function showData(error, tilegram) {
+                let tiles = topojson.feature(tilegram, tilegram.objects.tiles)
+                console.log(tiles);
+
+
+
+                let transform = d3.geoTransform({
+                    point: function (x, y) {
+                        this.stream.point(x, -y)
+                    }
+                })
+
+                let path = d3.geoPath().projection(transform)
+
+                // Constituencies 
+                let constCodes = tiles.features.flatMap(function (feature) {
+                    return feature.geometry.coordinates.map(function (polygonCoords, index) {
+                        return {
+                            ...feature,
+                            geometry: {
+                                type: 'Polygon',
+                                coordinates: feature.geometry.type === "MultiPolygon" ? feature.geometry.coordinates[index] : feature.geometry.coordinates
+                            },
+                            id_const: index
+                        }
+                    })
+                })
+
+                let scale = d3.scaleLinear()
+                    .domain([0, 600])  // Assuming the original path coordinates range from 0 to 50
+                    .range([0, 0.85 * HEIGHT]);
+
+                constCodes = constCodes.map(function (feature) {
+                    return {
+                        ...feature,
+                        geometry: {
+                            type: 'Polygon',
+                            coordinates: [feature.geometry.coordinates[0].map(function (coords, index) {
+                                return [scale(coords[0]), scale(coords[1])]
+                            })]
+                        }
+                    }
+                })
+                console.log("constCodes", constCodes);
+
+                let groupConst = svg.append('g')
+
+                // Draw path
+                groupConst.selectAll('.feature')
+                    .data(constCodes)
+                    .enter().append('path')
+                    .attr('class', 'feature')
+                    .attr('id', function (d) {
+                        return d.id_const; // Set the ID for each feature
+                    })
+                    .attr('d', function (d) {
+                        return path(d.geometry); // Set the path data for each feature
+                    })
+                    .attr('fill', function (d) {
+                        if (data[[d.id, d.id_const]]) {
+                            return '#' + data[[d.id, d.id_const]].party_colour; // Set the path data for each feature
+                        }
+                        else { return 'AAA'; }
+                    })
+                    .attr('stroke', '#FFF')
+                    .attr('stroke-width', 0.25)
+                    .on('mouseover', function (d) {
+                        d3.select(this).classed('highlighted', true);
+                        // Display the ID
+                        svg.append('foreignObject')
+                            .attr('class', 'label')
+                            .attr('x', 5)
+                            .attr('y', 5)
+                            .attr('width', WIDTH) // Adjust width as needed
+                            .attr('height', 50)
+                            .html('<div style="text-align: left; font-size: 0.9rem;">' + data[[d.id, d.id_const]].constituency + ' (' + data[[d.id, d.id_const]].state + ') - ' + hoverDetail(mode, data[[d.id, d.id_const]]) + '</div>')
+                    })
+                    .on('mouseout', function () {
+                        // Remove the label on mouseout
+                        d3.select(this).classed('highlighted', false);
+                        svg.selectAll('.label').remove();
+                    });
+
+
+                // Set centre
+                let offsetWidth = -groupConst.node().getBBox().x / 2;// + groupConst.node().getBBox().width;
+                let offsetHeight = (HEIGHT - groupConst.node().getBBox().y) / 2;
+
+
+                groupConst.attr('transform', 'translate(' + offsetWidth + ',' + offsetHeight + ')')
+
+                // States
+                let stateCodes = tilegram.objects.tiles.geometries.map(function (geo) {
+                    return topojson.merge(tilegram, [geo])
+                })
+                stateCodes = stateCodes.map(function (state) {
+                    return {
+                        ...state,
+                        coordinates: [[state.coordinates[0][0].map(function (coord) {
+                            return [scale(coord[0]), scale(coord[1])]
+                        })]]
+                    }
+                })
+                console.log("stateCodes", stateCodes);
+
+                let groupState = svg.append('g')
+                    .attr('transform', 'translate(' + offsetWidth + ',' + offsetHeight + ')')
+                groupState.selectAll('path.border')
+                    .data(stateCodes)
+                    .enter().append('path')
+                    .attr('d', path)
+                    .attr('class', 'border')
+                    .attr('fill', 'none')
+                    .attr('stroke', '#000')
+                    .attr('stroke-width', 2)
+            })
+        }
+        drawSVG();
+
+    </script>
+</body>
+
+</html>
