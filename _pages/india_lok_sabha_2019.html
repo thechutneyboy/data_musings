@@ -8,7 +8,8 @@ permalink: /india_lok_sabha_2019.html
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>India: Lok Sabha Elections 2019</title>
+    <title>How India Voted in 2019</title>
+    <meta property="og:description" content="Visualizing States NSDP relative to their size and population" />
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -23,7 +24,8 @@ permalink: /india_lok_sabha_2019.html
             height: 100vh;
         }
 
-        footer {
+        footer,
+        #source {
             font-size: smaller;
         }
 
@@ -38,7 +40,7 @@ permalink: /india_lok_sabha_2019.html
     <nav class="navbar navbar-expand-lg bg-light fixed-top">
         <div class="container-fluid">
             <div style="display: inline-flex;">
-                <span class="navbar-brand ms-3 me-2" href="#">Lok Sabha Elections 2019</span>
+                <span class="navbar-brand ms-3 me-2" href="#">How India Voted in 2019</span>
             </div>
             <button class="navbar-toggler mx-3 my-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,13 +48,9 @@ permalink: /india_lok_sabha_2019.html
             </button>
             <div class="collapse navbar-collapse align-items-end flex-column" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <!-- <li class="nav-item active">
-                            <a class="nav-link" href="https://github.com/thechutneyboy/saras/blob/main/README.md">About <i
-                                    class="bi bi-box-arrow-up-right"></i></a>
-                             <span class="sr-only">(current)</span>
-                        </li> -->
                     <li class="nav-item active">
-                        <a class="nav-link" href="https://github.com/thechutneyboy/data_musings"><i
+                        <a class="nav-link"
+                            href="https://github.com/thechutneyboy/data_musings/blob/main/_pages/india_lok_sabha_2019.html"><i
                                 class="bi bi-github"></i>
                             GitHub Project
                         </a>
@@ -62,7 +60,7 @@ permalink: /india_lok_sabha_2019.html
         </div>
     </nav>
 
-    <div class="container m-3 text-center align-self-center flex-grow-1">
+    <div class="container mx-3 mt-3 text-center align-self-center flex-grow-1">
         <nav class="nav nav-pills nav-justified">
             <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="tab">Party</a>
             <a class="nav-link disabled" data-bs-toggle="tab">Margin</a>
@@ -77,9 +75,14 @@ permalink: /india_lok_sabha_2019.html
             </li>
             <a class="nav-link disabled" href="#" data-bs-toggle="tab">Women</a>
         </nav>
-        <!-- <div class="position-relative "> -->
         <div id="map" class="position-relative top-50 start-50 translate-middle"></div>
-        <!-- </div> -->
+    </div>
+    <div id="source" class="container mx-3 mb-4">
+        Source: <a class="link-secondary"
+            href="https://old.eci.gov.in/files/file/10929-33constituency-wise-detailed-result/">Election
+            Commission of India</a><br>
+        Map: <a class="link-secondary" href="https://pitchinteractiveinc.github.io/tilegrams/">Tilegrams, Pitch
+            Interactive</a>
     </div>
     <footer class="text-muted">
         <p class="text-center">Credits: <i class="bi bi-twitter-x"></i> <a class="text-decoration-none text-primary"
@@ -233,9 +236,9 @@ permalink: /india_lok_sabha_2019.html
                         if (data[[d.id, d.id_const]]) {
                             return '#' + data[[d.id, d.id_const]].party_colour; // Set the path data for each feature
                         }
-                        else { return 'AAA'; }
+                        else { return '#FFF'; }
                     })
-                    .attr('stroke', '#FFF')
+                    .attr('stroke', '#DDD')
                     .attr('stroke-width', 0.25)
                     .on('mouseover', function (d) {
                         d3.select(this).classed('highlighted', true);
@@ -284,7 +287,7 @@ permalink: /india_lok_sabha_2019.html
                     .attr('d', path)
                     .attr('class', 'border')
                     .attr('fill', 'none')
-                    .attr('stroke', '#000')
+                    .attr('stroke', '#FFF')
                     .attr('stroke-width', 2)
             })
         }
