@@ -32,6 +32,23 @@ permalink: /india_lok_sabha_2019.html
         .feature.highlighted {
             fill: gold;
         }
+
+        .legend {
+            min-height: 110px;
+            max-height: 120px;
+            font-size: small;
+        }
+
+        .swatch {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .value {
+            font-size: small;
+        }
     </style>
     {% seo %}
 </head>
@@ -60,11 +77,11 @@ permalink: /india_lok_sabha_2019.html
         </div>
     </nav>
 
-    <div class="container mx-3 mt-3 text-center align-self-center flex-grow-1">
+    <div class="container mx-3 mt-3 text-center align-self-center flex-grow-1 d-flex flex-column">
         <nav class="nav nav-pills nav-justified">
             <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="tab">Party</a>
             <a class="nav-link disabled" data-bs-toggle="tab">Margin</a>
-            <li class="nav-item dropdown disabled">
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Voter</a>
                 <ul class="dropdown-menu">
@@ -75,18 +92,21 @@ permalink: /india_lok_sabha_2019.html
             </li>
             <a class="nav-link disabled" href="#" data-bs-toggle="tab">Women</a>
         </nav>
-        <div id="map" class="position-relative top-50 start-50 translate-middle"></div>
-    </div>
-    <div id="source" class="container mx-3 mb-4">
-        Source: <a class="link-secondary"
-            href="https://old.eci.gov.in/files/file/10929-33constituency-wise-detailed-result/">Election
-            Commission of India</a><br>
-        Map: <a class="link-secondary" href="https://pitchinteractiveinc.github.io/tilegrams/">Tilegrams, Pitch
-            Interactive</a>
+        <div id="legend" class="legend d-flex flex-grow-1 my-2 overflow-auto"></div>
+        <div>
+            <div id="map"></div>
+            <div id="source" class="mx-3">
+                Source: <a class="link-secondary"
+                    href="https://old.eci.gov.in/files/file/10929-33constituency-wise-detailed-result/">Election
+                    Commission of India</a><br>
+                Map: <a class="link-secondary" href="https://pitchinteractiveinc.github.io/tilegrams/">Tilegrams, Pitch
+                    Interactive</a>
+            </div>
+        </div>
     </div>
     <footer class="text-muted">
         <p class="text-center">Credits: <i class="bi bi-twitter-x"></i> <a class="text-decoration-none text-primary"
-                href="https://twitter.com/thechutneyboy">thechutneyboy</a> |
+                href="https://twitter.com/thechutneyboy">@thechutneyboy</a> |
             <a rel="license" class="text-decoration-none text-muted"
                 href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU
                 GPL-3.0</a>
@@ -101,28 +121,31 @@ permalink: /india_lok_sabha_2019.html
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 
     <script type="text/javascript">
-        async function readExcel() {
+        async function readExcel(sheetName) {
 
             try {
                 let response = await fetch('{{site.baseurl}}/docs/assets/data/lok_sabha_2019/summary.xlsx');
                 let data = await response.arrayBuffer();
 
                 let workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
-                let sheet = workbook.Sheets['summary'];
+                let sheet = workbook.Sheets[sheetName];
 
                 // Parse the sheet data
-                let jsonData = XLSX.utils.sheet_to_json(sheet);
-                // console.log(jsonData)
-                let dataObject = jsonData.reduce(function (result, item) {
-                    let key = [item.state_code, item.const_code];
-                    delete item.state_code
-                    delete item.const_code
-                    result[key] = item;
-                    return result
-                }, {});
+                let dataArray = XLSX.utils.sheet_to_json(sheet);
+                // console.log(dataArray)
+                if (sheetName == 'summary') {
+                    let dataObject = dataArray.reduce(function (result, item) {
+                        let key = [item.state_code, item.const_code];
+                        delete item.state_code
+                        delete item.const_code
+                        result[key] = item;
+                        return result
+                    }, {});
+                    // console.log(dataObject);
+                    return dataObject;
+                }
+                return dataArray
 
-                // console.log(dataObject);
-                return dataObject;
             } catch (error) {
                 console.error('Error reading file:', error);
                 return null
@@ -137,8 +160,53 @@ permalink: /india_lok_sabha_2019.html
 
         }
 
-        function legend() {
+        async function legend(mode, data) {
+            const legend = document.getElementById("legend");
 
+            if (mode == 'party') {
+                let alliance = await readExcel('alliance')
+                // console.log(alliance);
+
+                let nda = alliance.filter(p => p.alliance === 'NDA')
+                let india = alliance.filter(p => p.alliance === 'I.N.D.I.A.')
+                let unallied = alliance.filter(p => p.alliance === 'Unallied')
+                console.log(nda, india, unallied);
+
+                legend.innerHTML = `
+                <div class="d-flex w-100 justify-content-around">
+                    <div class="flex-fill">NDA\n
+                            ${nda.map((party) => {
+                    return `
+                                            <div class="d-flex m-2">
+                                                <div class="swatch mx-1" style = "background-color: #${party.colour};" ></div >
+                                                <div class="value">${party.party} (${party.seats})</div>
+                                            </div >`
+                }).join('\n')}
+                    </div>
+                    <div class="flex-fill">I.N.D.I.A.\n
+                        ${india.map((party) => {
+                    return `
+                                    <div class="d-flex m-2">
+                                        <div class="swatch mx-1" style = "background-color: #${party.colour};" ></div >
+                                        <div class="value">${party.party} (${party.seats})</div>
+                                    </div >`
+                }).join('\n')}
+                    </div>
+                    <div class="flex-fill">Unallied\n
+                                ${unallied.map((party) => {
+                    return `
+                                    <div class="d-flex m-2">
+                                        <div class="swatch mx-1" style = "background-color: #${party.colour};" ></div >
+                                        <div class="value">${party.party} (${party.seats})</div>
+                                    </div >`
+                }).join('\n')}
+                    </div>
+                </div>`
+
+            } else {
+                let range = computeRange('vote_margin_pct', data);
+                console.log(range);
+            }
         }
 
         function computeRange(mode, data) {
@@ -158,13 +226,12 @@ permalink: /india_lok_sabha_2019.html
     </script>
     <script>
         async function drawSVG() {
-            let data = await readExcel();
+            let data = await readExcel('summary');
             console.log(data);
 
             let mode = 'party';
 
-            let range = computeRange('vote_margin_pct', data);
-            console.log(range);
+            await legend(mode, data);
 
             let WIDTH = document.getElementById('map').offsetWidth
             let HEIGHT = WIDTH
@@ -177,8 +244,6 @@ permalink: /india_lok_sabha_2019.html
             d3.json('{{site.baseurl}}/docs/assets/data/lok_sabha_2019/tilegrams_topo.json', function showData(error, tilegram) {
                 let tiles = topojson.feature(tilegram, tilegram.objects.tiles)
                 console.log(tiles);
-
-
 
                 let transform = d3.geoTransform({
                     point: function (x, y) {
@@ -249,7 +314,10 @@ permalink: /india_lok_sabha_2019.html
                             .attr('y', 5)
                             .attr('width', WIDTH) // Adjust width as needed
                             .attr('height', 50)
-                            .html('<div style="text-align: left; font-size: 0.9rem;">' + data[[d.id, d.id_const]].constituency + ' (' + data[[d.id, d.id_const]].state + ') - ' + hoverDetail(mode, data[[d.id, d.id_const]]) + '</div>')
+                            .html(`<div style="text-align: left; font-size: 0.9rem;">
+                                ${data[[d.id, d.id_const]].constituency} (${data[[d.id, d.id_const]].state}) - 
+                                ${hoverDetail(mode, data[[d.id, d.id_const]])}
+                                </div>`)
                     })
                     .on('mouseout', function () {
                         // Remove the label on mouseout
