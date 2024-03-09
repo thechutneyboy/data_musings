@@ -34,7 +34,6 @@ permalink: /india_lok_sabha_2019.html
         }
 
         .legend {
-            min-height: 110px;
             max-height: 120px;
             font-size: small;
         }
@@ -44,6 +43,11 @@ permalink: /india_lok_sabha_2019.html
             height: 20px;
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-div {
+            width: 75%;
+            height: 15px;
         }
 
         .value {
@@ -79,23 +83,38 @@ permalink: /india_lok_sabha_2019.html
 
     <div class="container mx-3 mt-3 text-center align-self-center flex-grow-1 d-flex flex-column">
         <nav class="nav nav-pills nav-justified">
-            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="tab">Party</a>
-            <a class="nav-link disabled" data-bs-toggle="tab">Margin</a>
+            <a class="nav-link active" aria-current="page" data-bs-toggle="tab" onclick="mapLegend('party')">Party</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Margin</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" onclick="mapLegend('vote_margin_pct')">Percentage</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('vote_margin')">Absolute</a></li>
+                    <li><a class="dropdown-item disabled" href="#">5% Toss Up</a></li>
+                </ul>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Voter</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Turnout</a></li>
-                    <li><a class="dropdown-item" href="#">Electorate</a></li>
-                    <li><a class="dropdown-item" href="#">NOTA</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Turnout</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Electorate</a></li>
+                    <li><a class="dropdown-item disabled" href="#">NOTA</a></li>
                 </ul>
             </li>
-            <a class="nav-link disabled" href="#" data-bs-toggle="tab">Women</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">MPs</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item disabled" href="#">Women</a></li>
+                    <!-- <li><a class="dropdown-item disabled" href="#">Attendance</a></li> -->
+                </ul>
+            </li>
         </nav>
-        <div id="legend" class="legend d-flex flex-grow-1 my-2 overflow-auto"></div>
+        <div id="legend" class="legend d-flex justify-content-around align-items-stretch my-2 overflow-auto"></div>
         <div>
             <div id="map"></div>
-            <div id="source" class="mx-3">
+            <div id="source" class="mx-3 mb-2">
                 Source: <a class="link-secondary"
                     href="https://old.eci.gov.in/files/file/10929-33constituency-wise-detailed-result/">Election
                     Commission of India</a><br>
@@ -160,55 +179,6 @@ permalink: /india_lok_sabha_2019.html
 
         }
 
-        async function legend(mode, data) {
-            const legend = document.getElementById("legend");
-
-            if (mode == 'party') {
-                let alliance = await readExcel('alliance')
-                // console.log(alliance);
-
-                let nda = alliance.filter(p => p.alliance === 'NDA')
-                let india = alliance.filter(p => p.alliance === 'I.N.D.I.A.')
-                let unallied = alliance.filter(p => p.alliance === 'Unallied')
-                console.log(nda, india, unallied);
-
-                legend.innerHTML = `
-                <div class="d-flex w-100 justify-content-around">
-                    <div class="flex-fill">NDA\n
-                            ${nda.map((party) => {
-                    return `
-                                            <div class="d-flex m-2">
-                                                <div class="swatch mx-1" style = "background-color: #${party.colour};" ></div >
-                                                <div class="value">${party.party} (${party.seats})</div>
-                                            </div >`
-                }).join('\n')}
-                    </div>
-                    <div class="flex-fill">I.N.D.I.A.\n
-                        ${india.map((party) => {
-                    return `
-                                    <div class="d-flex m-2">
-                                        <div class="swatch mx-1" style = "background-color: #${party.colour};" ></div >
-                                        <div class="value">${party.party} (${party.seats})</div>
-                                    </div >`
-                }).join('\n')}
-                    </div>
-                    <div class="flex-fill">Unallied\n
-                                ${unallied.map((party) => {
-                    return `
-                                    <div class="d-flex m-2">
-                                        <div class="swatch mx-1" style = "background-color: #${party.colour};" ></div >
-                                        <div class="value">${party.party} (${party.seats})</div>
-                                    </div >`
-                }).join('\n')}
-                    </div>
-                </div>`
-
-            } else {
-                let range = computeRange('vote_margin_pct', data);
-                console.log(range);
-            }
-        }
-
         function computeRange(mode, data) {
             let max = data[Object.keys(data)[0]][mode];
             let min = data[Object.keys(data)[0]][mode];
@@ -223,18 +193,84 @@ permalink: /india_lok_sabha_2019.html
             }
             return [min, max];
         }
+
+        const legendMap = {
+            'vote_margin_pct': ['Winning Margin', '#002366', 'percent'],
+            'vote_margin': ['Winning Margin', '#002366', 'abs']
+        }
+
+        async function legend(mode, data) {
+            const legend = document.getElementById("legend");
+            legend.innerHTML = '';
+
+            if (mode == 'party') {
+                let alliance = await readExcel('alliance')
+                // console.log(alliance);
+
+                let nda = alliance.filter(p => p.alliance === 'NDA')
+                let india = alliance.filter(p => p.alliance === 'I.N.D.I.A.')
+                let unallied = alliance.filter(p => p.alliance === 'Unallied')
+                console.log(nda, india, unallied);
+
+                legend.innerHTML = `
+                <div class="d-flex w-100">
+                    <div class="flex-fill">NDA\n
+                            ${nda.map((party) => {
+                    return `
+                                            <div class="d-flex m-2">
+                                                <div class="swatch mx-1" style="background-color: #${party.colour};" ></div >
+                                                <div class="value">${party.party} (${party.seats})</div>
+                                            </div >`
+                }).join('\n')}
+                    </div>
+                    <div class="flex-fill">I.N.D.I.A.\n
+                        ${india.map((party) => {
+                    return `
+                                    <div class="d-flex m-2">
+                                        <div class="swatch mx-1" style="background-color: #${party.colour};" ></div >
+                                        <div class="value">${party.party} (${party.seats})</div>
+                                    </div >`
+                }).join('\n')}
+                    </div>
+                    <div class="flex-fill">Unallied\n
+                                ${unallied.map((party) => {
+                    return `
+                                    <div class="d-flex m-2">
+                                        <div class="swatch mx-1" style="background-color: #${party.colour};" ></div >
+                                        <div class="value">${party.party} (${party.seats})</div>
+                                    </div >`
+                }).join('\n')}
+                    </div>
+                </div>`
+
+            } else {
+                let range = computeRange(mode, data);
+                console.log(mode, range);
+
+                let legendMin = range[0]
+                let legendMax = range[1]
+
+                if (legendMap[mode][2] === 'percent') {
+                    legendMin = Number(legendMin).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 1 })
+                    legendMax = Number(legendMax).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 1 })
+                }
+
+                legend.innerHTML = `
+                <div class="d-flex flex-column w-100">
+                    <div class="text-start p-2">${legendMap[mode][0]}</div>
+                    <div class="d-flex px-2 justify-content-around">${legendMin}<div class="gradient-div mx-2" style="background: linear-gradient(to right, #ffffff, ${legendMap[mode][1]})"></div>${legendMax}</div>
+                </div>`
+            }
+        }
     </script>
     <script>
-        async function drawSVG() {
-            let data = await readExcel('summary');
-            console.log(data);
+        function drawSVG(mode, data) {
 
-            let mode = 'party';
+            const map = document.getElementById('map');
+            map.innerHTML = '';
 
-            await legend(mode, data);
-
-            let WIDTH = document.getElementById('map').offsetWidth
-            let HEIGHT = WIDTH
+            let WIDTH = map.offsetWidth
+            let HEIGHT = WIDTH * 0.95
 
             let svg = d3.select('#map').append('svg')
                 .attr('width', WIDTH)
@@ -359,8 +395,17 @@ permalink: /india_lok_sabha_2019.html
                     .attr('stroke-width', 2)
             })
         }
-        drawSVG();
+    </script>
+    <script>
+        async function mapLegend(mode) {
+            let data = await readExcel('summary');
+            console.log(mode, data);
 
+            legend(mode, data);
+
+            drawSVG('party', data);
+        }
+        window.onload = mapLegend('party');
     </script>
 </body>
 
