@@ -97,16 +97,16 @@ permalink: /india_lok_sabha_2019.html
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Voter</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item disabled" href="#">Turnout</a></li>
-                    <li><a class="dropdown-item disabled" href="#">Electorate</a></li>
-                    <li><a class="dropdown-item disabled" href="#">NOTA</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('voter_turnout')">Turnout</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('total_electors')">Electorate</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('nota_percent')">NOTA</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">MPs</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item disabled" href="#">Women</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('female_winner')">Women</a></li>
                     <!-- <li><a class="dropdown-item disabled" href="#">Attendance</a></li> -->
                 </ul>
             </li>
@@ -196,7 +196,11 @@ permalink: /india_lok_sabha_2019.html
 
         const legendMap = {
             'vote_margin_pct': ['Winning Margin', '#002366', 'percent'],
-            'vote_margin': ['Winning Margin', '#002366', 'abs']
+            'vote_margin': ['Winning Margin', '#002366', 'abs'],
+            'voter_turnout': ['Voter Turnout', '#002366', 'percent'],
+            'total_electors': ['Electorate Size', '#002366', 'abs'],
+            'nota_percent': ['NOTA', '#002366', 'percent'],
+            'female_winner': ['Women MPs', '#002366', 'abs'],
         }
 
         async function legend(mode, data) {
