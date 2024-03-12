@@ -24,8 +24,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   A good graphic tells a story better than words. It reveals surprising and unexpected truths.
 baseurl: /data_musings # the subpath of your site, e.g. /blog
 url: https://thechutneyboy.github.io # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: TheChutneyBoy
-github_username: thechutneyboy
+twitter:
+  username: TheChutneyBoy
+  card: summary
+github:
+  username: thechutneyboy
 
 # Build settings
 # theme: minima
