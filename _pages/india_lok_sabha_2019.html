@@ -9,9 +9,11 @@ permalink: /india_lok_sabha_2019.html
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How India Voted in 2019</title>
-    <meta name="og:title" content="Data Musings | How India Voted in 2019" />
-    <meta name="og:description"
+    <meta property="og:title" content="How India Voted in 2019" />
+    <meta property="og:description"
         content="A cartogram to visualise the complexity of the largest election in the world." />
+    <meta property="og:url" content="{{site.baseurl}}" />
+    <meta property="og:type" content="website" />
     <meta property="og:image" content="{{site.baseurl}}/docs/assets/images/lok_sabha_social.png" />
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
@@ -57,6 +59,20 @@ permalink: /india_lok_sabha_2019.html
         .value {
             font-size: small;
         }
+
+        .mean {
+            background-color: black;
+            top: -30%;
+            width: 1px;
+            position: relative;
+            height: 160%;
+        }
+
+        .meanText {
+            position: relative;
+            width: fit-content;
+            transform: translate(-50%);
+        }
     </style>
 </head>
 
@@ -91,31 +107,33 @@ permalink: /india_lok_sabha_2019.html
 
     <div class="container mx-3 mt-3 text-center align-self-center flex-grow-1 d-flex flex-column">
         <nav class="nav nav-pills nav-justified">
-            <a class="nav-link" aria-current="page" data-bs-toggle="tab" onclick="mapLegend('party')">Party</a>
+            <a id="party" class="nav-link" aria-current="page" data-bs-toggle="tab"
+                onclick="mapLegend('party','party')">Party</a>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                <a id="margin" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Margin</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" onclick="mapLegend('vote_margin_pct')">Percentage</a></li>
-                    <li><a class="dropdown-item" onclick="mapLegend('vote_margin')">Absolute</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('vote_margin_pct', 'margin')">Percentage</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('vote_margin', 'margin')">Absolute</a></li>
                     <!-- <li><a class="dropdown-item disabled" href="#">5% Toss Up</a></li> -->
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                <a id="voter" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Voter</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" onclick="mapLegend('voter_turnout')">Turnout</a></li>
-                    <li><a class="dropdown-item" onclick="mapLegend('total_electors')">Electorate</a></li>
-                    <li><a class="dropdown-item" onclick="mapLegend('nota_percent')">NOTA</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('voter_turnout', 'voter')">Turnout</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('total_electors', 'voter')">Electorate</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('nota_percent', 'voter')">NOTA</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                <a id="mp" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">MPs</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" onclick="mapLegend('female_winner')">Women</a></li>
-                    <li><a class="dropdown-item" onclick="mapLegend('female_candidates')">Women Candidates</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('female_winner', 'mp')">Women</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('female_candidates', 'mp')">Women Candidates</a>
+                    </li>
                     <!-- <li><a class="dropdown-item disabled" href="#">Attendance</a></li> -->
                 </ul>
             </li>
@@ -207,13 +225,13 @@ permalink: /india_lok_sabha_2019.html
         }
 
         const legendMap = {
-            'vote_margin_pct': ['Winning Margin', '#800080', 'percent'],
-            'vote_margin': ['Winning Margin', '#0070FF', 'absolute'],
-            'voter_turnout': ['Voter Turnout', '#FCC200', 'percent'],
-            'total_electors': ['Electorate Size', '#008000', 'absolute'],
-            'nota_percent': ['NOTA', '#A40000', 'percent'],
-            'female_winner': ['Women MPs', '#E4007C', 'absolute'],
-            'female_candidates': ['Women Candidates', '#E4007C', 'absolute'],
+            'vote_margin_pct': ['Winning Margin', '#800080', 'percent', 0.173, 'Margin less than: 1% (26)&nbsp;&nbsp;&nbsp;&nbsp;5% (96)&nbsp;&nbsp;&nbsp;&nbsp;10% (185)'],
+            'vote_margin': ['Winning Margin', '#0070FF', 'absolute', 196117, ''],
+            'voter_turnout': ['Voter Turnout (613,146,768)', '#FCC200', 'percent', 0.681, ''],
+            'total_electors': ['Electorate Size (910,512,091)', '#008000', 'absolute', 1679912, ''],
+            'nota_percent': ['NOTA (6,513,355 votes)', '#A40000', 'percent', 0.0106, ''],
+            'female_winner': ['Women MPs (78 or 14.36%)', '#E4007C', 'absolute', -1, ''],
+            'female_candidates': ['Women Candidates (724 or 9%)', '#E4007C', 'absolute', 1.34, 'Constituencies with no female candidates: 173'],
         }
 
         async function legend(mode, data) {
@@ -264,21 +282,35 @@ permalink: /india_lok_sabha_2019.html
                 let range = computeRange(mode, data);
                 console.log(mode, range);
 
-                let legendMin = range[0]
-                let legendMax = range[1]
+                let legendMin = range[0];
+                let legendMax = range[1];
+
+                let legendMean = legendMap[mode][3];
+                let meanPosition = (legendMean - legendMin) / (legendMax - legendMin);
+                meanPosition = Number(meanPosition).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 1 });
 
                 if (legendMap[mode][2] === 'percent') {
-                    legendMin = Number(legendMin).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 1 })
-                    legendMax = Number(legendMax).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 1 })
+                    legendMin = Number(legendMin).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 1 });
+                    legendMax = Number(legendMax).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 1 });
+                    legendMean = Number(legendMean).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 1 });
                 } else if (legendMap[mode][2] === 'absolute') {
-                    legendMin = Number(legendMin).toLocaleString('en-US')
-                    legendMax = Number(legendMax).toLocaleString('en-US')
+                    legendMin = Number(legendMin).toLocaleString('en-US');
+                    legendMax = Number(legendMax).toLocaleString('en-US');
+                    legendMean = Number(legendMean).toLocaleString('en-US');
                 }
 
                 legend.innerHTML = `
                 <div class="d-flex flex-column w-100">
                     <div class="text-start p-2">${legendMap[mode][0]}</div>
-                    <div class="d-flex px-2 justify-content-around">${legendMin}<div class="gradient-div mx-2" style="background: linear-gradient(to right, #ffffff, ${legendMap[mode][1]})"></div>${legendMax}</div>
+                    <div class="d-flex px-2 justify-content-around">
+                        ${legendMin}
+                        <div class="gradient-div mx-2" style="background: linear-gradient(to right, #ffffff, ${legendMap[mode][1]});">
+                            <div class="mean" style="left: ${meanPosition};"></div>
+                            <div class="meanText" style="left: ${meanPosition};">Avg: ${legendMean}</div>
+                        </div>
+                        ${legendMax}
+                    </div>
+                    <div class="text-center p-2 mt-4">${legendMap[mode][4]}</div>
                 </div>`
             }
         }
@@ -426,20 +458,30 @@ permalink: /india_lok_sabha_2019.html
                     .attr('d', path)
                     .attr('class', 'border')
                     .attr('fill', 'none')
-                    .attr('stroke', '#BBB')
+                    .attr('stroke', '#DDD')
                     .attr('stroke-width', 2)
             })
         }
     </script>
     <script>
-        async function mapLegend(mode) {
+        async function mapLegend(mode, menu) {
+            let menuList = ['party', 'margin', 'voter', 'mp'];
+            console.log(menuList)
+            menuList.forEach((m) => {
+                console.log(m);
+                let menu = document.getElementById(m);
+                menu.classList.remove('active');
+            })
+            let menuItem = document.getElementById(menu);
+            menuItem.classList.add('active');
+
             let data = await readExcel('summary');
             console.log(mode, data);
 
             legend(mode, data);
             drawSVG(mode, data);
         }
-        window.onload = mapLegend('party');
+        window.onload = mapLegend('party', 'party');
     </script>
 </body>
 
