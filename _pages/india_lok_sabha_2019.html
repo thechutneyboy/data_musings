@@ -39,7 +39,7 @@ permalink: /india_lok_sabha_2019.html
         }
 
         .legend {
-            max-height: 120px;
+            max-height: 130px;
             font-size: small;
         }
 
@@ -57,7 +57,7 @@ permalink: /india_lok_sabha_2019.html
         }
 
         .value {
-            font-size: small;
+            font-size: smaller;
         }
 
         .mean {
@@ -116,15 +116,20 @@ permalink: /india_lok_sabha_2019.html
 
     <div class="container mx-3 mt-3 text-center align-self-center flex-grow-1 d-flex flex-column">
         <nav class="nav nav-pills nav-justified">
-            <a id="party" class="nav-link" aria-current="page" data-bs-toggle="tab"
-                onclick="mapLegend('party','party')">Party</a>
+            <li class="nav-item dropdown">
+                <a id="party" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Party</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" onclick="mapLegend('party','party')">Party</a></li>
+                    <li><a class="dropdown-item" onclick="mapLegend('party_toss_up','party')">5% Toss Up</a></li>
+                </ul>
+            </li>
             <li class="nav-item dropdown">
                 <a id="margin" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Margin</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" onclick="mapLegend('vote_margin_pct', 'margin')">Percentage</a></li>
                     <li><a class="dropdown-item" onclick="mapLegend('vote_margin', 'margin')">Absolute</a></li>
-                    <!-- <li><a class="dropdown-item disabled" href="#">5% Toss Up</a></li> -->
                 </ul>
             </li>
             <li class="nav-item dropdown">
@@ -208,14 +213,16 @@ permalink: /india_lok_sabha_2019.html
         }
 
         function hoverDetail(mode, data) {
-            if (mode != 'party') {
+            if (!['party', 'party_toss_up'].includes(mode)) {
                 if (legendMap[mode][2] === 'percent') {
-                    return Number(data[mode]).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 1 })
+                    return Number(data[mode]).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 1 });
                 } else if (legendMap[mode][2] === 'absolute') {
-                    return Number(data[mode]).toLocaleString('en-US')
+                    return Number(data[mode]).toLocaleString('en-US');
                 }
+            } else if (mode == 'party_toss_up') {
+                return data[mode] + (data[mode] != data.party ? `<i class="bi bi-arrow-up text-success"></i> ` + data.party + `<i class="bi bi-arrow-down text-danger"></i>` : '');
             }
-            return data[mode]
+            return data[mode];
         }
 
         function computeRange(mode, data) {
@@ -287,6 +294,54 @@ permalink: /india_lok_sabha_2019.html
                     </div>
                 </div>`
 
+            } else if (mode == 'party_toss_up') {
+                let alliance = await readExcel('alliance_stress')
+                // console.log(alliance);
+
+                let nda = alliance.filter(p => p.alliance === 'NDA')
+                let india = alliance.filter(p => p.alliance === 'I.N.D.I.A.')
+                let unallied = alliance.filter(p => p.alliance === 'Unallied')
+                console.log(nda, india, unallied);
+
+                legend.innerHTML = `
+                <div class="d-flex flex-column w-100">
+                    <div class="text-start p-2">5% Voters Switch to Runner-Up</div>
+                    <div class="d-flex w-100">
+                        <div class="flex-fill">NDA\n
+                                ${nda.map((party) => {
+                    return `
+                                <div class="d-flex mx-1 my-2">
+                                    <div class="swatch mx-1" style="background-color: #${party.colour};" ></div >
+                                    <div class="value">${party.party} (${party.seats} 
+                                        | <span class="${party.change >= 0 ? "text-success" : "text-danger"}">${party.change > 0 ? "+" : ""}${party.change}</span>)
+                                    </div>
+                                </div >`
+                }).join('\n')}
+                        </div>
+                        <div class="flex-fill">I.N.D.I.A.\n
+                            ${india.map((party) => {
+                    return `
+                                <div class="d-flex mx-1 my-2">
+                                    <div class="swatch mx-1" style="background-color: #${party.colour};" ></div >
+                                    <div class="value">${party.party} (${party.seats} 
+                                        | <span class="${party.change >= 0 ? "text-success" : "text-danger"}">${party.change > 0 ? "+" : ""}${party.change}</span>)
+                                    </div>
+                                </div >`
+                }).join('\n')}
+                        </div>
+                        <div class="flex-fill">Unallied\n
+                                    ${unallied.map((party) => {
+                    return `
+                                <div class="d-flex mx-1 my-2">
+                                    <div class="swatch mx-1" style="background-color: #${party.colour};" ></div >
+                                    <div class="value">${party.party} (${party.seats} 
+                                        | <span class="${party.change >= 0 ? "text-success" : "text-danger"}">${party.change > 0 ? "+" : ""}${party.change}</span>)
+                                    </div>
+                                </div >`
+                }).join('\n')}
+                        </div>
+                    </div>
+                </div>`
             } else {
                 let range = computeRange(mode, data);
                 console.log(mode, range);
@@ -399,6 +454,25 @@ permalink: /india_lok_sabha_2019.html
                         if (data[[d.id, d.id_const]]) {
                             if (mode === 'party') {
                                 return '#' + data[[d.id, d.id_const]].party_colour; // Set the path data for each feature
+                            } else if (mode === 'party_toss_up') {
+                                const patternId = "stripes-" + data[[d.id, d.id_const]].party_colour_2;
+
+                                groupConst.append("defs")
+                                    .append("pattern")
+                                    .attr("id", patternId) // Unique ID for the pattern
+                                    .attr("patternUnits", "userSpaceOnUse") // Coordinate system for the pattern
+                                    .attr("width", 5) // Width of the pattern tile
+                                    .attr("height", 5) // Height of the pattern tile
+                                    .append("line") // Add a shape to the pattern (e.g., line, rectangle, etc.)
+                                    .attr("x1", 5) // Start point of the line
+                                    .attr("y1", 0)
+                                    .attr("x2", 0) // End point of the line
+                                    .attr("y2", 5)
+                                    .attr("stroke", '#' + data[[d.id, d.id_const]].party_colour_2) // Stroke color of the line
+                                    .attr("stroke-width", 2); // Stroke width of the line
+
+                                return (data[[d.id, d.id_const]].party != data[[d.id, d.id_const]].party_toss_up) ? 'url(#' + patternId + ')' : '#' + data[[d.id, d.id_const]].party_colour_2;
+                                // return '#' + data[[d.id, d.id_const]].party_colour_2; // Set the path data for each feature
                             } else {
                                 return legendMap[mode][1];
                             }
