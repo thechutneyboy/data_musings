@@ -1,0 +1,5777 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-10-27T00:25:41Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9780241",
+        "name": "St Mary Cray",
+        "naptan:AtcoCode": "9100STMRYC",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/smy/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/st-mary-cray",
+        "operator:wikidata": "Q108888230",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SMY",
+        "toilets:wheelchair": "no",
+        "wheelchair": "no",
+        "wikidata": "Q2349500",
+        "wikipedia": "en:St Mary Cray railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1057186,
+          51.394738
+        ]
+      },
+      "id": "node/9780241"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13884199",
+        "alt_name": "Mill Hill Broadway Rail Station",
+        "name": "Mill Hill Broadway",
+        "naptan:AtcoCode": "9100MLHB",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/mil/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "MIL",
+        "source": "GPS waypoint",
+        "start_date": "1868-07-13",
+        "toilets:wheelchair": "no",
+        "wheelchair": "no",
+        "wikidata": "Q2396825",
+        "wikipedia": "en:Mill Hill Broadway railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2488001,
+          51.6126689
+        ]
+      },
+      "id": "node/13884199"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13893359",
+        "air_conditioning": "no",
+        "baby_feeding": "no",
+        "fare_zone": "3",
+        "level": "1",
+        "name": "Catford",
+        "naptan:AtcoCode": "9100CATFORD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/ctf/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CTF",
+        "source": "survey",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2401174",
+        "wikipedia": "en:Catford railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0261521,
+          51.4444696
+        ]
+      },
+      "id": "node/13893359"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/19134896",
+        "name": "Northolt Park",
+        "naptan:AtcoCode": "9100NTHOLTP",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/nlt/",
+        "network:wikidata": "Q26334",
+        "operator": "Chiltern Railways",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NLT",
+        "wheelchair": "limited",
+        "wheelchair:description": "Flat access to both platforms. Please note that there is no flat access between platforms (access between platforms is via the footbridge). Flat access from one platform to another is via public footpaths and is a distance of roughly 500m.",
+        "wikidata": "Q2799274",
+        "wikipedia": "en:Northolt Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3592754,
+          51.5575208
+        ]
+      },
+      "id": "node/19134896"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/21362517",
+        "name": "Sudbury Hill Harrow",
+        "naptan:AtcoCode": "9100SDBRYHH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/sdh/",
+        "network:wikidata": "Q26334",
+        "operator": "Chiltern Railways",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SDH",
+        "wheelchair": "no",
+        "wikidata": "Q941324",
+        "wikipedia": "en:Sudbury Hill Harrow railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3361942,
+          51.558533
+        ]
+      },
+      "id": "node/21362517"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/21669593",
+        "name": "North Dulwich",
+        "name:ru": "Норт-Далвич",
+        "naptan:AtcoCode": "9100NDULWCH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/ndl/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NDL",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2105973",
+        "wikipedia": "en:North Dulwich railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0883292,
+          51.4541783
+        ]
+      },
+      "id": "node/21669593"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/26087536",
+        "name": "Coulsdon Town",
+        "naptan:AtcoCode": "9100SMITHAM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/cdn/",
+        "network:wikidata": "Q26334",
+        "old_name": "Smitham",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CDN",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2136840",
+        "wikipedia": "en:Coulsdon Town railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.134245,
+          51.3220643
+        ]
+      },
+      "id": "node/26087536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/26087544",
+        "name": "Woodmansterne",
+        "naptan:AtcoCode": "9100WDMNSTR",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wme/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WME",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2737664",
+        "wikipedia": "en:Woodmansterne railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1538819,
+          51.3190513
+        ]
+      },
+      "id": "node/26087544"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/26087557",
+        "name": "Reedham",
+        "naptan:AtcoCode": "9100REEDHMS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/rhm/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "postal_code": "CR8 4DJ",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "RHM",
+        "wheelchair": "limited",
+        "wheelchair:description": "Level access to platform 2 (to Tattenham Corner). Steps to platform 1 (to London).",
+        "wikidata": "Q1972220",
+        "wikipedia": "en:Reedham railway station (London)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1234118,
+          51.3311273
+        ]
+      },
+      "id": "node/26087557"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/27020525",
+        "name": "St. Helier",
+        "name:fr": "Saint-Hélier",
+        "naptan:AtcoCode": "9100SHLIER",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/sih/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SIH",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2217526",
+        "wikipedia": "en:St Helier railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1988601,
+          51.389451
+        ]
+      },
+      "id": "node/27020525"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/27021082",
+        "name": "Sutton Common",
+        "naptan:AtcoCode": "9100SUTTONC",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/suc/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SUC",
+        "wheelchair": "no",
+        "wikidata": "Q2482182",
+        "wikipedia": "en:Sutton Common railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1961049,
+          51.3754313
+        ]
+      },
+      "id": "node/27021082"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/35499361",
+        "addr:city": "Surbiton",
+        "addr:postcode": "KT6 4PE",
+        "addr:street": "Victoria Road",
+        "baby_feeding": "no",
+        "internet_access": "no",
+        "name": "Surbiton",
+        "naptan:AtcoCode": "9100SURBITN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/sur/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "operator:wikidata": "Q30602320",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SUR",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2526353",
+        "wikimedia_commons": "File:Surbiton station.jpg",
+        "wikipedia": "en:Surbiton railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3039992,
+          51.3924111
+        ]
+      },
+      "id": "node/35499361"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/36931223",
+        "name": "Motspur Park",
+        "naptan:AtcoCode": "9100MOTSPRP",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/mot/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "MOT",
+        "ref:stanox": "87301",
+        "toilets:wheelchair": "no",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2303311",
+        "wikipedia": "en:Motspur Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2396076,
+          51.3948747
+        ]
+      },
+      "id": "node/36931223"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/37984741",
+        "name": "South Merton",
+        "naptan:AtcoCode": "9100SMERTON",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/smo/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SMO",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q3951461",
+        "wikipedia": "en:South Merton railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2055176,
+          51.4033264
+        ]
+      },
+      "id": "node/37984741"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/43450256",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "name": "Hendon",
+        "naptan:AtcoCode": "9100HDON",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hen/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HEN",
+        "source": "NPE;local knowledge",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "start_date": "1868-07-13",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step-free southbound only. Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q2047351",
+        "wikipedia": "en:Hendon railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2388805,
+          51.5802174
+        ]
+      },
+      "id": "node/43450256"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/82620018",
+        "name": "Bromley North",
+        "naptan:AtcoCode": "9100BROMLYN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bmn/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/bromley-north",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BMN",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2367801",
+        "wikipedia": "en:Bromley North railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0177978,
+          51.409198
+        ]
+      },
+      "id": "node/82620018"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/154555335",
+        "name": "Waddon",
+        "naptan:AtcoCode": "9100WADDON",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wdo/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WDO",
+        "source": "NPE",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step-free access via side gate to platform 2 (to Sutton). Steps to platform 1 (to London).",
+        "wikidata": "Q2120787",
+        "wikipedia": "en:Waddon railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1174351,
+          51.3673338
+        ]
+      },
+      "id": "node/154555335"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/302042289",
+        "addr:city": "Croydon",
+        "electrified": "rail",
+        "name": "East Croydon",
+        "naptan:AtcoCode": "9100ECROYDN",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/ecr/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "operator:wikidata": "Q1258373",
+        "owner": "Network Rail",
+        "platforms": "6",
+        "postal_code": "CR0 1LF",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "ECR",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "toilets:wheelchair": "yes",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Lifts from West entrance & ramps from main George Street concourse to all platforms. Accessible WCs not checked today.",
+        "wikidata": "Q800699",
+        "wikipedia": "en:East Croydon station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0927317,
+          51.3758448
+        ]
+      },
+      "id": "node/302042289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1261934034",
+        "addr:city": "London",
+        "addr:postcode": "N4 1RE",
+        "name": "Harringay",
+        "naptan:AtcoCode": "9100HRGY",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hgy/",
+        "network:wikidata": "Q26334",
+        "old_name": "Harringay West",
+        "opening_hours": "Mo-Fr 06:30-14:00",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HGY",
+        "ref:tiploc": "HRGY",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2241512",
+        "wikipedia": "en:Harringay railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1052701,
+          51.5775578
+        ]
+      },
+      "id": "node/1261934034"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1583662829",
+        "internet_access": "yes",
+        "internet_access:fee": "customers",
+        "name": "Streatham Hill",
+        "name:ru": "Стретем-Хилл",
+        "naptan:AtcoCode": "9100STRHILL",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/srh/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SRH",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q1986365",
+        "wikipedia": "en:Streatham Hill railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1277852,
+          51.4383281
+        ]
+      },
+      "id": "node/1583662829"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1591017141",
+        "name": "Strawberry Hill",
+        "naptan:AtcoCode": "9100STRWBYH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/stw/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "STW",
+        "wheelchair": "yes",
+        "wheelchair:description": "Ramp at approx 1:14 gradient to Platform 1. Short unevenly-graded floor at approx 1:10 gradient to Platform 2. Step-free access between platforms via full-barrier level crossing.",
+        "wikidata": "Q2561677",
+        "wikipedia": "en:Strawberry Hill railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3393309,
+          51.4391919
+        ]
+      },
+      "id": "node/1591017141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2397308060",
+        "name": "Kidbrooke",
+        "naptan:AtcoCode": "9100KIDBROK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/kdb/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/kidbrooke",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "KDB",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to both platforms. For trains to London from platform 1 via Park Terrace, for trains away from London from Platform 2 via Henley Cross, step free interchange between platforms via road bridge is in excess of 300 metres.",
+        "wikidata": "Q2570789"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0279002,
+          51.4620317
+        ]
+      },
+      "id": "node/2397308060"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2961311554",
+        "fare_zone": "2",
+        "name": "Brixton",
+        "name:ru": "Брикстон",
+        "naptan:AtcoCode": "9100BRIXTON",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/brx/",
+        "network:wikidata": "Q26334",
+        "opening_hours": "Mo-Fr 06:30-20:30; Sa 08:00-15:00",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/brixton",
+        "operator:wikidata": "Q108888230",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BRX",
+        "ref:stanox": "87248",
+        "ref:tiploc": "BRIXTON",
+        "source:network": "Sign",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2212863",
+        "wikipedia": "en:Brixton railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1133473,
+          51.4628953
+        ]
+      },
+      "id": "node/2961311554"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3220011612",
+        "name": "Chessington South",
+        "naptan:AtcoCode": "9100CHSSS",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/css/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CSS",
+        "ref:stanox": "87411",
+        "wheelchair": "yes",
+        "wikidata": "Q1812549",
+        "wikipedia": "en:Chessington South railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.308097,
+          51.35675
+        ]
+      },
+      "id": "node/3220011612"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3393783822",
+        "name": "Fulwell",
+        "naptan:AtcoCode": "9100FULWELL",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/flw/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "FLW",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q3021339",
+        "wikipedia": "en:Fulwell railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3490573,
+          51.4339055
+        ]
+      },
+      "id": "node/3393783822"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3393783868",
+        "name": "Hampton",
+        "naptan:AtcoCode": "9100HAMPTON",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hmp/",
+        "network:wikidata": "Q26334",
+        "note": "Platform 1 is Clapham Junction and London Waterloo bound; Platform 2 is Shepperton bound",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HMP",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Level access to both platforms from separate entrances. Step-free access between platforms via street and level crossing approximately 230m.",
+        "wikidata": "Q2323143",
+        "wikipedia": "en:Hampton railway station (London)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3721547,
+          51.4159079
+        ]
+      },
+      "id": "node/3393783868"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3446641270",
+        "name": "Queenstown Road",
+        "name:ru": "Куинстаун-Роуд",
+        "naptan:AtcoCode": "9100QTRDBAT",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/qrb/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "QRB",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2685594",
+        "wikipedia": "en:Queenstown Road railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1462935,
+          51.4752161
+        ]
+      },
+      "id": "node/3446641270"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3446663141",
+        "addr:city": "London",
+        "addr:postcode": "SW8 1SS",
+        "addr:street": "South Lambeth Road",
+        "fare_zone": "1;2",
+        "name": "Vauxhall",
+        "name:ru": "Воксхолл",
+        "naptan:AtcoCode": "9100VAUXHLW",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/vxh/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "operator:wikidata": "Q30602320",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "VXH",
+        "source": "yahoo",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q86666660",
+        "wikimedia_commons": "Category:Vauxhall railway station",
+        "wikipedia": "en:Vauxhall station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1227502,
+          51.4858478
+        ]
+      },
+      "id": "node/3446663141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3627101102",
+        "name": "Welling",
+        "naptan:AtcoCode": "9100WELLING",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wli/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/welling",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WLI",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to Platform 1 for services towards London via main entrance. Step free access to Platform 2 for services away from London via side entrance on Car Park. Step free interchange between platforms via the street 300 metres.",
+        "wikidata": "Q2347379",
+        "wikipedia": "en:Welling railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1016292,
+          51.4648215
+        ]
+      },
+      "id": "node/3627101102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3627121536",
+        "name": "Barnehurst",
+        "naptan:AtcoCode": "9100BRNHRST",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bnh/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/barnehurst",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BNH",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to platform 1 for services to London via path from ticket office. Step free access to platform 2 for services away from London via car park.No step free interchange between platforms.",
+        "wikidata": "Q2152688",
+        "wikipedia": "en:Barnehurst railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1596467,
+          51.4650212
+        ]
+      },
+      "id": "node/3627121536"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3627131075",
+        "name": "Eltham",
+        "naptan:AtcoCode": "9100ELTHAM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/elw/",
+        "network:wikidata": "Q26334",
+        "opening_hours": "Mo-Sa 06:00-20:00; Su 08:00-16:00",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/eltham",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "ELW",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2448983"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0522692,
+          51.4555936
+        ]
+      },
+      "id": "node/3627131075"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3627157761",
+        "addr:city": "Erith, Kent",
+        "addr:street": "Stonewood Road",
+        "name": "Erith",
+        "naptan:AtcoCode": "9100ERITH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/erh/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/erith",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "ERH",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to platform 2 for services away from London. There is no step free access to Platform 1. No step free interchange between platforms.",
+        "wikidata": "Q5389579",
+        "wikimedia_commons": "File:Erith station.jpg",
+        "wikipedia": "en:Erith railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1751948,
+          51.4815782
+        ]
+      },
+      "id": "node/3627157761"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3627170668",
+        "name": "Wandsworth Town",
+        "name:ru": "Уондсуэрт-Таун",
+        "naptan:AtcoCode": "9100WDWTOWN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wnt/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "operator:wikidata": "Q30602320",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WNT",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2834607",
+        "wikipedia": "en:Wandsworth Town railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1882512,
+          51.4609627
+        ]
+      },
+      "id": "node/3627170668"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3632469240",
+        "name": "Berrylands",
+        "naptan:AtcoCode": "9100BRLANDS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/brs/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "operator:wikidata": "Q30602320",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BRS",
+        "ref:stanox": "87170",
+        "source:name": "photograph",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q2649746",
+        "wikipedia": "en:Berrylands railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2809105,
+          51.3990081
+        ]
+      },
+      "id": "node/3632469240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3632471059",
+        "name": "New Malden",
+        "naptan:AtcoCode": "9100NEWMLDN",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/nem/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "operator:wikidata": "Q30602320",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NEM",
+        "ref:stanox": "87169",
+        "source:name": "local knowledge",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q1870734",
+        "wikipedia": "en:New Malden railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2557593,
+          51.4039615
+        ]
+      },
+      "id": "node/3632471059"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3638795617",
+        "name": "London Waterloo",
+        "name:et": "Waterloo metroojaam",
+        "name:ru": "Ватерлоо",
+        "name:uk": "Ватерлоо",
+        "name:zh": "伦敦滑铁卢",
+        "name:zh-Hans": "伦敦滑铁卢",
+        "name:zh-Hant": "倫敦滑鐵盧",
+        "naptan:AtcoCode": "9100WATRLMN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wat/",
+        "network:wikidata": "Q26334",
+        "old_name": "Waterloo Bridge",
+        "operator": "Network Rail",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:ref": "WAT",
+        "railway:ref:DB": "XKLW",
+        "ref:crs": "WAT",
+        "toilets:wheelchair": "yes",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q795691",
+        "wikipedia": "en:London Waterloo station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.112801,
+          51.5028379
+        ]
+      },
+      "id": "node/3638795617"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3655209248",
+        "name": "Malden Manor",
+        "naptan:AtcoCode": "9100MALDENM",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/mal/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "MAL",
+        "ref:stanox": "87400",
+        "source": "NPE",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q1907224",
+        "wikipedia": "en:Malden Manor railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2612451,
+          51.3847246
+        ]
+      },
+      "id": "node/3655209248"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3655209291",
+        "name": "Tolworth",
+        "naptan:AtcoCode": "9100TOLWTH",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/tol/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "TOL",
+        "ref:stanox": "87403",
+        "source": "NPE",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q3921078",
+        "wikipedia": "en:Tolworth railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2794424,
+          51.3768746
+        ]
+      },
+      "id": "node/3655209291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3655209318",
+        "name": "Chessington North",
+        "naptan:AtcoCode": "9100CHSSN",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/csn/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CSN",
+        "ref:stanox": "87405",
+        "source:name": "knowledge",
+        "wheelchair": "no",
+        "wikidata": "Q1934700",
+        "wikipedia": "en:Chessington North railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3007319,
+          51.363982
+        ]
+      },
+      "id": "node/3655209318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3655237096",
+        "name": "Streatham",
+        "name:ru": "Стретем",
+        "naptan:AtcoCode": "9100STRETHM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/ste/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "STE",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step-free southbound only. Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q368336",
+        "wikipedia": "en:Streatham railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1313131,
+          51.4259609
+        ]
+      },
+      "id": "node/3655237096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3660623412",
+        "fare_zone": "1;2",
+        "name": "Elephant & Castle",
+        "name:ru": "Элефант-энд-Касл",
+        "naptan:AtcoCode": "9100ELPHNAC",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/eph/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "EPH",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q13583357",
+        "wikipedia": "en:Elephant & Castle railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0987169,
+          51.4940431
+        ]
+      },
+      "id": "node/3660623412"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3661349170",
+        "addr:city": "Sutton",
+        "addr:postcode": "SM2 5AD",
+        "addr:street": "Brighton Road",
+        "name": "Sutton",
+        "naptan:AtcoCode": "9100SUTTON",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/suo/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SUO",
+        "toilets:wheelchair": "yes",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Lifts to all platforms. Accessible toilets on Platforms 1 & 2/3. Also ChangingPlaces Toilet on 2/3. http://changingplaces.uktoiletmap.org/toilet/view/620 - Station supervisor is able to offer a key to non-travellers.",
+        "wikidata": "Q4437087",
+        "wikipedia": "en:Sutton railway station (London)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1908861,
+          51.3596769
+        ]
+      },
+      "id": "node/3661349170"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3662847634",
+        "alt_name": "St Pancras International",
+        "iata": "QQS",
+        "name": "London St. Pancras International",
+        "name:fr": "Londres-St Pancras International",
+        "name:zh": "圣潘克拉斯国际",
+        "name:zh-Hans": "圣潘克拉斯国际",
+        "name:zh-Hant": "聖潘克拉斯國際",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/stp/",
+        "network:wikidata": "Q26334",
+        "operator": "Network Rail",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:ref": "STP",
+        "railway:ref:DB": "XKLP",
+        "ref:FR:sncf:resarail": "GBSPX",
+        "ref:FR:uic8": "70154005",
+        "ref:crs": "STP",
+        "ref:crs:eurostar": "SPX",
+        "start_date": "1868-10-01",
+        "toilets:wheelchair": "yes",
+        "train": "yes",
+        "uic_ref": "7015400",
+        "website:departures": "http://www.livedepartureboards.co.uk/ldb/summary.aspx?T=STP",
+        "wheelchair": "yes",
+        "wikidata": "Q720102",
+        "wikipedia": "en:St Pancras railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1270027,
+          51.5327196
+        ]
+      },
+      "id": "node/3662847634"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3671417635",
+        "addr:street": "Station Road",
+        "name": "Barnes",
+        "naptan:AtcoCode": "9100BARNES",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bns/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BNS",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "limited",
+        "wheelchair:description": "Level access to Platforms 1 and 4 from separate entrances. Steps to Platforms 2/3.",
+        "wikidata": "Q1973974",
+        "wikipedia": "en:Barnes railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2411817,
+          51.466783
+        ]
+      },
+      "id": "node/3671417635"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3683559902",
+        "name": "Hampton Wick",
+        "naptan:AtcoCode": "9100HAMWICK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hmw/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HMW",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q969228",
+        "wikipedia": "en:Hampton Wick railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3123501,
+          51.4145582
+        ]
+      },
+      "id": "node/3683559902"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3691424209",
+        "name": "Cheam",
+        "naptan:AtcoCode": "9100CHEAM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/che/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CHE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q1813087",
+        "wikipedia": "en:Cheam railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2145128,
+          51.3556609
+        ]
+      },
+      "id": "node/3691424209"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3735044726",
+        "name": "Wimbledon Chase",
+        "naptan:AtcoCode": "9100WIMLCHS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wbo/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WBO",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2351064",
+        "wikipedia": "en:Wimbledon Chase railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2147881,
+          51.410247
+        ]
+      },
+      "id": "node/3735044726"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3737726469",
+        "name": "North Sheen",
+        "naptan:AtcoCode": "9100NSHEEN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/nsh/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NSH",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q2797378",
+        "wikipedia": "en:North Sheen railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2865821,
+          51.4653247
+        ]
+      },
+      "id": "node/3737726469"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3749254091",
+        "name": "Earlsfield",
+        "name:ru": "Эрлсфилд",
+        "naptan:AtcoCode": "9100ERLFLD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/ead/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "operator:wikidata": "Q30602320",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "EAD",
+        "source:name": "local knowledge",
+        "source_ref:network": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q742411",
+        "wikipedia": "en:Earlsfield railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1876937,
+          51.4424033
+        ]
+      },
+      "id": "node/3749254091"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3752975773",
+        "addr:city": "London",
+        "addr:postcode": "SW17 9JR",
+        "addr:street": "London Road",
+        "name": "Tooting",
+        "name:ru": "Тутинг",
+        "naptan:AtcoCode": "9100TOOTING",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/too/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "TOO",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2181903",
+        "wikipedia": "en:Tooting railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1613225,
+          51.4198463
+        ]
+      },
+      "id": "node/3752975773"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3752975780",
+        "name": "Haydons Road",
+        "name:ru": "Хэйдонс-Роуд",
+        "naptan:AtcoCode": "9100HYDNSRD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hyr/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HYR",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q1909042",
+        "wikipedia": "en:Haydons Road railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1883425,
+          51.4253627
+        ]
+      },
+      "id": "node/3752975780"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3757075887",
+        "name": "Wandsworth Common",
+        "name:ru": "Уондсуэрт-Коммон",
+        "naptan:AtcoCode": "9100WANDCMN",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wsw/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "operator:wikidata": "Q1258373",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WSW",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Level access to platform 1 (to Croydon / London Bridge) via rear entrance. Steps to all other platforms.",
+        "wikidata": "Q2398577",
+        "wikipedia": "en:Wandsworth Common railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1635168,
+          51.4461242
+        ]
+      },
+      "id": "node/3757075887"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3768010552",
+        "name": "London Victoria",
+        "name:ru": "Виктория",
+        "name:wuu": "伦敦维多利亚",
+        "name:yue": "倫敦維多利亞",
+        "name:zh": "倫敦維多利亞",
+        "name:zh-Hans": "伦敦维多利亚",
+        "name:zh-Hant": "倫敦維多利亞",
+        "naptan:AtcoCode": "9100VICTRIE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/vic/",
+        "network:wikidata": "Q26334",
+        "operator": "Network Rail",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:ref": "VIC",
+        "railway:ref:DB": "XKLV",
+        "ref:crs": "VIC",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "toilets:wheelchair": "yes",
+        "train": "yes",
+        "uic_ref": "7000010",
+        "wheelchair": "yes",
+        "wheelchair:description": "Concourse to platforms step-free & wide gates. Access to all trains by portable ramps, no Harrington Humps discovered yet.",
+        "wikidata": "Q985210",
+        "wikipedia": "en:London Victoria station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1445802,
+          51.4947328
+        ]
+      },
+      "id": "node/3768010552"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3825936573",
+        "name": "Orpington",
+        "naptan:AtcoCode": "9100ORPNGTN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/orp/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/orpington",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "ORP",
+        "source": "NPE",
+        "wheelchair": "yes",
+        "wikidata": "Q1956050",
+        "wikipedia": "en:Orpington railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0887195,
+          51.3736037
+        ]
+      },
+      "id": "node/3825936573"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3831844357",
+        "name": "Herne Hill",
+        "name:ru": "Херн-Хилл",
+        "naptan:AtcoCode": "9100HERNEH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hnh/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/herne-hill",
+        "operator:wikidata": "Q108888230",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HNH",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "yes",
+        "wikidata": "Q2794382",
+        "wikipedia": "en:Herne Hill railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1022835,
+          51.4534691
+        ]
+      },
+      "id": "node/3831844357"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3875853157",
+        "name": "Bexley",
+        "naptan:AtcoCode": "9100BEXLEY",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bxy/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/bexley",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BXY",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "toilets:wheelchair": "yes",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Only the near platform (to Crayford) is accessible",
+        "wikidata": "Q2346075",
+        "wikipedia": "en:Bexley railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1479494,
+          51.4402375
+        ]
+      },
+      "id": "node/3875853157"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3941256583",
+        "fare_zone": "3",
+        "name": "Balham",
+        "naptan:AtcoCode": "9100BALHAM",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/balham/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "operator:wikidata": "Q1258373",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BAL",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q579345",
+        "wikipedia": "en:Balham station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1514426,
+          51.4428285
+        ]
+      },
+      "id": "node/3941256583"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3942249071",
+        "name": "Mortlake",
+        "naptan:AtcoCode": "9100MRTLKE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/mtl/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "MTL",
+        "wheelchair": "yes",
+        "wikidata": "Q3401843",
+        "wikipedia": "en:Mortlake railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2673708,
+          51.4680644
+        ]
+      },
+      "id": "node/3942249071"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4290857012",
+        "addr:city": "London",
+        "addr:postcode": "SE1 9SP",
+        "fare_zone": "1",
+        "layer": "1",
+        "name": "London Bridge",
+        "name:da": "London Bridge Station",
+        "naptan:AtcoCode": "9100LNDNBDE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/lbg/",
+        "network:wikidata": "Q26334",
+        "operator": "Network Rail",
+        "public_transport": "station",
+        "public_transport:version": "2",
+        "railway": "station",
+        "railway:ref": "LBG",
+        "railway:ref:DB": "XKLLB",
+        "ref:crs": "LBG",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Step-free access street to train",
+        "wikidata": "Q801125",
+        "wikipedia": "en:London Bridge station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0851473,
+          51.5048764
+        ]
+      },
+      "id": "node/4290857012"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4337677777",
+        "name": "West Sutton",
+        "naptan:AtcoCode": "9100WSUTTON",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wsu/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WSU",
+        "wheelchair": "no",
+        "wikidata": "Q2544455",
+        "wikipedia": "en:West Sutton railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2044835,
+          51.3662613
+        ]
+      },
+      "id": "node/4337677777"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4816726094",
+        "name": "Feltham",
+        "naptan:AtcoCode": "9100FELTHAM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/fel/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "FEL",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "yes",
+        "wikidata": "Q969784",
+        "wikipedia": "en:Feltham railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4102826,
+          51.4478377
+        ]
+      },
+      "id": "node/4816726094"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4820677220",
+        "name": "St Margarets",
+        "naptan:AtcoCode": "9100STMGTS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/smg/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SMG",
+        "source": "NPE",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access for trains towards Twickenham and Strawberry Hill. Steps required for trains towards Richmond. Access for Amyand Road for Platform 3 only.",
+        "wikidata": "Q1845639",
+        "wikipedia": "en:St Margarets railway station (London)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3202187,
+          51.4551535
+        ]
+      },
+      "id": "node/4820677220"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5293817931",
+        "name": "Kenley",
+        "naptan:AtcoCode": "9100KNLY",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/kly/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "postal_code": "CR8 5JA",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "KLY",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wikidata": "Q2393108",
+        "wikipedia": "en:Kenley railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.100844,
+          51.3247757
+        ]
+      },
+      "id": "node/5293817931"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5293818504",
+        "name": "Purley",
+        "naptan:AtcoCode": "9100PURLEY",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/pur/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "postal_code": "CR8 2UD",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "PUR",
+        "wheelchair": "yes",
+        "wikidata": "Q2180994",
+        "wikipedia": "en:Purley railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1139278,
+          51.3374869
+        ]
+      },
+      "id": "node/5293818504"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5469622521",
+        "name": "Limehouse",
+        "naptan:AtcoCode": "9100LIMHSE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/lhs/",
+        "network:wikidata": "Q26334",
+        "operator": "c2c",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "LHS",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q801102",
+        "wikipedia": "en:Limehouse station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0390456,
+          51.5128705
+        ]
+      },
+      "id": "node/5469622521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5475849013",
+        "name": "Knockholt",
+        "naptan:AtcoCode": "9100KNCKHLT",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/kck/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/knockholt",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "KCK",
+        "train": "yes",
+        "wikidata": "Q1908399",
+        "wikipedia": "en:Knockholt railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1308295,
+          51.3457689
+        ]
+      },
+      "id": "node/5475849013"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5520180858",
+        "name": "Hadley Wood",
+        "naptan:AtcoCode": "9100HADLYWD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hdw/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HDW",
+        "ref:tiploc": "HADLYWD",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to/from platform 4 only (Northbound) via a moderate slope. Customers travelling towards London who require step-free access may use your ticket to travel north to Potters Bar station before catching a train towards London.",
+        "wikidata": "Q5637997",
+        "wikipedia": "en:Hadley Wood railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1761376,
+          51.6686291
+        ]
+      },
+      "id": "node/5520180858"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5564994509",
+        "name": "Mitcham Eastfields",
+        "naptan:AtcoCode": "9100ESTFLDS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/mtc/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "MTC",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q6881038",
+        "wikipedia": "en:Mitcham Eastfields railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.154872,
+          51.4073954
+        ]
+      },
+      "id": "node/5564994509"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5571737425",
+        "name": "Morden South",
+        "naptan:AtcoCode": "9100MORDENS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/mds/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "MDS",
+        "source": "wikipedia,local knowledge",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q3921420",
+        "wikipedia": "en:Morden South railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1992399,
+          51.395678
+        ]
+      },
+      "id": "node/5571737425"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5574104460",
+        "fare_zone": "3",
+        "name": "Blackheath",
+        "naptan:AtcoCode": "9100BLKHTH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bkh/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/blackheath",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BKH",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to platform 1 for services towards London via lift. Step free access to platform 2 for services away from London via ramp from side entrance. Step free interchange via front of station. Step access to both platforms via booking hall.",
+        "wikidata": "Q4923002",
+        "wikipedia": "en:Blackheath railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0089218,
+          51.4657989
+        ]
+      },
+      "id": "node/5574104460"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5575342411",
+        "addr:city": "London",
+        "addr:housename": "Deptford station",
+        "addr:postcode": "SE8 3NU",
+        "addr:street": "Deptford High Street",
+        "fare_zone": "2",
+        "internet_access": "no",
+        "name": "Deptford",
+        "naptan:AtcoCode": "9100DEPTFD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/dep/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/deptford",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "DEP",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2170868",
+        "wikipedia": "en:Deptford railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0266353,
+          51.4789824
+        ]
+      },
+      "id": "node/5575342411"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5766054217",
+        "addr:city": "London",
+        "addr:postcode": "NW1 6JJ",
+        "alt_name": "Marylebone",
+        "name": "London Marylebone",
+        "name:da": "Marylebone Station",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/london-marylebone/",
+        "operator": "Chiltern Railways",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:ref": "MYB",
+        "ref:crs": "MYB",
+        "source": "Bing",
+        "wheelchair": "yes",
+        "wikidata": "Q649419",
+        "wikipedia": "en:Marylebone station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.163592,
+          51.5243712
+        ]
+      },
+      "id": "node/5766054217"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5863634789",
+        "name": "Raynes Park",
+        "naptan:AtcoCode": "9100RAYNSPK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/ray/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "operator:wikidata": "Q30602320",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "RAY",
+        "ref:stanox": "87271",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "This station has step-free access to Platforms 1 and 2 (for trains towards London Waterloo) via long and steep ramps at up to 1:10 gradient. There is no step-free access to Platforms 3 and 4 (for trains towards Chessington South/ Kingston/ Surbiton).",
+        "wikidata": "Q2804062",
+        "wikipedia": "en:Raynes Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.23054,
+          51.408966
+        ]
+      },
+      "id": "node/5863634789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5863634790",
+        "addr:city": "Worcester Park",
+        "name": "Worcester Park",
+        "naptan:AtcoCode": "9100WRCSTRP",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wcp/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WCP",
+        "ref:stanox": "87302",
+        "source": "NPE",
+        "toilets:wheelchair": "yes",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2234958",
+        "wikipedia": "en:Worcester Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.244985,
+          51.3814192
+        ]
+      },
+      "id": "node/5863634790"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5863723750",
+        "name": "Carshalton",
+        "naptan:AtcoCode": "9100CRSHLTN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/csh/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CSH",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp",
+        "wikidata": "Q3317733",
+        "wikipedia": "en:Carshalton railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1663814,
+          51.3685771
+        ]
+      },
+      "id": "node/5863723750"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5871218011",
+        "fare_zone": "2",
+        "name": "St Johns",
+        "naptan:AtcoCode": "9100STJOHNS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/saj/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/st-johns-london",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:aws": "yes",
+        "railway:tpws": "yes",
+        "ref:crs": "SAJ",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q7593815",
+        "wikipedia": "en:St Johns railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0221846,
+          51.4690905
+        ]
+      },
+      "id": "node/5871218011"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5871218012",
+        "addr:street": "Station Crescent",
+        "name": "Westcombe Park",
+        "naptan:AtcoCode": "9100WCOMBEP",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wcb/",
+        "network:wikidata": "Q26334",
+        "opening_hours": "Mo-Fr 09:00-18:00; Sa 09:00-14:00",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/westcombe-park",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WCB",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q2522084"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0186204,
+          51.4842403
+        ]
+      },
+      "id": "node/5871218012"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5871218014",
+        "name": "Woolwich Dockyard",
+        "naptan:AtcoCode": "9100WOLWCDY",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wwd/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/woolwich-dockyard",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:aws": "yes",
+        "railway:tpws": "yes",
+        "ref:crs": "WWD",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to platform for services away from London. There is no step free access to Platform 1. No step free interchange between platforms.",
+        "wikidata": "Q2201803"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0548824,
+          51.4910924
+        ]
+      },
+      "id": "node/5871218014"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5871218015",
+        "name": "Woolwich Arsenal",
+        "naptan:AtcoCode": "9100WOLWCHA",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wwa/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/woolwich-arsenal",
+        "operator:wikidata": "Q1696490",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:aws": "yes",
+        "railway:tpws": "yes",
+        "ref:crs": "WWA",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q801639"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0703782,
+          51.4896184
+        ]
+      },
+      "id": "node/5871218015"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5871218016",
+        "name": "Plumstead",
+        "naptan:AtcoCode": "9100PLMS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/plu/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/plumstead",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:aws": "yes",
+        "railway:tpws": "yes",
+        "ref:crs": "PLU",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q4403657"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0840176,
+          51.4897681
+        ]
+      },
+      "id": "node/5871218016"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5871218018",
+        "electrified": "rail",
+        "frequency": "0",
+        "gauge": "1435",
+        "name": "Slade Green",
+        "naptan:AtcoCode": "9100SLADEGN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/sgr/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/slade-green",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:aws": "yes",
+        "railway:tpws": "yes",
+        "ref:crs": "SGR",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q2155070",
+        "wikipedia": "en:Slade Green railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1903098,
+          51.4676731
+        ]
+      },
+      "id": "node/5871218018"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5872906104",
+        "addr:city": "London",
+        "addr:street": "Baring Road",
+        "addr:suburb": "Grove Park",
+        "fare_zone": "4",
+        "name": "Grove Park",
+        "naptan:AtcoCode": "9100GRVPK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/grp/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/grove-park",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "GRP",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q2252599",
+        "wikipedia": "en:Grove Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0220245,
+          51.4307645
+        ]
+      },
+      "id": "node/5872906104"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5872906105",
+        "fare_zone": "3",
+        "name": "Hither Green",
+        "naptan:AtcoCode": "9100HTHRGRN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hgr/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/hither-green",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HGR",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2182758",
+        "wikipedia": "en:Hither Green railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0006473,
+          51.4515872
+        ]
+      },
+      "id": "node/5872906105"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5872906106",
+        "name": "Elmstead Woods",
+        "naptan:AtcoCode": "9100ELMW",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/esd/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/elmstead-woods",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "ESD",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to platform 4 for services away from London from Station Approach. There is no step free access to Platform 1, 2 or 3. No step free interchange between platforms.",
+        "wikidata": "Q2261123",
+        "wikipedia": "en:Elmstead Woods railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0446574,
+          51.4167981
+        ]
+      },
+      "id": "node/5872906106"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5872906107",
+        "name": "Chislehurst",
+        "naptan:AtcoCode": "9100CHSLHRS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/cit/",
+        "network:wikidata": "Q26334",
+        "opening_hours": "Mo-Sa 06:00-20:30; Su 08:15-15:40",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/chislehurst",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CIT",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "tfl_travelzone": "5",
+        "url": "https://www.nationalrail.co.uk/stations/cit/",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to platform 4 for services away from London. There is no step free access to Platform 1 2 or 3.",
+        "wikidata": "Q2273007",
+        "wikipedia": "en:Chislehurst railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0578673,
+          51.4051626
+        ]
+      },
+      "id": "node/5872906107"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5872906108",
+        "name": "Petts Wood",
+        "naptan:AtcoCode": "9100PETSWD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/pet/",
+        "network:wikidata": "Q26334",
+        "opening_hours": "Mo-Fr 05:45-20:00; Sa 07:00-20:00; Su 07:45-19:15",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/petts-wood",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "PET",
+        "source": "NPE",
+        "train": "yes",
+        "url": "http://www.nationalrail.co.uk/stations/pet/details.html",
+        "wheelchair": "no",
+        "wikidata": "Q2381365",
+        "wikipedia": "en:Petts Wood railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0745614,
+          51.388626
+        ]
+      },
+      "id": "node/5872906108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5872906109",
+        "name": "Chelsfield",
+        "naptan:AtcoCode": "9100CHLSFLD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/cld/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/chelsfield",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CLD",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to platform 1 from Station Approach Rd. Steep ramp to access Platform 2 from Warren Road. Step free interchange via road and steep paths is in excess of 400metres.",
+        "wikidata": "Q1846494",
+        "wikipedia": "en:Chelsfield railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1083284,
+          51.3566115
+        ]
+      },
+      "id": "node/5872906109"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5882282269",
+        "name": "South Croydon",
+        "naptan:AtcoCode": "9100SCROYDN",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/scy/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "postal_code": "CR2 7PA",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SCY",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q7566932",
+        "wikipedia": "en:South Croydon railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0933556,
+          51.3629173
+        ]
+      },
+      "id": "node/5882282269"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5882282270",
+        "addr:city": "South Croydon",
+        "addr:postcode": "CR2 0PL",
+        "addr:street": "Station Approach",
+        "name": "Sanderstead",
+        "naptan:AtcoCode": "9100SDSD",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/snr/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SNR",
+        "wheelchair": "yes",
+        "wheelchair:description": "Level access to both platforms via separate entrances. Long access route between platforms via street, steep in places (over 400m and gradient above 1:10).",
+        "wikidata": "Q1816144",
+        "wikipedia": "en:Sanderstead railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0934589,
+          51.348394
+        ]
+      },
+      "id": "node/5882282270"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5882282271",
+        "name": "Riddlesdown",
+        "naptan:AtcoCode": "9100RDLSDWN",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/rdd/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "postal_code": "CR8 1HN",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "RDD",
+        "wheelchair": "yes",
+        "wheelchair:description": "Step-free access to platforms via long and steep ramps (over 1:10 gradient).",
+        "wikidata": "Q5004660",
+        "wikipedia": "en:Riddlesdown railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0997037,
+          51.3329352
+        ]
+      },
+      "id": "node/5882282271"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5883033865",
+        "fare_zone": "3",
+        "name": "Ladywell",
+        "naptan:AtcoCode": "9100LDYW",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/lad/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/ladywell",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "LAD",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2703794",
+        "wikipedia": "en:Ladywell railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0191917,
+          51.4560257
+        ]
+      },
+      "id": "node/5883033865"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5883033866",
+        "air_conditioning": "no",
+        "baby_feeding": "no",
+        "fare_zone": "3",
+        "level": "0",
+        "name": "Catford Bridge",
+        "naptan:AtcoCode": "9100CATFBDG",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/cfb/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/catford-bridge",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CFB",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2624460",
+        "wikipedia": "en:Catford Bridge railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0249226,
+          51.4445909
+        ]
+      },
+      "id": "node/5883033866"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5883033867",
+        "fare_zone": "4",
+        "name": "Lower Sydenham",
+        "naptan:AtcoCode": "9100LSYDNHM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/lsy/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/lower-sydenham",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "LSY",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step Free to both platforms, No step free interchange between platforms.",
+        "wikidata": "Q2444364",
+        "wikipedia": "en:Lower Sydenham railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0332998,
+          51.4247446
+        ]
+      },
+      "id": "node/5883033867"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5883033868",
+        "name": "New Beckenham",
+        "naptan:AtcoCode": "9100NBCKNHM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/nbc/",
+        "network:wikidata": "Q26334",
+        "opening_hours": "Mo-Fr 06:30-13:00; Sa 07:30-14:00",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/new-beckenham",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NBC",
+        "source": "NPE",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to both platforms. No step free interchange between platforms.",
+        "wikidata": "Q2173160",
+        "wikipedia": "en:New Beckenham railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0352069,
+          51.4169395
+        ]
+      },
+      "id": "node/5883033868"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5883033869",
+        "name": "Clock House",
+        "naptan:AtcoCode": "9100CLOCKHS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/clk/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/clock-house",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CLK",
+        "source": "survey",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to platform 2 for services away from London via Clock House Road. There is no step free access to Platform 1.",
+        "wikidata": "Q1978582",
+        "wikipedia": "en:Clock House railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0408182,
+          51.4083449
+        ]
+      },
+      "id": "node/5883033869"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5883033870",
+        "name": "West Wickham",
+        "naptan:AtcoCode": "9100WWICKHM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wwi/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/west-wickham",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WWI",
+        "start_date": "1882-05-29",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2253171",
+        "wikipedia": "en:West Wickham railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0147334,
+          51.3815143
+        ]
+      },
+      "id": "node/5883033870"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5883033871",
+        "name": "Eden Park",
+        "naptan:AtcoCode": "9100EDPK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/edn/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/eden-park",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "EDN",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to platform 1 for services to London. There is no step free access to Platform 2.Only step access to platform 2 for services away from London. No step free interchange between platforms.",
+        "wikidata": "Q2323478",
+        "wikipedia": "en:Eden Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0263691,
+          51.3901801
+        ]
+      },
+      "id": "node/5883033871"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5883033872",
+        "gauge": "1435",
+        "name": "Elmers End",
+        "naptan:AtcoCode": "9100ELMERSE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/ele/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/elmers-end",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "ELE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "voltage": "750",
+        "wheelchair": "yes",
+        "wikidata": "Q2420368",
+        "wikipedia": "en:Elmers End station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0497025,
+          51.398012
+        ]
+      },
+      "id": "node/5883033872"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6022637124",
+        "name": "Twickenham",
+        "naptan:AtcoCode": "9100TWCKNHM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/twi/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "TWI",
+        "source": "NPE",
+        "wheelchair": "yes",
+        "wikidata": "Q2286388",
+        "wikipedia": "en:Twickenham railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3288402,
+          51.4505786
+        ]
+      },
+      "id": "node/6022637124"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6022902649",
+        "level": "-1-0",
+        "name": "Whitton",
+        "naptan:AtcoCode": "9100WHTTON",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wtn/",
+        "network:wikidata": "Q26334",
+        "note": "This station has 2 Stannah lifts",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WTN",
+        "source": "NPE",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q3198886",
+        "wikipedia": "en:Whitton railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3577822,
+          51.4494981
+        ]
+      },
+      "id": "node/6022902649"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6023272580",
+        "addr:city": "London",
+        "addr:street": "The Terrace",
+        "level": "2",
+        "name": "Barnes Bridge",
+        "naptan:AtcoCode": "9100BNSBDGE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bni/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BNI",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q1834855",
+        "wikipedia": "en:Barnes Bridge railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2526332,
+          51.4720123
+        ]
+      },
+      "id": "node/6023272580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6023272581",
+        "name": "Chiswick",
+        "name:ru": "Чизик",
+        "naptan:AtcoCode": "9100CHISWCK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/chk/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CHK",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "toilets:wheelchair": "no",
+        "wheelchair": "limited",
+        "wheelchair:description": "Level access to Platform 1 (for trains towards London Waterloo). Short ramp at approx 1:7 gradient to Platform 2 (for trains towards Hounslow) via separate entrance. No reasonable step-free access between platforms.",
+        "wikidata": "Q2135035",
+        "wikipedia": "en:Chiswick railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2681753,
+          51.4811465
+        ]
+      },
+      "id": "node/6023272581"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6023272582",
+        "name": "Kew Bridge",
+        "naptan:AtcoCode": "9100KEWBDGE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/kwb/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "KWB",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q2851105",
+        "wikipedia": "en:Kew Bridge railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.287225,
+          51.4895024
+        ]
+      },
+      "id": "node/6023272582"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6023272583",
+        "alt_name": "Brentford Station",
+        "name": "Brentford",
+        "naptan:AtcoCode": "9100BNTFORD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bfd/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BFD",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2804531",
+        "wikipedia": "en:Brentford railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3096825,
+          51.4876569
+        ]
+      },
+      "id": "node/6023272583"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6023272584",
+        "name": "Syon Lane",
+        "naptan:AtcoCode": "9100SYONLA",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/syl/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SYL",
+        "wheelchair": "no",
+        "wikidata": "Q3226814",
+        "wikipedia": "en:Syon Lane railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.32478,
+          51.4818147
+        ]
+      },
+      "id": "node/6023272584"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6023274485",
+        "name": "Isleworth",
+        "naptan:AtcoCode": "9100ISLEWTH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/isl/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "ISL",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "yes",
+        "wikidata": "Q2485750",
+        "wikipedia": "en:Isleworth railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3368946,
+          51.4748823
+        ]
+      },
+      "id": "node/6023274485"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6023274486",
+        "name": "Hounslow",
+        "naptan:AtcoCode": "9100HOUNSLW",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hou/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HOU",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Steps or ramp (approx. gradient 1:15) to Platform 1 (trains towards Chiswick). Level access to Platform 2 from separate entrance. Access between platforms via footbridge with steps, or step-free route via street approximately 150m.",
+        "wikidata": "Q2131128",
+        "wikipedia": "en:Hounslow railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3617294,
+          51.4620974
+        ]
+      },
+      "id": "node/6023274486"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6023649380",
+        "name": "Norbiton",
+        "naptan:AtcoCode": "9100NRBITON",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/nbt/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NBT",
+        "ref:stanox": "87163",
+        "source:name": "local knowledge",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "There is step free access via ramps to both platforms. Interchange via a stepped subway.",
+        "wikidata": "Q2360178",
+        "wikipedia": "en:Norbiton railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2840976,
+          51.4123032
+        ]
+      },
+      "id": "node/6023649380"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6023649381",
+        "name": "Teddington",
+        "naptan:AtcoCode": "9100TEDNGTN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/ted/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "TED",
+        "source:name": "local knowledge",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Level access to both platforms from street but bridge between platforms not wheelchair accessible.",
+        "wikidata": "Q2130623",
+        "wikipedia": "en:Teddington railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3325731,
+          51.4244662
+        ]
+      },
+      "id": "node/6023649381"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6090336257",
+        "name": "Hackbridge",
+        "naptan:AtcoCode": "9100HKBG",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hcb/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HCB",
+        "source": "en:Hackbridge railway station",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp",
+        "wikidata": "Q2409962",
+        "wikipedia": "en:Hackbridge railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1537197,
+          51.3780278
+        ]
+      },
+      "id": "node/6090336257"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6137252710",
+        "name": "Northumberland Park",
+        "naptan:AtcoCode": "9100NMBRLPK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/num/",
+        "network:wikidata": "Q26334",
+        "operator": "Greater Anglia",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NUM",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2424431",
+        "wikipedia": "en:Northumberland Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.053865,
+          51.6019083
+        ]
+      },
+      "id": "node/6137252710"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6137852389",
+        "name": "Brimsdown",
+        "naptan:AtcoCode": "9100BRIMSDN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bmd/",
+        "network:wikidata": "Q26334",
+        "operator": "Greater Anglia",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BMD",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2440318",
+        "wikipedia": "en:Brimsdown railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0307915,
+          51.6555713
+        ]
+      },
+      "id": "node/6137852389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6137852390",
+        "name": "Enfield Lock",
+        "naptan:AtcoCode": "9100ENFLDLK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/enl/",
+        "network:wikidata": "Q26334",
+        "operator": "Greater Anglia",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "ENL",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "toilets:wheelchair": "no",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q3296969",
+        "wikipedia": "en:Enfield Lock railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0285689,
+          51.6706112
+        ]
+      },
+      "id": "node/6137852390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6207523037",
+        "name": "Mitcham Junction",
+        "naptan:AtcoCode": "9100MITCHMJ",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/mij/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "MIJ",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q3280024",
+        "wikipedia": "en:Mitcham Junction station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1577774,
+          51.392945
+        ]
+      },
+      "id": "node/6207523037"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6291571385",
+        "name": "Crews Hill",
+        "naptan:AtcoCode": "9100CRHL",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/cwh/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CWH",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q2514883",
+        "wikipedia": "en:Crews Hill railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1072562,
+          51.6847476
+        ]
+      },
+      "id": "node/6291571385"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6291571386",
+        "layer": "1",
+        "name": "Gordon Hill",
+        "naptan:AtcoCode": "9100GORDONH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/gdh/",
+        "network:wikidata": "Q26334",
+        "opening_hours": "Mo-Fr 06:30-18:00; Sa 07:00-14:00; Su 08:00-18:00",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "GDH",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q1871311",
+        "wikipedia": "en:Gordon Hill railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0946375,
+          51.663247
+        ]
+      },
+      "id": "node/6291571386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6291571388",
+        "name": "Grange Park",
+        "naptan:AtcoCode": "9100GRPK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/gpk/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "GPK",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q3125716",
+        "wikipedia": "en:Grange Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0969391,
+          51.6433292
+        ]
+      },
+      "id": "node/6291571388"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6291571389",
+        "name": "Palmers Green",
+        "naptan:AtcoCode": "9100PALMRSG",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/pal/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "PAL",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q7128305",
+        "wikimedia_commons": "Category:Palmers Green railway station",
+        "wikipedia": "en:Palmers Green railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1101687,
+          51.6186609
+        ]
+      },
+      "id": "node/6291571389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6291571390",
+        "name": "Hornsey",
+        "naptan:AtcoCode": "9100HRNSY",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hrn/",
+        "network:wikidata": "Q26334",
+        "opening_hours": "Mo-Fr 07:00-14:30; Sa 07:00-15:00; Su off",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HRN",
+        "ref:tiploc": "HRNSY",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q600848",
+        "wikipedia": "en:Hornsey railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1116832,
+          51.5863215
+        ]
+      },
+      "id": "node/6291571390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6291571394",
+        "name": "Bowes Park",
+        "naptan:AtcoCode": "9100BOWESPK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bop/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BOP",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2600064",
+        "wikipedia": "en:Bowes Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1204848,
+          51.6071861
+        ]
+      },
+      "id": "node/6291571394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6419682398",
+        "addr:city": "London",
+        "addr:housename": "Drayton Park Station",
+        "addr:postcode": "N5 1NT",
+        "addr:street": "Drayton Park",
+        "name": "Drayton Park",
+        "naptan:AtcoCode": "9100DRYP",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/dyp/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "DYP",
+        "source": "Local knowledge",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q682110",
+        "wikipedia": "en:Drayton Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1057696,
+          51.5531063
+        ]
+      },
+      "id": "node/6419682398"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6475280937",
+        "name": "Meridian Water",
+        "naptan:AtcoCode": "910GMWRWSTN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/mrw/",
+        "network:wikidata": "Q26334",
+        "opening_date": "2019-06-03",
+        "operator": "Greater Anglia",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:STANOX": "51925",
+        "ref:crs": "MRW",
+        "ref:nalco": "659900",
+        "ref:tiploc": "MWRWSTN",
+        "start_date": "2019-06-03",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q56273891",
+        "wikipedia": "en:Meridian Water railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0500855,
+          51.610003
+        ]
+      },
+      "id": "node/6475280937"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476798601",
+        "name": "South Bermondsey",
+        "naptan:AtcoCode": "9100SBRMNDS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/sbm/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SBM",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2470635",
+        "wikipedia": "en:South Bermondsey railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0544564,
+          51.4879512
+        ]
+      },
+      "id": "node/6476798601"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6516411104",
+        "addr:city": "London",
+        "addr:postcode": "SE13 7RY",
+        "addr:street": "Loampit Vale",
+        "fare_zone": "2;3",
+        "internet_access": "no",
+        "name": "Lewisham",
+        "naptan:AtcoCode": "9100LEWISHM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/lew/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/lewisham",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "LEW",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wikidata": "Q801096",
+        "wikipedia": "en:Lewisham station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0139562,
+          51.4656437
+        ]
+      },
+      "id": "node/6516411104"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6522206880",
+        "name": "West Hampstead Thameslink",
+        "naptan:AtcoCode": "9100WHMPSTM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/whp/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WHP",
+        "start_date": "1871-03-01",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q658445",
+        "wikipedia": "en:West Hampstead Thameslink railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.192322,
+          51.5484242
+        ]
+      },
+      "id": "node/6522206880"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6539839675",
+        "addr:city": "London",
+        "addr:postcode": "SE25 5QB",
+        "addr:street": "Selhurst Road",
+        "name": "Selhurst",
+        "naptan:AtcoCode": "9100SELHRST",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/srs/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SRS",
+        "source": "NPE",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2365023",
+        "wikipedia": "en:Selhurst railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0886537,
+          51.3922136
+        ]
+      },
+      "id": "node/6539839675"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6677340894",
+        "name": "Shortlands",
+        "naptan:AtcoCode": "9100SHRTLND",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/srt/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/shortlands",
+        "operator:wikidata": "Q108888230",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SRT",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q1819241",
+        "wikipedia": "en:Shortlands railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0021679,
+          51.4059051
+        ]
+      },
+      "id": "node/6677340894"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6689800286",
+        "name": "West Dulwich",
+        "name:ru": "Уэст-Далвич",
+        "naptan:AtcoCode": "9100WDULWCH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wdu/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/west-dulwich",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WDU",
+        "wheelchair": "no",
+        "wikidata": "Q2242126",
+        "wikipedia": "en:West Dulwich railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0908906,
+          51.4402849
+        ]
+      },
+      "id": "node/6689800286"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6689800287",
+        "name": "Sydenham Hill",
+        "naptan:AtcoCode": "9100SYDNHMH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/syh/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/sydenham-hill",
+        "operator:wikidata": "Q108888230",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SYH",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q3090498",
+        "wikipedia": "en:Sydenham Hill railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0801504,
+          51.4326101
+        ]
+      },
+      "id": "node/6689800287"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6689800288",
+        "name": "Penge East",
+        "naptan:AtcoCode": "9100PNGEE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/pne/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/penge-east",
+        "operator:wikidata": "Q108888230",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "PNE",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to platform 1 from main entrance. Step free access to platform 2 via Lindon Grove - No step free interchange between platforms but stepped access via station footbridge is available.",
+        "wikidata": "Q2483411",
+        "wikipedia": "en:Penge East railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0541364,
+          51.4193151
+        ]
+      },
+      "id": "node/6689800288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6689800289",
+        "name": "Kent House",
+        "naptan:AtcoCode": "9100KENTHOS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/kth/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/kent-house",
+        "operator:wikidata": "Q108888230",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "KTH",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "tfl_travelzone": "4",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2054189",
+        "wikipedia": "en:Kent House railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.045213,
+          51.4122745
+        ]
+      },
+      "id": "node/6689800289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6689800290",
+        "name": "Beckenham Junction",
+        "naptan:AtcoCode": "9100BCKNHMJ",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bkj/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/beckenham-junction",
+        "operator:wikidata": "Q108888230",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BKJ",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "tfl_travelzone": "4",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wikidata": "Q2189753",
+        "wikipedia": "en:Beckenham Junction station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0259866,
+          51.4110623
+        ]
+      },
+      "id": "node/6689800290"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6689800291",
+        "addr:city": "Bromley",
+        "addr:postcode": "BR1 2EB",
+        "addr:street": "Southborough Road",
+        "internet_access": "no",
+        "name": "Bickley",
+        "naptan:AtcoCode": "9100BICKLEY",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bkl/",
+        "network:wikidata": "Q26334",
+        "opening_hours": "Mo-Fr 06:00-20:00; Sa 07:00-14:00; Su 08:00-14:00",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/bickley",
+        "operator:wikidata": "Q108888230",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BKL",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "tfl_travelzone": "5",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2245384",
+        "wikipedia": "en:Bickley railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0443369,
+          51.4000641
+        ]
+      },
+      "id": "node/6689800291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6689800292",
+        "name": "Bromley South",
+        "naptan:AtcoCode": "9100BROMLYS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bms/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/bromley-south",
+        "operator:wikidata": "Q108888230",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BMS",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "tfl_travelzone": "5",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp",
+        "wikidata": "Q2200768",
+        "wikipedia": "en:Bromley South railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0182769,
+          51.4000405
+        ]
+      },
+      "id": "node/6689800292"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6694775793",
+        "name": "Nunhead",
+        "naptan:AtcoCode": "9100NUNHEAD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/nhd/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NHD",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q1907609",
+        "wikipedia": "en:Nunhead railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0523755,
+          51.4668348
+        ]
+      },
+      "id": "node/6694775793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6694775794",
+        "fare_zone": "3",
+        "name": "Crofton Park",
+        "naptan:AtcoCode": "9100CFPK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/cft/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CFT",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step-free platform interchange requires a 400m+ journey via street. Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q2122032",
+        "wikipedia": "en:Crofton Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0366299,
+          51.4552149
+        ]
+      },
+      "id": "node/6694775794"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6694775795",
+        "fare_zone": "3",
+        "name": "Bellingham",
+        "naptan:AtcoCode": "9100BELNGHM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bgm/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BGM",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2796094",
+        "wikipedia": "en:Bellingham railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0195194,
+          51.4328307
+        ]
+      },
+      "id": "node/6694775795"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6694775796",
+        "fare_zone": "4",
+        "name": "Beckenham Hill",
+        "naptan:AtcoCode": "9100BCKNHMH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bec/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BEC",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Step-free platform interchange requires a 400m+ journey via street. Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q2278948",
+        "wikipedia": "en:Beckenham Hill railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0159101,
+          51.4245222
+        ]
+      },
+      "id": "node/6694775796"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6695079960",
+        "name": "Ravensbourne",
+        "naptan:AtcoCode": "9100RBRN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/rvb/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "RVB",
+        "source": "survey",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step-free southbound only. Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q1861913",
+        "wikipedia": "en:Ravensbourne railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0076295,
+          51.4143132
+        ]
+      },
+      "id": "node/6695079960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6695079961",
+        "name": "Loughborough Junction",
+        "name:ru": "Лафборо-Джанкшен",
+        "naptan:AtcoCode": "9100LBGHJN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/lgj/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "LGJ",
+        "source:network": "Sign",
+        "wheelchair": "no",
+        "wikidata": "Q2099753",
+        "wikipedia": "en:Loughborough Junction railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1021612,
+          51.4662551
+        ]
+      },
+      "id": "node/6695079961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6735092352",
+        "addr:city": "Dagenham",
+        "addr:postcode": "RM9 6PF",
+        "addr:street": "Chequers Lane",
+        "internet_access": "yes",
+        "name": "Dagenham Dock",
+        "naptan:AtcoCode": "9100DGNHMDC",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/ddk/",
+        "network:wikidata": "Q26334",
+        "operator": "c2c",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "DDK",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q800643",
+        "wikipedia": "en:Dagenham Dock railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1454324,
+          51.5261927
+        ]
+      },
+      "id": "node/6735092352"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6735092353",
+        "name": "Rainham",
+        "naptan:AtcoCode": "9100RNHAME",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/rnm/",
+        "network:wikidata": "Q26334",
+        "operator": "c2c",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "RNM",
+        "wheelchair": "yes",
+        "wikidata": "Q2221209",
+        "wikipedia": "en:Rainham railway station (London)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1906219,
+          51.5167202
+        ]
+      },
+      "id": "node/6735092353"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6736447751",
+        "name": "Enfield Chase",
+        "naptan:AtcoCode": "9100ENFC",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/enc/",
+        "network:wikidata": "Q26334",
+        "old_name": "Enfield",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "ENC",
+        "wheelchair": "no",
+        "wikidata": "Q3056996",
+        "wikipedia": "en:Enfield Chase railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0908639,
+          51.6526384
+        ]
+      },
+      "id": "node/6736447751"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6758674587",
+        "name": "Stratford International",
+        "naptan:AtcoCode": "9100STFODOM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/sfa/",
+        "network:wikidata": "Q26334",
+        "operator": "HS1 Ltd",
+        "platforms": "6",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SFA",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q801472",
+        "wikipedia": "en:Stratford International station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0087494,
+          51.5447954
+        ]
+      },
+      "id": "node/6758674587"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6774062195",
+        "name": "Carshalton Beeches",
+        "naptan:AtcoCode": "9100CRSHLTB",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/csb/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CSB",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q2372214",
+        "wikipedia": "en:Carshalton Beeches railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1693507,
+          51.3571959
+        ]
+      },
+      "id": "node/6774062195"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6774062196",
+        "name": "Wallington",
+        "naptan:AtcoCode": "9100WALNGTN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wlt/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WLT",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2447377",
+        "wikipedia": "en:Wallington railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1505899,
+          51.3602348
+        ]
+      },
+      "id": "node/6774062196"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6774062197",
+        "name": "Purley Oaks",
+        "naptan:AtcoCode": "9100PURLEYO",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/puo/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "postal_code": "CR2 0ND",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "PUO",
+        "website": "https://www.southernrailway.com/your-journey/station-information/PUO/",
+        "wheelchair": "no",
+        "wikidata": "Q2001741",
+        "wikipedia": "en:Purley Oaks railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0987108,
+          51.3470347
+        ]
+      },
+      "id": "node/6774062197"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6774476167",
+        "name": "Belmont",
+        "naptan:AtcoCode": "9100BELM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/blm/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BLM",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2799373",
+        "wikipedia": "en:Belmont railway station (Sutton)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1987852,
+          51.3438964
+        ]
+      },
+      "id": "node/6774476167"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6774489101",
+        "name": "Streatham Common",
+        "name:ru": "Стретем-Коммон",
+        "naptan:AtcoCode": "9100STRHCOM",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/src/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "postal_code": "SW16 5NT",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SRC",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q7622732",
+        "wikipedia": "en:Streatham Common railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1359263,
+          51.4185662
+        ]
+      },
+      "id": "node/6774489101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6774489102",
+        "name": "Norbury",
+        "name:ru": "Норбери",
+        "naptan:AtcoCode": "9100NORBURY",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/nrb/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "postal_code": "SW16 3RW",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NRB",
+        "source": "NPE",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Step-free access to all platforms via long and steep ramps (over 400m long and above 1:10 gradient).",
+        "wikidata": "Q1932430",
+        "wikipedia": "en:Norbury railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1218018,
+          51.4113697
+        ]
+      },
+      "id": "node/6774489102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6774489103",
+        "name": "Thornton Heath",
+        "naptan:AtcoCode": "9100THTH",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/tth/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "postal_code": "CR7 8RX",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "TTH",
+        "source": "NPE",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2187219",
+        "wikipedia": "en:Thornton Heath railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1005158,
+          51.3989438
+        ]
+      },
+      "id": "node/6774489103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6778324440",
+        "fare_zone": "3",
+        "name": "Lee",
+        "naptan:AtcoCode": "9100LEEE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/lee/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/lee-london",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "LEE",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2681604",
+        "wikipedia": "en:Lee railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0146411,
+          51.4496733
+        ]
+      },
+      "id": "node/6778324440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6778324441",
+        "name": "Mottingham",
+        "naptan:AtcoCode": "9100MOTNGHM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/mtg/",
+        "network:wikidata": "Q26334",
+        "opening_hours": "Mo-Sa 06:00-20:00; Su 08:00-16:00",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/mottingham",
+        "operator:wikidata": "Q1696490",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "MTG",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to Platform 1 for services to London via main station entrance. Step free access to platform 2 for services away from London via side entrance. No step free interchange between platforms.",
+        "wikidata": "Q2433460"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0499618,
+          51.4402515
+        ]
+      },
+      "id": "node/6778324441"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6778324442",
+        "name": "New Eltham",
+        "naptan:AtcoCode": "9100NWELTHM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/neh/",
+        "network:wikidata": "Q26334",
+        "opening_hours": "Mo-Fr 06:00-20:00; Sa 08:00-16:00; Su 10:00-17:00",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/new-eltham",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NEH",
+        "toilets:wheelchair": "yes",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2019025"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0709469,
+          51.4380136
+        ]
+      },
+      "id": "node/6778324442"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6778324443",
+        "addr:city": "Sidcup",
+        "addr:street": "Station Road",
+        "name": "Sidcup",
+        "naptan:AtcoCode": "9100SIDCUP",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/sid/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/sidcup",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SID",
+        "toilets:wheelchair": "yes",
+        "train": "yes",
+        "wheelchair:description": "Entrance depends on which platform you need to access, only the London bound platform is accessible from the station building itself, the other platform is accessed via a separate entrance on the far side",
+        "wikidata": "Q2068572",
+        "wikipedia": "en:Sidcup railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1034297,
+          51.4340208
+        ]
+      },
+      "id": "node/6778324443"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6778324444",
+        "name": "Crayford",
+        "naptan:AtcoCode": "9100CRFD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/cry/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/crayford",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CRY",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wikidata": "Q2755666",
+        "wikipedia": "en:Crayford railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1783894,
+          51.448177
+        ]
+      },
+      "id": "node/6778324444"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6779166227",
+        "name": "Albany Park",
+        "naptan:AtcoCode": "9100ALBNYPK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/ayp/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/albany-park",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "AYP",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2656573",
+        "wikipedia": "en:Albany Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1259653,
+          51.4353837
+        ]
+      },
+      "id": "node/6779166227"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7140186755",
+        "addr:city": "London",
+        "addr:postcode": "WC2N 5HS",
+        "addr:street": "Strand",
+        "alt_name": "London Charing Cross",
+        "fare_zone": "1",
+        "name": "Charing Cross",
+        "name:he": "תחנת צ'רינג קרוס",
+        "name:ko": "채링 크로스",
+        "name:ru": "Чаринг-Кросс",
+        "naptan:AtcoCode": "9100CHRX",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/chx/",
+        "network:wikidata": "Q26334",
+        "operator": "Network Rail",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:ref": "CHX",
+        "railway:ref:DB": "XKLC",
+        "ref:crs": "CHX",
+        "train": "yes",
+        "uic_ref": "7000007",
+        "wheelchair": "no",
+        "wikidata": "Q801128",
+        "wikipedia": "en:Charing Cross railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1236888,
+          51.5074975
+        ]
+      },
+      "id": "node/7140186755"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7147315248",
+        "name": "Winchmore Hill",
+        "naptan:AtcoCode": "9100WNMHILL",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wih/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WIH",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q1923168",
+        "wikipedia": "en:Winchmore Hill railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1009414,
+          51.6340675
+        ]
+      },
+      "id": "node/7147315248"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7158651920",
+        "addr:city": "London",
+        "addr:postcode": "SW15 1RT",
+        "addr:street": "Upper Richmond Road",
+        "fare_zone": "2/3",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Putney",
+        "name:ru": "Путни",
+        "naptan:AtcoCode": "9100PUTNEY",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/put/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "operator:wikidata": "Q30602320",
+        "phone": "+44 800 528 2100",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "PUT",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2494925",
+        "wikipedia": "en:Putney railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2153478,
+          51.4609339
+        ]
+      },
+      "id": "node/7158651920"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7158669749",
+        "name": "Essex Road",
+        "naptan:AtcoCode": "9100ESSEXRD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/exr/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "EXR",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "toilets:wheelchair": "no",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q682124",
+        "wikipedia": "en:Essex Road railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0961859,
+          51.5407328
+        ]
+      },
+      "id": "node/7158669749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7158881499",
+        "name": "Cricklewood",
+        "naptan:AtcoCode": "9100CRKLWD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/cri/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CRI",
+        "source": "Bing;survey",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "start_date": "1870-05-02",
+        "wheelchair": "limited",
+        "wheelchair:description": "You can only enter and exit southbound platform. Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q2794823",
+        "wikipedia": "en:Cricklewood railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2129746,
+          51.5587554
+        ]
+      },
+      "id": "node/7158881499"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7159130435",
+        "addr:city": "London",
+        "addr:postcode": "SE1 8SW",
+        "addr:street": "Sandell Street",
+        "name": "Waterloo East",
+        "naptan:AtcoCode": "9100WLOE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wae/",
+        "network:wikidata": "Q26334",
+        "old_name": "Waterloo Eastern",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/london-waterloo-east",
+        "operator:wikidata": "Q1696490",
+        "platforms": "4",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WAE",
+        "source": "Bing",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to Waterloo East is only through use of lift at Waterloo Main. Ramps access to the platforms is steep.",
+        "wikidata": "Q685952",
+        "wikimedia_commons": "Category:Waterloo_East_railway_station",
+        "wikipedia": "en:Waterloo East railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1082027,
+          51.5042171
+        ]
+      },
+      "id": "node/7159130435"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7159162454",
+        "addr:city": "London",
+        "addr:postcode": "N1C 4AP",
+        "addr:street": "Euston Road",
+        "alt_name": "King's Cross",
+        "iata": "QQK",
+        "name": "London King's Cross",
+        "name:ru": "Лондон Кингс-Кросс",
+        "name:zh": "伦敦国王十字",
+        "name:zh-Hans": "伦敦国王十字",
+        "name:zh-Hant": "倫敦國王十字",
+        "naptan:AtcoCode": "910GKNGX",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/kgx/",
+        "network:wikidata": "Q26334",
+        "operator": "Network Rail",
+        "platforms": "12",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:ref": "KGX",
+        "ref:crs": "KGX",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q219867",
+        "wikipedia": "en:London King's Cross railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1230224,
+          51.5323954
+        ]
+      },
+      "id": "node/7159162454"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7159246417",
+        "name": "Hayes",
+        "naptan:AtcoCode": "9100HAYS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/hys/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/hayes-kent",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "HYS",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "start_date": "1882-05-29",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Short ramp access from car park to station entrance. Step free access to these terminal platform from station entrance via short steep ramp.",
+        "wikidata": "Q2479740",
+        "wikipedia": "en:Hayes railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0095073,
+          51.3765959
+        ]
+      },
+      "id": "node/7159246417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7159280033",
+        "name": "Maze Hill",
+        "naptan:AtcoCode": "9100MAZEH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/mzh/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/maze-hill",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "MZH",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp.",
+        "wikidata": "Q6798399"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.00375,
+          51.4826479
+        ]
+      },
+      "id": "node/7159280033"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7159309580",
+        "addr:city": "Bexleyheath",
+        "addr:housename": "Bexleyheath Station",
+        "addr:postcode": "DA7 4AA",
+        "addr:street": "Station Road",
+        "image": "https://archive.org/details/bexleyheath-2019-03-28/Bexleyheath-2019-03-28/DSCN9279.JPG",
+        "name": "Bexleyheath",
+        "naptan:AtcoCode": "9100BXLYHTH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bxh/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/bexleyheath",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BXH",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q3262067",
+        "wikipedia": "en:Bexleyheath railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1329448,
+          51.4635649
+        ]
+      },
+      "id": "node/7159309580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7159313958",
+        "name": "Belvedere",
+        "naptan:AtcoCode": "9100BELVEDR",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bvd/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/belvedere",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BVD",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access to both platforms. No step free interchange between platforms which is via a footbridge.",
+        "wikidata": "Q2095782",
+        "wikipedia": "en:Belvedere railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1533667,
+          51.4922273
+        ]
+      },
+      "id": "node/7159313958"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7159314259",
+        "name": "Coulsdon South",
+        "naptan:AtcoCode": "9100COLSDNS",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/cds/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "postal_code": "CR5 3EA",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CDS",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp",
+        "wikidata": "Q2514119",
+        "wikipedia": "en:Coulsdon South railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.137974,
+          51.315543
+        ]
+      },
+      "id": "node/7159314259"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7159366405",
+        "name": "Falconwood",
+        "naptan:AtcoCode": "9100FALCNWD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/fcn/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/falconwood",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "FCN",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q2569749",
+        "wikipedia": "en:Falconwood railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0793044,
+          51.4592305
+        ]
+      },
+      "id": "node/7159366405"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7159380474",
+        "addr:street": "Charlton Church Lane",
+        "name": "Charlton",
+        "naptan:AtcoCode": "9100CRLN",
+        "naptan:CommonName": "Charlton",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/ctn/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/charlton",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:aws": "yes",
+        "railway:tpws": "yes",
+        "ref:crs": "CTN",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Access from platform to train by manual boarding ramp",
+        "wikidata": "Q2216265"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.030809,
+          51.4867602
+        ]
+      },
+      "id": "node/7159380474"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7167219011",
+        "addr:city": "London",
+        "addr:country": "GB",
+        "addr:postcode": "EN3 4QB",
+        "addr:street": "South Street",
+        "name": "Ponders End",
+        "naptan:AtcoCode": "9100PNDRSEN",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/pon/",
+        "network:wikidata": "Q26334",
+        "operator": "Greater Anglia",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "PON",
+        "source": "Survey of 2015-09-08",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2469907",
+        "wikipedia": "en:Ponders End railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0347864,
+          51.6428468
+        ]
+      },
+      "id": "node/7167219011"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7167219012",
+        "name": "Lea Bridge",
+        "naptan:AtcoCode": "9100LEABDGE",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/leb/",
+        "network:wikidata": "Q26334",
+        "operator": "Greater Anglia",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "LEB",
+        "source": "Survey of 2016-05-13",
+        "start_date": "2016-05-15",
+        "wheelchair": "yes",
+        "wikidata": "Q6508178",
+        "wikipedia": "en:Lea Bridge railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0371218,
+          51.5667512
+        ]
+      },
+      "id": "node/7167219012"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7170486869",
+        "addr:city": "Kingston",
+        "addr:country": "GB",
+        "addr:postcode": "KT1 1UJ",
+        "addr:street": "Wood Street",
+        "alt_name": "Kingston-upon-Thames",
+        "name": "Kingston",
+        "naptan:AtcoCode": "9100KGSTON",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/kng/",
+        "network:wikidata": "Q26334",
+        "operator": "South Western Railway",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "KNG",
+        "ref:stanox": "87161",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q1916904",
+        "wikipedia": "en:Kingston railway station (England)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3018577,
+          51.4129277
+        ]
+      },
+      "id": "node/7170486869"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7170577519",
+        "name": "Wembley Stadium",
+        "naptan:AtcoCode": "9100WEMBLSM",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wcx/",
+        "network:wikidata": "Q26334",
+        "operator": "Chiltern Railways",
+        "postal_code": "HA9 8BQ",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WCX",
+        "source": "NPE",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2587124",
+        "wikipedia": "en:Wembley Stadium railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2847664,
+          51.5542489
+        ]
+      },
+      "id": "node/7170577519"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7170585072",
+        "description": "This station is served every 2 hours, Monday-Friday in the peak direction only.",
+        "name": "Sudbury & Harrow Road",
+        "naptan:AtcoCode": "9100SDBRYHR",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/sud/",
+        "network:wikidata": "Q26334",
+        "operator": "Chiltern Railways",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SUD",
+        "shelter": "light materials",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q7633492",
+        "wikipedia": "en:Sudbury & Harrow Road railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3160599,
+          51.5543352
+        ]
+      },
+      "id": "node/7170585072"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7851898375",
+        "name": "Alexandra Palace",
+        "naptan:AtcoCode": "9100ALEXNDP",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/aap/",
+        "network:wikidata": "Q26334",
+        "old_name": "Wood Green",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "platforms": "4",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "AAP",
+        "ref:tiploc": "ALEXNDP",
+        "source": "local knowledge",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2300483",
+        "wikipedia": "en:Alexandra Palace railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1206625,
+          51.5982024
+        ]
+      },
+      "id": "node/7851898375"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7851898376",
+        "name": "New Southgate",
+        "naptan:AtcoCode": "9100NEWSGAT",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/nsg/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NSG",
+        "ref:tiploc": "NEWSGAT",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2526904",
+        "wikipedia": "en:New Southgate railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1428091,
+          51.613804
+        ]
+      },
+      "id": "node/7851898376"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7851898377",
+        "name": "Oakleigh Park",
+        "naptan:AtcoCode": "9100OKLGHPK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/okl/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "OKL",
+        "ref:tiploc": "OKLGHPK",
+        "wheelchair": "no",
+        "wikidata": "Q1222897",
+        "wikipedia": "en:Oakleigh Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1662251,
+          51.6376675
+        ]
+      },
+      "id": "node/7851898377"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7851898378",
+        "name": "New Barnet",
+        "naptan:AtcoCode": "9100NBARNET",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/nba/",
+        "network:wikidata": "Q26334",
+        "old_name": "Barnet",
+        "operator": "Govia Thameslink Railway (Great Northern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "NBA",
+        "ref:tiploc": "NBARNET",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q1217434",
+        "wikipedia": "en:New Barnet railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1726236,
+          51.6482779
+        ]
+      },
+      "id": "node/7851898378"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7860900545",
+        "name": "Sundridge Park",
+        "naptan:AtcoCode": "9100SNDP",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/sup/",
+        "network:wikidata": "Q26334",
+        "operator": "Southeastern",
+        "operator:website": "https://www.southeasternrailway.co.uk/travel-information/more-travel-help/station-information/stations/sundridge-park",
+        "operator:wikidata": "Q1696490",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SUP",
+        "train": "yes",
+        "wheelchair": "limited",
+        "wheelchair:description": "Step free access available to platform 2 for services to Bromley North via gate from side path. There is no step free access to Platform 1.",
+        "wikidata": "Q3070740",
+        "wikipedia": "en:Sundridge Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.021475,
+          51.4139567
+        ]
+      },
+      "id": "node/7860900545"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7860903088",
+        "name": "West Norwood",
+        "name:ru": "Уэст-Норвуд",
+        "naptan:AtcoCode": "9100WNORWOD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/wnw/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "WNW",
+        "source": "NPE",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2958963",
+        "wikipedia": "en:West Norwood railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1034911,
+          51.4316272
+        ]
+      },
+      "id": "node/7860903088"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7860903089",
+        "name": "Gipsy Hill",
+        "name:ru": "Джипси-Хилл",
+        "naptan:AtcoCode": "9100GIPSYH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/gip/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "platforms": "2",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "GIP",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wikidata": "Q2206539",
+        "wikipedia": "en:Gipsy Hill railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0840424,
+          51.4245334
+        ]
+      },
+      "id": "node/7860903089"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7860903096",
+        "name": "Birkbeck",
+        "naptan:AtcoCode": "9100BIRKBCK",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/bik/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "platforms": "1",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BIK",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "tfl_travelzone": "4",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wikidata": "Q2207882",
+        "wikipedia": "en:Birkbeck station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0565394,
+          51.4034563
+        ]
+      },
+      "id": "node/7860903096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7860903110",
+        "name": "East Dulwich",
+        "naptan:AtcoCode": "9100EDULWCH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/edw/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "EDW",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "wheelchair": "yes",
+        "wheelchair:description": "Steep ramp to platform 1 (to London Bridge). Steep ramp to platform 2 (to Tulse Hill). Ramps are longer than 400m/above 1:10 gradient).",
+        "wikidata": "Q5328256",
+        "wikipedia": "en:East Dulwich railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0807982,
+          51.4610374
+        ]
+      },
+      "id": "node/7860903110"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7862969803",
+        "name": "South Greenford",
+        "naptan:AtcoCode": "9100SGFORD",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/sgn/",
+        "network:wikidata": "Q26334",
+        "operator": "Great Western Railway",
+        "operator:website": "https://www.gwr.com/stations-and-destinations/stations/south-greenford",
+        "operator:wikidata": "Q1419438",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "SGN",
+        "source": "NPE",
+        "wheelchair": "limited",
+        "wheelchair:description": "This station has a degree of step free access to both platforms however this is via Long ramps to both palforms (approx 1:10).",
+        "wikidata": "Q2612956",
+        "wikipedia": "en:South Greenford railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3364379,
+          51.5332032
+        ]
+      },
+      "id": "node/7862969803"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7862969806",
+        "addr:city": "London",
+        "addr:postcode": "W7 1BA",
+        "addr:street": "Copley Close",
+        "internet_access": "no",
+        "name": "Castle Bar Park",
+        "naptan:AtcoCode": "9100CBARPAR",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/cbp/",
+        "network:wikidata": "Q26334",
+        "operator": "Great Western Railway",
+        "operator:website": "https://www.gwr.com/stations-and-destinations/stations/castle-bar-park",
+        "operator:wikidata": "Q1419438",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "CBP",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "train": "yes",
+        "website": "https://www.gwr.com/stations-and-destinations/stations/castle-bar-park",
+        "wheelchair": "no",
+        "wikidata": "Q5049994",
+        "wikipedia": "en:Castle Bar Park railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3315024,
+          51.5228669
+        ]
+      },
+      "id": "node/7862969806"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7862969807",
+        "name": "Drayton Green",
+        "naptan:AtcoCode": "9100DRAYGRN",
+        "network": "National Rail",
+        "network:train": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/drg/",
+        "network:wikidata": "Q26334",
+        "operator": "Great Western Railway",
+        "operator:website": "https://www.gwr.com/stations-and-destinations/stations/drayton-green",
+        "operator:wikidata": "Q1419438",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "DRG",
+        "source": "NPE",
+        "source_ref": "http://en.wikipedia.org/wiki/List_of_London_railway_stations",
+        "wheelchair": "no",
+        "wikidata": "Q4947698",
+        "wikipedia": "en:Drayton Green railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3301943,
+          51.5163854
+        ]
+      },
+      "id": "node/7862969807"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8724517978",
+        "name": "Tulse Hill",
+        "name:ru": "Талс-Хилл",
+        "naptan:AtcoCode": "9100TULSEH",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/tuh/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Southern)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "TUH",
+        "train": "yes",
+        "wheelchair": "no",
+        "wikidata": "Q2851519",
+        "wikipedia": "en:Tulse Hill railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1048466,
+          51.4399271
+        ]
+      },
+      "id": "node/8724517978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8907391302",
+        "fare_zone": "3",
+        "name": "Brent Cross West",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/brent-cross-west/",
+        "network:wikidata": "Q26334",
+        "operator": "Govia Thameslink Railway (Thameslink)",
+        "public_transport": "station",
+        "railway": "station",
+        "ref:crs": "BCZ",
+        "start_date": "2023-12-10",
+        "train": "yes",
+        "wikidata": "Q4961357",
+        "wikipedia": "en:Brent Cross West railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2265437,
+          51.5688188
+        ]
+      },
+      "id": "node/8907391302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12254780537",
+        "name": "St Pancras International",
+        "naptan:AtcoCode": "9100STPXBOX",
+        "network": "National Rail",
+        "network:website": "https://www.nationalrail.co.uk/stations/stp/",
+        "network:wikidata": "Q26334",
+        "note": "low level station",
+        "operator": "Network Rail (High Speed)",
+        "public_transport": "station",
+        "railway": "station",
+        "railway:ref": "STP",
+        "ref:crs": "SPL",
+        "start_date": "2007-12-09",
+        "toilets:wheelchair": "yes",
+        "train": "yes",
+        "uic_ref": "7015400",
+        "website:departures": "http://www.livedepartureboards.co.uk/ldb/summary.aspx?T=STP",
+        "wheelchair": "yes",
+        "wikidata": "Q720102",
+        "wikipedia": "en:St Pancras railway station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1276185,
+          51.5322106
+        ]
+      },
+      "id": "node/12254780537"
+    }
+  ]
+}

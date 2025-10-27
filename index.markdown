@@ -11,6 +11,8 @@ layout: default
 
 # India
 
+Public Transport - [Interactive](./_pages/city_transit.html)
+
 ## Politics
 
 - General Elections 2019 Cartogram - [Interactive](./_pages/india_lok_sabha_2019.html) | [Essay](https://bsky.app/profile/thechutneyboy.bsky.social/post/3ko7ehqcuh62u)
