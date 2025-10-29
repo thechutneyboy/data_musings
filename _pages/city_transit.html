@@ -25,7 +25,7 @@ permalink: /city_transit.html
         #map-toggle {
             position: absolute;
             top: 10px;
-            left: 10px;
+            right: 10px;
             z-index: 1000;
             background: rgba(255, 255, 255, 0.9);
             padding: 10px;
@@ -44,6 +44,12 @@ permalink: /city_transit.html
 
         #map-toggle button:hover {
             background: #e0e0e0;
+        }
+
+        .highlight {
+            background-color: #FFD700;
+            /* Gold color for highlight */
+            transition: background-color 0.3s ease;
         }
 
         #map {
@@ -88,23 +94,24 @@ permalink: /city_transit.html
     <div id="map"></div>
 
     <div class="legend">
-        <h4>Legend</h4>
-        <div class="legend-item">
+
+        <div class="legend-item" data-layer="metro">
             <div class="legend-color" style="background-color: #0009AB; width: 20px; height: 3px;"></div>
             <span>Metro</span>
         </div>
-        <div class="legend-item">
+        <div class="legend-item" data-layer="bus">
             <div class="legend-color" style="background-color: #DE2110; width: 20px; height: 3px;"></div>
             <span>Bus</span>
         </div>
-        <div class="legend-item">
-            <div class="legend-color" style="background-color: #3388FF; width: 20px; height: 3px;"></div>
-            <span>Trains</span>
+        <div class="legend-item" data-layer="rail">
+            <div class="legend-color" style="background-color: #000000; width: 20px; height: 3px;"></div>
+            <span>Rail</span>
         </div>
-        <div class="legend-item">
-            <div class="legend-color" style="background-color: #000000; border-radius: 50%; width: 12px; height: 12px;">
+        <div class="legend-item" data-layer="stations">
+            <span>&nbsp;</span>
+            <div class="legend-color" style="background-color: #000000; border-radius: 50%; width: 10px; height: 10px;">
             </div>
-            <span>Stations</span>
+            <span>&nbsp;Stations</span>
         </div>
         <!-- <div class="legend-item">
             <div class="legend-color" style="background-color: #4CAF50; opacity: 0.3; width: 20px; height: 10px;"></div>
@@ -115,7 +122,7 @@ permalink: /city_transit.html
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="text/javascript">
         // Initialize the map with CartoDB Positron (light monochrome)
-        const map = L.map('map').setView([12.9716, 77.5946], 12);
+        const map = L.map('map', { zoomSnap: 0, }).setView([12.9716, 77.5946], 12);
 
         // Add light basemap
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -133,222 +140,329 @@ permalink: /city_transit.html
         const bengaluruLayers = {};
         const londonLayers = {};
 
+        const busLayerGroup = L.layerGroup().addTo(map);
+        const metroLayerGroup = L.layerGroup().addTo(map);
+        const railLayerGroup = L.layerGroup().addTo(map);
+        const stationsLayerGroup = L.layerGroup().addTo(map);
+
+        // Reference lat/zoom used to equalize meters-per-pixel across cities
+        const REF = { lat: 12.9716, zoom: 12 };
+        function deg2rad(deg) { return deg * Math.PI / 180; }
+        // compute zoom for `cityLat` that gives same meters/pixel as REF
+        function matchZoomToReference(cityLat) {
+            const cosCity = Math.cos(deg2rad(cityLat));
+            const cosRef = Math.cos(deg2rad(REF.lat));
+            const delta = Math.log2(cosCity / cosRef);
+            return REF.zoom + delta;
+        }
+
+        map.on('zoomend', function () {
+            console.log('Current zoom:', map.getZoom());
+        });
+
         // Load Bengaluru data
         async function loadBengaluru() {
-            map.setView([12.9716, 77.5946], 12);
+            const z = matchZoomToReference(12.9716);
+            map.setView([12.9716, 77.5946], z);
 
             // Clear London layers if they exist
             Object.values(londonLayers).forEach(layer => {
                 if (layer && map.hasLayer(layer)) map.removeLayer(layer);
             });
 
+            // Fetch all layers in parallel
+            const metroPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/bengaluru/metro.geojson').then(res => res.json());
+            const busPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/bengaluru/bus.geojson').then(res => res.json());
+            const railPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/bengaluru/railway.geojson').then(res => res.json());
+
+            // Wait for all data
+            const [metroData, busData, railData] = await Promise.all([metroPromise, busPromise, railPromise]);
+
             // Load Metro lines
             //Source: https://overpass-turbo.eu/
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/bengaluru/metro.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    bengaluruLayers.bus = L.geoJSON(data, {
-                        pointToLayer: (feature, latlng) => {
-                            return L.circleMarker(latlng, {
-                                radius: 3,
-                                fillColor: '#0009AB',
-                                color: '#0009AB',
-                                weight: 2,
-                                fillOpacity: 1
-                            })
-                        },
-                        style: { color: '#0009AB', weight: 2, opacity: 1 }
-                    }).addTo(map);
-                });
+            railLayerGroup.addLayer(L.geoJSON(railData, {
+                pointToLayer: (feature, latlng) => {
+                    return L.circleMarker(latlng, {
+                        radius: 3,
+                        fillColor: '#000000',
+                        color: '#000000',
+                        weight: 2,
+                        fillOpacity: 1
+                    });
+                },
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties && feature.properties.name) {
+                        layer.bindPopup(`${feature.properties.name}`);
+                    }
+                },
+                style: {
+                    color: '#000000',  // Dark brown track color
+                    weight: 2,
+                    dashArray: '10, 3',
+                    dashOffset: '7',
+                    lineCap: 'butt'
+                },
+            }));
+            busLayerGroup.addLayer(L.geoJSON(busData, {
+                pointToLayer: (feature, latlng) => {
+                    return L.circleMarker(latlng, {
+                        radius: 1,
+                        fillColor: '#DE2110',
+                        color: '#DE2110',
+                        weight: 1,
+                        fillOpacity: 1
+                    });
+                },
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties && feature.properties.name) {
+                        layer.bindPopup(`<strong>Bus:</strong> ${feature.properties.name}`);
+                    }
+                },
+                style: { color: '#DE2110', weight: 2, opacity: 0.08 },
+            }));
+
+            metroLayerGroup.addLayer(L.geoJSON(metroData, {
+                pointToLayer: (feature, latlng) => {
+                    return L.circleMarker(latlng, {
+                        radius: 2.5,
+                        fillColor: '#0009AB',
+                        color: '#0009AB',
+                        weight: 2,
+                        fillOpacity: 1
+                    });
+                },
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties && feature.properties.name) {
+                        layer.bindPopup(`<strong>Metro:</strong> ${feature.properties.name}`);
+                    }
+                },
+                style: { color: '#0009AB', weight: 2, opacity: 1 }
+            }));
 
         }
 
         // Load London data
         async function loadLondon() {
-            map.setView([51.5074, -0.1278], 12);
+            const z = matchZoomToReference(51.5074);
+            map.setView([51.5074, -0.1278], z);
 
             // Clear Bengaluru layers
             Object.values(bengaluruLayers).forEach(layer => {
                 if (layer && map.hasLayer(layer)) map.removeLayer(layer);
             });
 
-            // Load Tube lines
-            //Source: https://overpass-turbo.eu/
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_tube.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.bus = L.geoJSON(data, {
-                        pointToLayer: () => null,
-                        style: { color: '#0009AB', weight: 2, opacity: 1 }
-                    }).addTo(map);
-                });
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_elizabeth.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.bus = L.geoJSON(data, {
-                        pointToLayer: () => null,
-                        style: { color: '#6950A1', weight: 2, opacity: 1 }
-                    }).addTo(map);
-                });
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_dlr.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.bus = L.geoJSON(data, {
-                        pointToLayer: () => null,
-                        style: { color: '#00A4A7', weight: 2, opacity: 1 }
-                    }).addTo(map);
-                });
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_overground.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.bus = L.geoJSON(data, {
-                        pointToLayer: () => null,
-                        style: { color: '#EE7C0E', weight: 2, opacity: 1 }
-                    }).addTo(map);
-                });
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_tram.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.bus = L.geoJSON(data, {
-                        pointToLayer: () => null,
-                        style: { color: '#84B817', weight: 2, opacity: 1 }
-                    }).addTo(map);
-                });
+            // Fetch all layers in parallel
+            const tubePromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/tube.geojson').then(res => res.json());
+            const elizabethPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/elizabeth.geojson').then(res => res.json());
+            const dlrPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/dlr.geojson').then(res => res.json());
+            const overgroundPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/overground.geojson').then(res => res.json());
+            const tramPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/tram.geojson').then(res => res.json());
+            const railPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/nat_rail.geojson').then(res => res.json());
 
+
+            const busRoutesPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/bus_routes.geojson').then(res => res.json());
+            const busStopsPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/bus_stops.geojson').then(res => res.json());
+
+            const tubeStationsPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/stations_tube.geojson').then(res => res.json());
+            const elizabethStationsPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/stations_elizabeth.geojson').then(res => res.json());
+            const dlrStationsPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/stations_dlr.geojson').then(res => res.json());
+            const overgroundStationsPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/stations_overground.geojson').then(res => res.json());
+            const tramStationsPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/stations_tramlink.geojson').then(res => res.json());
+            const railStationsPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/stations_nat_rail.geojson').then(res => res.json());
+
+            // Wait for all data
+            const [
+                tubeData, elizabethData, dlrData, overgroundData, tramData,
+                busRoutesData, busStopsData,
+                tubeStationsData, elizabethStationsData, dlrStationsData, overgroundStationsData, tramStationsData,
+                railData, railStationsData
+            ] = await Promise.all([
+                tubePromise, elizabethPromise, dlrPromise, overgroundPromise, tramPromise, busRoutesPromise, busStopsPromise,
+                tubeStationsPromise, elizabethStationsPromise, dlrStationsPromise, overgroundStationsPromise, tramStationsPromise,
+                railPromise, railStationsPromise,
+            ]);
+
+            // Source: https://overpass-turbo.eu/
             // Source: https://gis-tfl.opendata.arcgis.com/
-            // Load bus routes (red)
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_bus_routes.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.bus = L.geoJSON(data, {
-                        style: { color: '#DE2110', weight: 2, opacity: 0.05 }
-                    }).addTo(map);
-                });
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_bus_stops.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.bus = L.geoJSON(data, {
-                        pointToLayer: (feature, latlng) => {
-                            return L.circleMarker(latlng, {
-                                radius: 1,
-                                fillColor: '#DE2110',
-                                color: '#DE2110',
-                                weight: 1,
-                                fillOpacity: 1
-                            }).on('click', () => {
-                                showIsochrone(feature.properties.id, 'london');
-                            });
-                        }
-                    }).addTo(map);
-                });
+            railLayerGroup.addLayer(L.geoJSON(railData, {
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties && feature.properties.name) {
+                        layer.bindPopup(`<strong>Rail:</strong> ${feature.properties.name}`);
+                    }
+                },
+                style: {
+                    color: '#000000',  // Dark brown track color
+                    weight: 2,
+                    dashArray: '10, 3',
+                    dashOffset: '7',
+                    lineCap: 'butt'
+                }
+            }));
+            railLayerGroup.addLayer(L.geoJSON(railStationsData, {
+                pointToLayer: (feature, latlng) => {
+                    const marker = L.circleMarker(latlng, {
+                        radius: 3,
+                        fillColor: '#000000',
+                        color: '#00000',
+                        weight: 2,
+                        fillOpacity: 1
+                    });
+                    if (feature.properties && feature.properties.name) {
+                        marker.bindPopup(`<strong>Train Station:</strong> ${feature.properties.name}`);
+                    }
+                    return marker;
+                },
+            }));
 
-            // Load stations
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_stations_tube.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.stations = L.geoJSON(data, {
-                        pointToLayer: (feature, latlng) => {
-                            return L.circleMarker(latlng, {
-                                radius: 3,
-                                fillColor: '#0009AB',
-                                color: '#0009AB',
-                                weight: 2,
-                                fillOpacity: 1
-                            }).on('click', () => {
-                                showIsochrone(feature.properties.id, 'london');
-                            });
-                        }
-                    }).addTo(map);
-                });
+            busLayerGroup.addLayer(L.geoJSON(busRoutesData, {
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties && feature.properties.ROUTE) {
+                        layer.bindPopup(`<strong>Bus:</strong> ${feature.properties.ROUTE}`);
+                    }
+                },
+                style: { color: '#DE2110', weight: 2, opacity: 0.08 }
+            }));
+            busLayerGroup.addLayer(L.geoJSON(busStopsData, {
+                pointToLayer: (feature, latlng) => {
+                    const marker = L.circleMarker(latlng, {
+                        radius: 1,
+                        fillColor: '#DE2110',
+                        color: '#DE2110',
+                        weight: 1,
+                        fillOpacity: 1
+                    });
+                    if (feature.properties && feature.properties.STOP_NAME) {
+                        marker.bindPopup(`<strong>Bus Stop:</strong> ${feature.properties.STOP_NAME}`);
+                    }
+                    return marker;
+                }
+            }));
 
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_stations_elizabeth.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.stations = L.geoJSON(data, {
-                        pointToLayer: (feature, latlng) => {
-                            return L.circleMarker(latlng, {
-                                radius: 3,
-                                fillColor: '#6950A1',
-                                color: '#6950A1',
-                                weight: 2,
-                                fillOpacity: 1
-                            }).on('click', () => {
-                                showIsochrone(feature.properties.id, 'london');
-                            });
-                        }
-                    }).addTo(map);
-                });
+            metroLayerGroup.addLayer(L.geoJSON(tubeData, {
+                pointToLayer: () => null,
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties && feature.properties.name) {
+                        layer.bindPopup(`<strong>[Tube]</strong> ${feature.properties.name}`);
+                    }
+                },
+                style: { color: '#0009AB', weight: 2, opacity: 1 }
+            }));
+            metroLayerGroup.addLayer(L.geoJSON(elizabethData, {
+                pointToLayer: () => null,
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties && feature.properties.name) {
+                        layer.bindPopup(`${feature.properties.name}`);
+                    }
+                },
+                style: { color: '#6950A1', weight: 2, opacity: 1 }
+            }));
+            metroLayerGroup.addLayer(L.geoJSON(dlrData, {
+                pointToLayer: () => null,
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties && feature.properties.name) {
+                        layer.bindPopup(`${feature.properties.name}`);
+                    }
+                },
+                style: { color: '#00A4A7', weight: 2, opacity: 1 }
+            }));
+            metroLayerGroup.addLayer(L.geoJSON(overgroundData, {
+                pointToLayer: () => null,
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties && feature.properties.name) {
+                        layer.bindPopup(`<strong>Overground:</strong> ${feature.properties.name}`);
+                    }
+                },
+                style: { color: '#EE7C0E', weight: 2, opacity: 1 }
+            }));
+            metroLayerGroup.addLayer(L.geoJSON(tramData, {
+                pointToLayer: () => null,
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties && feature.properties.name) {
+                        layer.bindPopup(`${feature.properties.name}`);
+                    }
+                },
+                style: { color: '#84B817', weight: 2, opacity: 1 }
+            }));
 
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_stations_dlr.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.stations = L.geoJSON(data, {
-                        pointToLayer: (feature, latlng) => {
-                            return L.circleMarker(latlng, {
-                                radius: 3,
-                                fillColor: '#00A4A7',
-                                color: '#00A4A7',
-                                weight: 2,
-                                fillOpacity: 1
-                            }).on('click', () => {
-                                showIsochrone(feature.properties.id, 'london');
-                            });
-                        }
-                    }).addTo(map);
-                });
 
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_stations_overground.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.stations = L.geoJSON(data, {
-                        pointToLayer: (feature, latlng) => {
-                            return L.circleMarker(latlng, {
-                                radius: 3,
-                                fillColor: '#EE7C0E',
-                                color: '#EE7C0E',
-                                weight: 2,
-                                fillOpacity: 1
-                            }).on('click', () => {
-                                showIsochrone(feature.properties.id, 'london');
-                            });
-                        }
-                    }).addTo(map);
-                });
-
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london_stations_tramlink.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.stations = L.geoJSON(data, {
-                        pointToLayer: (feature, latlng) => {
-                            return L.circleMarker(latlng, {
-                                radius: 3,
-                                fillColor: '#84B817',
-                                color: '#84B817',
-                                weight: 2,
-                                fillOpacity: 1
-                            }).on('click', () => {
-                                showIsochrone(feature.properties.id, 'london');
-                            });
-                        }
-                    }).addTo(map);
-                });
-            fetch('{{site.baseurl}}/docs/assets/data/city_transit/london/stations_nat_rail.geojson')
-                .then(res => res.json())
-                .then(data => {
-                    londonLayers.stations = L.geoJSON(data, {
-                        pointToLayer: (feature, latlng) => {
-                            return L.circleMarker(latlng, {
-                                radius: 4,
-                                fillColor: '#000000',
-                                color: '#00000',
-                                weight: 2,
-                                fillOpacity: 1
-                            }).on('click', () => {
-                                showIsochrone(feature.properties.id, 'london');
-                            });
-                        }
-                    }).addTo(map);
-                });
+            stationsLayerGroup.addLayer(L.geoJSON(tubeStationsData, {
+                pointToLayer: (feature, latlng) => {
+                    const marker = L.circleMarker(latlng, {
+                        radius: 2.5,
+                        fillColor: '#0009AB',
+                        color: '#0009AB',
+                        weight: 2,
+                        fillOpacity: 1
+                    });
+                    if (feature.properties && feature.properties.NAME) {
+                        marker.bindPopup(`<strong>Tube Station:</strong> ${feature.properties.NAME}`);
+                    }
+                    return marker;
+                }
+            }));
+            stationsLayerGroup.addLayer(L.geoJSON(elizabethStationsData, {
+                pointToLayer: (feature, latlng) => {
+                    const marker = L.circleMarker(latlng, {
+                        radius: 2.5,
+                        fillColor: '#6950A1',
+                        color: '#6950A1',
+                        weight: 2,
+                        fillOpacity: 1
+                    });
+                    if (feature.properties && feature.properties.NAME) {
+                        marker.bindPopup(`<strong>Elizabeth Line Station:</strong> ${feature.properties.NAME}`);
+                    }
+                    return marker;
+                }
+            }));
+            stationsLayerGroup.addLayer(L.geoJSON(dlrStationsData, {
+                pointToLayer: (feature, latlng) => {
+                    // .on('click', () => {
+                    //     showIsochrone(feature.properties.id, 'london');
+                    // });
+                    const marker = L.circleMarker(latlng, {
+                        radius: 2.5,
+                        fillColor: '#00A4A7',
+                        color: '#00A4A7',
+                        weight: 2,
+                        fillOpacity: 1
+                    });
+                    if (feature.properties && feature.properties.NAME) {
+                        marker.bindPopup(`<strong>DLR Station:</strong> ${feature.properties.NAME}`);
+                    }
+                    return marker;
+                },
+            }));
+            stationsLayerGroup.addLayer(L.geoJSON(overgroundStationsData, {
+                pointToLayer: (feature, latlng) => {
+                    const marker = L.circleMarker(latlng, {
+                        radius: 2.5,
+                        fillColor: '#EE7C0E',
+                        color: '#EE7C0E',
+                        weight: 2,
+                        fillOpacity: 1
+                    });
+                    if (feature.properties && feature.properties.NAME) {
+                        marker.bindPopup(`<strong>Overground Station:</strong> ${feature.properties.NAME}`);
+                    }
+                    return marker;
+                }
+            }));
+            stationsLayerGroup.addLayer(L.geoJSON(tramStationsData, {
+                pointToLayer: (feature, latlng) => {
+                    const marker = L.circleMarker(latlng, {
+                        radius: 2.5,
+                        fillColor: '#84B817',
+                        color: '#84B817',
+                        weight: 2,
+                        fillOpacity: 1
+                    });
+                    if (feature.properties && feature.properties.NAME) {
+                        marker.bindPopup(`<strong>Tram Station:</strong> ${feature.properties.NAME}`);
+                    }
+                    return marker;
+                }
+            }));
         }
 
         // Show 15-min walk isochrone for a station
@@ -388,7 +502,32 @@ permalink: /city_transit.html
         //         });
         // }
 
-        // Link buttons to functions
+        // Toggle layer visibility
+        function toggleLayer(layerName) {
+            layerMap = {
+                'metro': metroLayerGroup,
+                'bus': busLayerGroup,
+                'rail': railLayerGroup,
+                'stations': stationsLayerGroup
+            };
+
+            if (map.hasLayer(layerMap[layerName])) {
+                map.removeLayer(layerMap[layerName]);
+            } else {
+                layerMap[layerName].addTo(map);
+            }
+
+            console.log('Layer toggled:', map.layers);
+        }
+
+        // Add click event listeners to legend items
+        document.querySelectorAll('.legend-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const layerName = item.getAttribute('data-layer');
+                toggleLayer(layerName);
+            });
+        });
+
         document.getElementById('bengaluru-btn').addEventListener('click', loadBengaluru);
         document.getElementById('london-btn').addEventListener('click', loadLondon);
 
