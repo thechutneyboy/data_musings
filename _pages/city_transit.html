@@ -10,6 +10,7 @@ permalink: /city_transit.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>How Cities Move People</title>
     <meta property="og:title" content="How Cities Move People" />
+    <meta property="og:description" content="Visualizing Public Transport systems across cities" />
     <meta property="og:url" content="{{site.baseurl}}" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="{{site.baseurl}}/docs/assets/images/city_transit.png" />
@@ -19,7 +20,16 @@ permalink: /city_transit.html
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" />
     </script>
-    <!-- Custom CSS -->
+    {% seo %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HS9GPYMD5N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HS9GPYMD5N');
+    </script>
     <style>
         body {
             margin: 0;
