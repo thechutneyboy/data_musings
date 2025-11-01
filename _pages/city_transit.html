@@ -8,15 +8,23 @@ permalink: /city_transit.html
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-    <title>City Transit Map</title>
+    <title>How Cities Move People</title>
+    <meta property="og:title" content="How Cities Move People" />
+    <meta property="og:url" content="{{site.baseurl}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{site.baseurl}}/docs/assets/images/city_transit.png" />
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" />
+    </script>
     <!-- Custom CSS -->
     <style>
         body {
             margin: 0;
             padding: 0;
+            padding-top: 56px;
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             color: #333;
@@ -24,11 +32,11 @@ permalink: /city_transit.html
 
         #map-toggle {
             position: absolute;
-            top: 10px;
+            top: 70px;
             right: 10px;
             z-index: 1000;
             background: rgba(255, 255, 255, 0.9);
-            padding: 10px;
+            padding: 10px 10px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
@@ -53,16 +61,16 @@ permalink: /city_transit.html
         }
 
         #map {
-            height: 100vh;
+            height: calc(100vh - 56px);
             width: 100%;
         }
 
         .legend {
             position: absolute;
-            bottom: 20px;
-            right: 20px;
+            bottom: 40px;
+            right: 10px;
             background: rgba(255, 255, 255, 0.9);
-            padding: 10px;
+            padding: 5px 10px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             z-index: 1000;
@@ -85,7 +93,40 @@ permalink: /city_transit.html
     </style>
 </head>
 
-<body>
+<body class="d-flex flex-column">
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <div class="container-fluid">
+            <div style="display: inline-flex;">
+                <span class="navbar-brand ms-3 me-2" href="#">How Cities Move People</span>
+            </div>
+            <button class="navbar-toggler mx-3 my-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse align-items-end flex-column" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#acknowledgementsModal"><i
+                                class="bi bi-heart-fill"></i>
+                            &nbsp;Acknowledgments
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{site.baseurl}}/"><i class="bi bi-columns-gap"></i>
+                            &nbsp;Data Musings
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link"
+                            href="https://github.com/thechutneyboy/data_musings/blob/main/_pages/city_transit.html"><i
+                                class="bi bi-github"></i>
+                            &nbsp;GitHub Project
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div id="map-toggle">
         <button id="bengaluru-btn">Bengaluru</button>
         <button id="london-btn">London</button>
@@ -95,19 +136,19 @@ permalink: /city_transit.html
 
     <div class="legend">
 
-        <div class="legend-item" data-layer="metro">
+        <div class="legend-item p-0 m-0 btn text-decoration-none" data-layer="metro">
             <div class="legend-color" style="background-color: #0009AB; width: 20px; height: 3px;"></div>
             <span>Metro</span>
         </div>
-        <div class="legend-item" data-layer="bus">
+        <div class="legend-item p-0 m-0 btn text-decoration-none" data-layer="bus">
             <div class="legend-color" style="background-color: #DE2110; width: 20px; height: 3px;"></div>
             <span>Bus</span>
         </div>
-        <div class="legend-item" data-layer="rail">
+        <div class="legend-item p-0 m-0 btn text-decoration-none" data-layer="rail">
             <div class="legend-color" style="background-color: #000000; width: 20px; height: 3px;"></div>
             <span>Rail</span>
         </div>
-        <div class="legend-item" data-layer="stations">
+        <div class="legend-item p-0 m-0 btn text-decoration-none" data-layer="stations">
             <span>&nbsp;</span>
             <div class="legend-color" style="background-color: #000000; border-radius: 50%; width: 10px; height: 10px;">
             </div>
@@ -118,6 +159,55 @@ permalink: /city_transit.html
             <span>15-min Walk</span>
         </div> -->
     </div>
+    <div class="modal fade" id="acknowledgementsModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="bi bi-heart-fill text-danger me-2"></i>
+                        Acknowledgements
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Special thanks to the remarkable people behind these extraordinary resources and their
+                                generosity in making them open source. </p>
+                            <p>If you liked this project, consider supporting their work.</p>
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong>OpenStreetMap Foundation</strong>
+                                        <small class="text-muted d-block">UK-based, volunteer community-run open source
+                                            map database. Donate <a class="text-decoration-none"
+                                                href="https://supporting.openstreetmap.org/">here</a>.</small>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong>Leaflet</strong>
+                                        <small class="text-muted d-block">JavaScript library for map overlays by <a
+                                                class="text-decoration-none" href="https://agafonkin.com/">Volodymyr
+                                                Agafonkin</a>.</small>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong>Overpass Turbo</strong>
+                                        <small class="text-muted d-block">Data mining API for OpenStreetMap by <a
+                                                class="text-decoration-none"
+                                                href="https://wiki.openstreetmap.org/wiki/User:Tyr">Martin
+                                                Raifer</a>.</small>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="text/javascript">
@@ -126,7 +216,7 @@ permalink: /city_transit.html
 
         // Add light basemap
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, © <a href="https://carto.com/attributions">CARTO</a>',
+            attribution: '<i class="bi bi-twitter-x"></i> <a href="https://x.com/TheChutneyBoy/status/1769713864797556899" > @thechutneyboy</a> | <a rel="license" class="text-decoration-none text-muted" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL-3.0</a><br>© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, © <a href="https://carto.com/attributions">CARTO</a><br>',
             maxZoom: 19
         }).addTo(map);
 
