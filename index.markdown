@@ -11,7 +11,12 @@ layout: default
 
 # India
 
-Public Transport - [Interactive](./_pages/city_transit.html)
+## Infrastructure
+
+- A Tale of Two Cities: How They Move People - [Interactive](./_pages/city_transit.html)
+  <a href="{{site.baseurl | prepend: site.url}}/city_transit.html">
+  <img src="{{site.baseurl | prepend: site.url}}/docs/assets/images/city_transit.png" />
+  </a>
 
 ## Politics
 
