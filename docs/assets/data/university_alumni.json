@@ -1,0 +1,791 @@
+{
+  "_readme": "Each entry is one alumnus. Fields: year (graduation year), gender, dept (department code), deg (degree type), ind (industry), state (US state of current residence).",
+  "_departments": {
+    "CS": "Computer Science",
+    "EE": "Electrical Engineering",
+    "ME": "Mechanical Engineering",
+    "CE": "Civil Engineering",
+    "CH": "Chemical Engineering"
+  },
+  "_degrees": ["BTech", "MTech", "PhD"],
+  "_industries": [
+    "Tech & Software",
+    "Finance",
+    "Manufacturing",
+    "Healthcare",
+    "Energy",
+    "Government",
+    "Academia",
+    "Consulting"
+  ],
+  "alumni": [
+    {
+      "year": 2000,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2000,
+      "gender": "Women",
+      "dept": "EE",
+      "deg": "MTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2000,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Michigan"
+    },
+    {
+      "year": 2000,
+      "gender": "Women",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Government",
+      "state": "Texas"
+    },
+    {
+      "year": 2000,
+      "gender": "Men",
+      "dept": "CH",
+      "deg": "PhD",
+      "ind": "Energy",
+      "state": "Texas"
+    },
+    {
+      "year": 2001,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "Washington"
+    },
+    {
+      "year": 2001,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "MTech",
+      "ind": "Consulting",
+      "state": "California"
+    },
+    {
+      "year": 2001,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2001,
+      "gender": "Women",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Ohio"
+    },
+    {
+      "year": 2002,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2002,
+      "gender": "Women",
+      "dept": "EE",
+      "deg": "PhD",
+      "ind": "Academia",
+      "state": "Massachusetts"
+    },
+    {
+      "year": 2002,
+      "gender": "Men",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Government",
+      "state": "Virginia"
+    },
+    {
+      "year": 2002,
+      "gender": "Non-binary",
+      "dept": "CS",
+      "deg": "MTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2003,
+      "gender": "Men",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Energy",
+      "state": "Texas"
+    },
+    {
+      "year": 2003,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2003,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "MTech",
+      "ind": "Manufacturing",
+      "state": "Indiana"
+    },
+    {
+      "year": 2003,
+      "gender": "Women",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Consulting",
+      "state": "Illinois"
+    },
+    {
+      "year": 2004,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2004,
+      "gender": "Women",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Healthcare",
+      "state": "Florida"
+    },
+    {
+      "year": 2004,
+      "gender": "Men",
+      "dept": "CH",
+      "deg": "PhD",
+      "ind": "Energy",
+      "state": "Texas"
+    },
+    {
+      "year": 2004,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "MTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2005,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Michigan"
+    },
+    {
+      "year": 2005,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "Washington"
+    },
+    {
+      "year": 2005,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "MTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2005,
+      "gender": "Non-binary",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Government",
+      "state": "Maryland"
+    },
+    {
+      "year": 2006,
+      "gender": "Women",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Healthcare",
+      "state": "Pennsylvania"
+    },
+    {
+      "year": 2006,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2006,
+      "gender": "Women",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Ohio"
+    },
+    {
+      "year": 2006,
+      "gender": "Men",
+      "dept": "CE",
+      "deg": "MTech",
+      "ind": "Consulting",
+      "state": "New York"
+    },
+    {
+      "year": 2007,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2007,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Energy",
+      "state": "Texas"
+    },
+    {
+      "year": 2007,
+      "gender": "Women",
+      "dept": "CH",
+      "deg": "PhD",
+      "ind": "Academia",
+      "state": "Massachusetts"
+    },
+    {
+      "year": 2007,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "MTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2008,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Michigan"
+    },
+    {
+      "year": 2008,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "Washington"
+    },
+    {
+      "year": 2008,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2008,
+      "gender": "Women",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Government",
+      "state": "Virginia"
+    },
+    {
+      "year": 2009,
+      "gender": "Men",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Energy",
+      "state": "Texas"
+    },
+    {
+      "year": 2009,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "MTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2009,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Consulting",
+      "state": "Illinois"
+    },
+    {
+      "year": 2010,
+      "gender": "Women",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2010,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2010,
+      "gender": "Women",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Healthcare",
+      "state": "Florida"
+    },
+    {
+      "year": 2010,
+      "gender": "Non-binary",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2010,
+      "gender": "Men",
+      "dept": "CE",
+      "deg": "MTech",
+      "ind": "Government",
+      "state": "Maryland"
+    },
+    {
+      "year": 2011,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "Washington"
+    },
+    {
+      "year": 2011,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Michigan"
+    },
+    {
+      "year": 2011,
+      "gender": "Women",
+      "dept": "EE",
+      "deg": "PhD",
+      "ind": "Academia",
+      "state": "Massachusetts"
+    },
+    {
+      "year": 2011,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Consulting",
+      "state": "New York"
+    },
+    {
+      "year": 2012,
+      "gender": "Women",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Energy",
+      "state": "Texas"
+    },
+    {
+      "year": 2012,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "MTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2012,
+      "gender": "Non-binary",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Government",
+      "state": "Virginia"
+    },
+    {
+      "year": 2012,
+      "gender": "Women",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Ohio"
+    },
+    {
+      "year": 2013,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2013,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2013,
+      "gender": "Men",
+      "dept": "CH",
+      "deg": "MTech",
+      "ind": "Healthcare",
+      "state": "Pennsylvania"
+    },
+    {
+      "year": 2014,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2014,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Consulting",
+      "state": "Illinois"
+    },
+    {
+      "year": 2014,
+      "gender": "Women",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Energy",
+      "state": "Texas"
+    },
+    {
+      "year": 2014,
+      "gender": "Non-binary",
+      "dept": "CS",
+      "deg": "MTech",
+      "ind": "Tech & Software",
+      "state": "Washington"
+    },
+    {
+      "year": 2015,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2015,
+      "gender": "Women",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Healthcare",
+      "state": "Florida"
+    },
+    {
+      "year": 2015,
+      "gender": "Men",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Government",
+      "state": "Maryland"
+    },
+    {
+      "year": 2015,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "PhD",
+      "ind": "Academia",
+      "state": "Massachusetts"
+    },
+    {
+      "year": 2016,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2016,
+      "gender": "Women",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Michigan"
+    },
+    {
+      "year": 2016,
+      "gender": "Non-binary",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2016,
+      "gender": "Men",
+      "dept": "CH",
+      "deg": "MTech",
+      "ind": "Energy",
+      "state": "Texas"
+    },
+    {
+      "year": 2017,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "Washington"
+    },
+    {
+      "year": 2017,
+      "gender": "Men",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Consulting",
+      "state": "New York"
+    },
+    {
+      "year": 2017,
+      "gender": "Women",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Healthcare",
+      "state": "Florida"
+    },
+    {
+      "year": 2017,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "MTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2018,
+      "gender": "Women",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Energy",
+      "state": "Texas"
+    },
+    {
+      "year": 2018,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Indiana"
+    },
+    {
+      "year": 2018,
+      "gender": "Non-binary",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2018,
+      "gender": "Women",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Government",
+      "state": "Virginia"
+    },
+    {
+      "year": 2019,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2019,
+      "gender": "Women",
+      "dept": "EE",
+      "deg": "MTech",
+      "ind": "Tech & Software",
+      "state": "Washington"
+    },
+    {
+      "year": 2019,
+      "gender": "Men",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Healthcare",
+      "state": "Pennsylvania"
+    },
+    {
+      "year": 2019,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2020,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Michigan"
+    },
+    {
+      "year": 2020,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2020,
+      "gender": "Non-binary",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2020,
+      "gender": "Men",
+      "dept": "CE",
+      "deg": "MTech",
+      "ind": "Government",
+      "state": "Maryland"
+    },
+    {
+      "year": 2021,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "Washington"
+    },
+    {
+      "year": 2021,
+      "gender": "Men",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Energy",
+      "state": "Texas"
+    },
+    {
+      "year": 2021,
+      "gender": "Women",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Consulting",
+      "state": "Illinois"
+    },
+    {
+      "year": 2021,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "PhD",
+      "ind": "Academia",
+      "state": "Massachusetts"
+    },
+    {
+      "year": 2022,
+      "gender": "Women",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2022,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "MTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2022,
+      "gender": "Non-binary",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Government",
+      "state": "Virginia"
+    },
+    {
+      "year": 2022,
+      "gender": "Women",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Healthcare",
+      "state": "Florida"
+    },
+    {
+      "year": 2023,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2023,
+      "gender": "Women",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Ohio"
+    },
+    {
+      "year": 2023,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Energy",
+      "state": "Texas"
+    },
+    {
+      "year": 2023,
+      "gender": "Women",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Consulting",
+      "state": "New York"
+    }
+  ]
+}

@@ -237,6 +237,16 @@ permalink: /city_transit.html
                                         </small>
                                     </div>
                                 </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong>Vonter on Github</strong>
+                                        <small class="text-muted d-block">For painstakingly curating the <a
+                                                class="text-decoration-none"
+                                                href="https://github.com/Vonter/bmtc-gtfs">Unofficial GTFS dataset for
+                                                BMTC
+                                                Hub</a>.</small>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -298,11 +308,13 @@ permalink: /city_transit.html
 
             // Fetch all layers in parallel
             const metroPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/bengaluru/metro.geojson').then(res => res.json());
-            const busPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/bengaluru/bus.geojson').then(res => res.json());
+            // TODO: Clean up bus data into routes and stops, remove timings and dummy routes
+            const busRoutesPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/bengaluru/bus_routes.geojson').then(res => res.json());
+            const busStopsPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/bengaluru/bus_stops.geojson').then(res => res.json());
             const railPromise = fetch('{{site.baseurl}}/docs/assets/data/city_transit/bengaluru/railway.geojson').then(res => res.json());
 
             // Wait for all data
-            const [metroData, busData, railData] = await Promise.all([metroPromise, busPromise, railPromise]);
+            const [metroData, busStopsData, busRoutesData, railData] = await Promise.all([metroPromise, busStopsPromise, busRoutesPromise, railPromise]);
 
             // Load Metro lines
             //Source: https://overpass-turbo.eu/
@@ -329,22 +341,45 @@ permalink: /city_transit.html
                     lineCap: 'butt'
                 },
             }));
-            busLayerGroup.addLayer(L.geoJSON(busData, {
+            // busLayerGroup.addLayer(L.geoJSON(busData, {
+            //     pointToLayer: (feature, latlng) => {
+            //         return L.circleMarker(latlng, {
+            //             radius: 1,
+            //             fillColor: '#DE2110',
+            //             color: '#DE2110',
+            //             weight: 1,
+            //             fillOpacity: 1
+            //         });
+            //     },
+            //     onEachFeature: (feature, layer) => {
+            //         if (feature.properties && feature.properties.name) {
+            //             layer.bindPopup(`<strong>Bus:</strong> ${feature.properties.name}`);
+            //         }
+            //     },
+            //     style: { color: '#DE2110', weight: 2, opacity: 0.08 },
+            // }));
+            busLayerGroup.addLayer(L.geoJSON(busRoutesData, {
+                onEachFeature: (feature, layer) => {
+                    if (feature.properties && feature.properties.name) {
+                        layer.bindPopup(`<strong>Bus:</strong> ${feature.properties.name}`);
+                    }
+                },
+                style: { color: '#DE2110', weight: 2, opacity: 0.08 }
+            }));
+            busLayerGroup.addLayer(L.geoJSON(busStopsData, {
                 pointToLayer: (feature, latlng) => {
-                    return L.circleMarker(latlng, {
+                    const marker = L.circleMarker(latlng, {
                         radius: 1,
                         fillColor: '#DE2110',
                         color: '#DE2110',
                         weight: 1,
                         fillOpacity: 1
                     });
-                },
-                onEachFeature: (feature, layer) => {
                     if (feature.properties && feature.properties.name) {
-                        layer.bindPopup(`<strong>Bus:</strong> ${feature.properties.name}`);
+                        marker.bindPopup(`<strong>Bus Stop:</strong> ${feature.properties.name}`);
                     }
-                },
-                style: { color: '#DE2110', weight: 2, opacity: 0.08 },
+                    return marker;
+                }
             }));
 
             metroLayerGroup.addLayer(L.geoJSON(metroData, {

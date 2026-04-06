@@ -31,8 +31,8 @@ github:
   username: thechutneyboy
 
 # Build settings
-# theme: minima
-remote_theme: pages-themes/minimal@v0.2.0
+theme: jekyll-theme-minimal
+remote_theme: pages-themes/minimal
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag

@@ -1,0 +1,896 @@
+---
+permalink: /university_alumni.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Alumni dashboard — interactive data visualisation for engineering college graduates.">
+    <meta name="theme-color" content="#0f1117">
+    <title>Alumni Dashboard · Engineering College</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23185fa5'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='18' font-family='serif' fill='white'>A</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #f9f9f9;
+            --surface: #f0f0f0;
+            --surface2: #e3e3e3;
+            --border: rgba(0, 0, 0, 0.08);
+            --border2: rgba(0, 0, 0, 0.14);
+            --text: #222222;
+            --muted: #7a8099;
+            --accent: #378add;
+            --accent2: #1d9e75;
+            --accent3: #d85a30;
+            --accent4: #ba7517;
+            --accent5: #993556;
+            --r: 10px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* ── Header ── */
+        header {
+            border-bottom: 0.5px solid var(--border);
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            z-index: 10;
+            backdrop-filter: blur(8px);
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 20px;
+            letter-spacing: -0.3px;
+            color: var(--text);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .badge {
+            font-size: 11px;
+            background: rgba(55, 138, 221, 0.15);
+            color: var(--accent);
+            border: 0.5px solid rgba(55, 138, 221, 0.3);
+            border-radius: 20px;
+            padding: 3px 10px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        /* ── Hero summary bar ── */
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            border-bottom: 0.5px solid var(--border);
+        }
+
+        .stat {
+            background: var(--bg);
+            padding: 1.4rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .stat-val {
+            font-family: 'DM Serif Display', serif;
+            font-size: 30px;
+            letter-spacing: -1px;
+            color: var(--text);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--muted);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .stat-sub {
+            font-size: 12px;
+            color: var(--accent2);
+        }
+
+        /* ── Main layout ── */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* ── Tabs ── */
+        .tabs {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 2rem;
+            border-bottom: 0.5px solid var(--border);
+            padding-bottom: 0;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            border: none;
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 14px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -0.5px;
+            transition: color 0.15s, border-color 0.15s;
+            white-space: nowrap;
+        }
+
+        .tab:hover {
+            color: var(--text);
+        }
+
+        .tab.active {
+            color: var(--text);
+            border-bottom-color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* ── Panels ── */
+        .panel {
+            display: none;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .panel.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(4px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ── Controls ── */
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: flex-end;
+            margin-bottom: 1.5rem;
+            padding: 1.2rem 1.4rem;
+            background: var(--surface);
+            border-radius: var(--r);
+            border: 0.5px solid var(--border);
+        }
+
+        .ctrl-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .ctrl-label {
+            font-size: 11px;
+            color: var(--muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        select {
+            background: var(--surface2);
+            border: 0.5px solid var(--border2);
+            color: var(--text);
+            border-radius: 6px;
+            padding: 7px 12px;
+            font-size: 13px;
+            font-family: 'DM Sans', sans-serif;
+            cursor: pointer;
+            outline: none;
+            min-width: 160px;
+        }
+
+        select:focus {
+            border-color: var(--accent);
+        }
+
+        .seg {
+            display: flex;
+            border: 0.5px solid var(--border2);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .seg-btn {
+            padding: 7px 16px;
+            background: transparent;
+            border: none;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 13px;
+            font-family: 'DM Sans', sans-serif;
+            transition: all 0.15s;
+        }
+
+        .seg-btn.active {
+            background: var(--accent);
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .seg-btn+.seg-btn {
+            border-left: 0.5px solid var(--border2);
+        }
+
+        .seg-btn:hover:not(.active) {
+            background: var(--surface2);
+            color: var(--text);
+        }
+
+        .range-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .range-row input[type=range] {
+            width: 110px;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
+        .range-val {
+            font-weight: 500;
+            color: var(--text);
+            min-width: 32px;
+            font-size: 13px;
+        }
+
+        /* ── Chart wrappers ── */
+        .chart-card {
+            background: var(--surface);
+            border: 0.5px solid var(--border);
+            border-radius: var(--r);
+            padding: 1.4rem;
+        }
+
+        .chart-title {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 1rem;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .legend span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        /* ── Sankey ── */
+        .sankey-wrap {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        /* ── Map ── */
+        #map-container {
+            width: 100%;
+            min-height: 400px;
+        }
+
+        #map-container svg path {
+            cursor: pointer;
+            transition: opacity 0.15s;
+        }
+
+        #map-container svg path:hover {
+            opacity: 0.75;
+        }
+
+        .map-legend {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .map-legend-bar {
+            display: flex;
+            height: 8px;
+            width: 160px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        /* ── Tooltip ── */
+        .tooltip {
+            position: fixed;
+            background: var(--surface2);
+            border: 0.5px solid var(--border2);
+            border-radius: 8px;
+            padding: 9px 13px;
+            font-size: 13px;
+            color: var(--text);
+            pointer-events: none;
+            display: none;
+            z-index: 100;
+            line-height: 1.6;
+            max-width: 200px;
+        }
+
+        .tooltip strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        /* ── Loading state ── */
+        #loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            color: var(--muted);
+            font-size: 14px;
+            gap: 10px;
+        }
+
+        .spinner {
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--border2);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            header {
+                padding: 0 1rem;
+            }
+
+            main {
+                padding: 1rem 1rem 3rem;
+            }
+
+            .stat {
+                padding: 1rem 1.2rem;
+            }
+
+            .stat-val {
+                font-size: 24px;
+            }
+
+            .controls {
+                gap: 12px;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <span class="logo">Alumni<span>.</span></span>
+        <span class="badge">Institute of Technology</span>
+    </header>
+
+    <div id="loading">
+        <div class="spinner"></div> Loading alumni data…
+    </div>
+
+    <div id="app" style="display:none;">
+
+        <div class="summary" id="summary-bar"></div>
+
+        <main>
+            <div class="tabs">
+                <button class="tab active" onclick="showPanel('timeline',this)">Timeline</button>
+                <button class="tab" onclick="showPanel('sankey',this)">Industry</button>
+                <button class="tab" onclick="showPanel('choropleth',this)">Location</button>
+            </div>
+
+            <!-- Timeline -->
+            <div id="panel-timeline" class="panel active">
+                <div class="controls">
+                    <div class="ctrl-group">
+                        <span class="ctrl-label">Stack by</span>
+                        <select id="stack-by" onchange="drawTimeline()">
+                            <option value="gender">Gender</option>
+                            <option value="dept">Department</option>
+                            <option value="deg">Degree type</option>
+                        </select>
+                    </div>
+                    <div class="ctrl-group">
+                        <span class="ctrl-label">Y-axis</span>
+                        <div class="seg">
+                            <button class="seg-btn active" id="yc" onclick="setY('count',this)">Count</button>
+                            <button class="seg-btn" id="yp" onclick="setY('pct',this)">Percentage</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <div class="legend" id="timeline-legend"></div>
+                    <div style="position:relative;width:100%;min-height:340px;"><canvas id="timelineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sankey -->
+            <div id="panel-sankey" class="panel">
+                <div class="controls">
+                    <div class="ctrl-group">
+                        <span class="ctrl-label">Graduation years</span>
+                        <div class="range-row">
+                            <span>From</span>
+                            <input type="range" id="sk-from" min="2000" max="2023" value="2000" step="1"
+                                oninput="updateSankeyRange()">
+                            <span class="range-val" id="sk-from-val">2000</span>
+                            <span>to</span>
+                            <input type="range" id="sk-to" min="2000" max="2023" value="2023" step="1"
+                                oninput="updateSankeyRange()">
+                            <span class="range-val" id="sk-to-val">2023</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <p class="chart-title">Department to Industry</p>
+                    <div class="sankey-wrap"><canvas id="sankeyChart"></canvas></div>
+                </div>
+            </div>
+
+            <!-- Choropleth -->
+            <div id="panel-choropleth" class="panel">
+                <div class="controls">
+                    <div class="ctrl-group">
+                        <span class="ctrl-label">Graduation years</span>
+                        <div class="range-row">
+                            <span>From</span>
+                            <input type="range" id="ch-from" min="2000" max="2023" value="2000" step="1"
+                                oninput="updateChoropleth()">
+                            <span class="range-val" id="ch-from-val">2000</span>
+                            <span>to</span>
+                            <input type="range" id="ch-to" min="2000" max="2023" value="2023" step="1"
+                                oninput="updateChoropleth()">
+                            <span class="range-val" id="ch-to-val">2023</span>
+                        </div>
+                    </div>
+                    <div class="ctrl-group">
+                        <span class="ctrl-label">Department</span>
+                        <select id="ch-dept" onchange="updateChoropleth()">
+                            <option value="all">All departments</option>
+                            <option value="CS">Computer Science</option>
+                            <option value="EE">Electrical Engineering</option>
+                            <option value="ME">Mechanical Engineering</option>
+                            <option value="CE">Civil Engineering</option>
+                            <option value="CH">Chemical Engineering</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <p class="chart-title">Where are they now?</p>
+                    <div id="map-container"></div>
+                    <div class="map-legend">
+                        <span>Fewer</span>
+                        <div class="map-legend-bar" id="map-legend-bar"></div>
+                        <span>More</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <script>
+        // ── Config ──────────────────────────────────────────────────────────────────
+        const DEPTS = ['CS', 'EE', 'ME', 'CE', 'CH'];
+        const DEPT_NAMES = { CS: 'Computer Science', EE: 'Electrical Engineering', ME: 'Mechanical Engineering', CE: 'Civil Engineering', CH: 'Chemical Engineering' };
+        const GENDERS = ['Men', 'Women', 'Non-binary'];
+        const DEGREES = ['BTech', 'MTech', 'PhD'];
+        const INDUSTRIES = ['Tech & Software', 'Finance', 'Manufacturing', 'Healthcare', 'Energy', 'Government', 'Academia', 'Consulting'];
+
+        const G_COLORS = ['#378add', '#d85a30', '#1d9e75'];
+        const D_COLORS = ['#378add', '#d85a30', '#1d9e75', '#ba7517', '#993556'];
+        const DEG_COLORS = ['#378add', '#d85a30', '#1d9e75'];
+        const IND_COLORS = ['#378add', '#d85a30', '#1d9e75', '#ba7517', '#993556', '#534ab7', '#5f5e5a', '#e24b4a'];
+
+        // ── State ────────────────────────────────────────────────────────────────────
+        let DATA = [];
+        let YEARS = [];
+        let yMode = 'count';
+        let timelineChart = null;
+        let topoCache = null;
+
+        // ── Boot ─────────────────────────────────────────────────────────────────────
+        fetch('{{site.baseurl}}/docs/assets/data/university_alumni.json')
+            .then(r => r.json())
+            .then(json => {
+                DATA = json.alumni;
+                YEARS = [...new Set(DATA.map(d => d.year))].sort();
+                const minY = YEARS[0], maxY = YEARS[YEARS.length - 1];
+                ['sk-from', 'sk-to', 'ch-from', 'ch-to'].forEach(id => {
+                    const el = document.getElementById(id);
+                    el.min = minY; el.max = maxY;
+                    el.value = id.endsWith('from') ? minY : maxY;
+                });
+                document.getElementById('sk-from-val').textContent = minY;
+                document.getElementById('sk-to-val').textContent = maxY;
+                document.getElementById('ch-from-val').textContent = minY;
+                document.getElementById('ch-to-val').textContent = maxY;
+                buildSummary();
+                drawTimeline();
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('app').style.display = 'block';
+            })
+            .catch(err => {
+                document.getElementById('loading').innerHTML = '<span style="color:#e24b4a">Could not load data.json — make sure it is in the same folder as index.html.</span>';
+                console.error(err);
+            });
+
+        // ── Summary bar ──────────────────────────────────────────────────────────────
+        function buildSummary() {
+            const total = DATA.length;
+            const states = new Set(DATA.map(d => d.state)).size;
+            const latestYear = YEARS[YEARS.length - 1];
+            const latestCount = DATA.filter(d => d.year === latestYear).length;
+            const womenPct = Math.round(DATA.filter(d => d.gender === 'Women').length / total * 100);
+            document.getElementById('summary-bar').innerHTML = `
+    <div class="stat"><span class="stat-val">${total.toLocaleString()}</span><span class="stat-label">Total alumni</span><span class="stat-sub">${YEARS[0]}–${latestYear}</span></div>
+    <div class="stat"><span class="stat-val">${DEPTS.length}</span><span class="stat-label">Departments</span><span class="stat-sub">${INDUSTRIES.length} industries tracked</span></div>
+    <div class="stat"><span class="stat-val">${states}</span><span class="stat-label">US states</span><span class="stat-sub">where alumni live now</span></div>
+    <div class="stat"><span class="stat-val">${womenPct}%</span><span class="stat-label">Women</span><span class="stat-sub">across all cohorts</span></div>
+    <div class="stat"><span class="stat-val">${latestCount}</span><span class="stat-label">Class of ${latestYear}</span><span class="stat-sub">most recent cohort</span></div>
+  `;
+        }
+
+        // ── Tabs ─────────────────────────────────────────────────────────────────────
+        function showPanel(name, btn) {
+            document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById('panel-' + name).classList.add('active');
+            btn.classList.add('active');
+            if (name === 'sankey') drawSankey();
+            if (name === 'choropleth') drawChoropleth();
+        }
+
+        // ── Timeline ─────────────────────────────────────────────────────────────────
+        function setY(m, btn) {
+            yMode = m;
+            document.getElementById('yc').classList.toggle('active', m === 'count');
+            document.getElementById('yp').classList.toggle('active', m === 'pct');
+            drawTimeline();
+        }
+
+        function drawTimeline() {
+            const by = document.getElementById('stack-by').value;
+            const categories = by === 'gender' ? GENDERS : by === 'dept' ? DEPTS : DEGREES;
+            const colors = by === 'gender' ? G_COLORS : by === 'dept' ? D_COLORS : DEG_COLORS;
+            const datasets = categories.map((cat, ci) => {
+                const data = YEARS.map(y => {
+                    const total = DATA.filter(d => d.year === y).length;
+                    const n = DATA.filter(d => d.year === y && d[by] === cat).length;
+                    return yMode === 'count' ? n : total === 0 ? 0 : Math.round(n / total * 1000) / 10;
+                });
+                return { label: cat, data, fill: true, backgroundColor: colors[ci] + '99', borderWidth: 1.5, borderColor: colors[ci], tension: 0, pointRadius: 3, pointHoverRadius: 5 };
+            });
+
+            const legEl = document.getElementById('timeline-legend');
+            legEl.innerHTML = categories.map((c, i) =>
+                `<span><span class="dot" style="background:${colors[i]}"></span>${c}</span>`
+            ).join('');
+
+            const ctx = document.getElementById('timelineChart');
+            if (timelineChart) timelineChart.destroy();
+            timelineChart = new Chart(ctx, {
+                type: 'line',
+                data: { labels: YEARS, datasets },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#1e2435',
+                            borderColor: 'rgba(255,255,255,0.1)',
+                            borderWidth: 0.5,
+                            titleColor: '#e8eaf0',
+                            bodyColor: '#7a8099',
+                            callbacks: {
+                                label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y}${yMode === 'pct' ? '%' : ''}`
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                            grid: { display: false },
+                            ticks: { color: '#7a8099', font: { size: 11, family: 'DM Sans' }, maxRotation: 45 },
+                            border: { color: 'rgba(255,255,255,0.08)' }
+                        },
+                        y: {
+                            stacked: true,
+                            grid: { color: 'rgba(255,255,255,0.05)' },
+                            ticks: { color: '#7a8099', font: { size: 11, family: 'DM Sans' }, callback: v => yMode === 'pct' ? v + '%' : v },
+                            border: { color: 'rgba(255,255,255,0.08)' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // ── Sankey ───────────────────────────────────────────────────────────────────
+        function updateSankeyRange() {
+            const f = parseInt(document.getElementById('sk-from').value);
+            const t = parseInt(document.getElementById('sk-to').value);
+            document.getElementById('sk-from-val').textContent = Math.min(f, t);
+            document.getElementById('sk-to-val').textContent = Math.max(f, t);
+            drawSankey();
+        }
+
+        function drawSankey() {
+            const f = Math.min(parseInt(document.getElementById('sk-from').value), parseInt(document.getElementById('sk-to').value));
+            const t = Math.max(parseInt(document.getElementById('sk-from').value), parseInt(document.getElementById('sk-to').value));
+            const filtered = DATA.filter(d => d.year >= f && d.year <= t);
+
+            const container = document.getElementById('sankeyChart').parentElement;
+            const W = Math.max(container.clientWidth || 680, 500);
+            // const H = 460;
+            const leftCount = DEPTS.length;
+            const rightCount = INDUSTRIES.length;
+            const maxNodes = Math.max(leftCount, rightCount);
+            const H = maxNodes * 44 + 180;
+
+            const nodeW = 20;
+            const leftX = 80, rightX = W - 120;
+            const gap = 7;
+
+            const deptTotals = DEPTS.map(d => filtered.filter(r => r.dept === d).length);
+            const indTotals = INDUSTRIES.map(i => filtered.filter(r => r.ind === i).length);
+            const total = filtered.length || 1;
+
+            function layoutNodes(names, totals, x) {
+                const totalH = H - 60;
+                const totalVal = totals.reduce((a, b) => a + b, 0) || 1;
+                let y = 30;
+                return names.map((name, i) => {
+                    const h = Math.max(4, Math.round(totals[i] / totalVal * totalH));
+                    const node = { name, val: totals[i], x, y, h };
+                    y += h + gap;
+                    return node;
+                });
+            }
+
+            const leftNodes = layoutNodes(DEPTS, deptTotals, leftX);
+            const rightNodes = layoutNodes(INDUSTRIES, indTotals, rightX);
+
+            const canvas = document.getElementById('sankeyChart');
+            canvas.width = W; canvas.height = H;
+            canvas.style.display = 'block';
+            canvas.style.width = '100%';
+            canvas.style.height = H + 'px';
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, W, H);
+
+            const leftEdges = leftNodes.map(n => ({ ...n, curY: n.y }));
+            const rightEdges = rightNodes.map(n => ({ ...n, curY: n.y }));
+
+            DEPTS.forEach((dept, di) => {
+                INDUSTRIES.forEach((ind, ii) => {
+                    const n = filtered.filter(r => r.dept === dept && r.ind === ind).length;
+                    if (n === 0) return;
+                    const ln = leftEdges[di], rn = rightEdges[ii];
+                    const lh = Math.max(1, Math.round(n / total * (H - 60)));
+                    const rh = lh;
+                    ctx.beginPath();
+                    ctx.moveTo(ln.x + nodeW, ln.curY);
+                    ctx.bezierCurveTo((ln.x + nodeW + rn.x) / 2, ln.curY, (ln.x + nodeW + rn.x) / 2, rn.curY, rn.x, rn.curY);
+                    ctx.lineTo(rn.x, rn.curY + rh);
+                    ctx.bezierCurveTo((ln.x + nodeW + rn.x) / 2, rn.curY + rh, (ln.x + nodeW + rn.x) / 2, ln.curY + lh, ln.x + nodeW, ln.curY + lh);
+                    ctx.closePath();
+                    ctx.fillStyle = D_COLORS[di] + '44';
+                    ctx.fill();
+                    ln.curY += lh;
+                    rn.curY += rh;
+                });
+            });
+
+            ctx.font = '12px DM Sans, sans-serif';
+            leftNodes.forEach((n, i) => {
+                ctx.fillStyle = D_COLORS[i];
+                ctx.fillRect(n.x, n.y, nodeW, n.h);
+                ctx.fillStyle = '#101010';
+                ctx.textAlign = 'right';
+                ctx.fillText(n.name, n.x - 6, n.y + Math.max(n.h / 2, 6) + 4);
+                ctx.fillStyle = '#7a8099';
+                ctx.fillText(n.val.toLocaleString(), n.x - 6, n.y + Math.max(n.h / 2, 6) + 17);
+            });
+
+            rightNodes.forEach((n, i) => {
+                ctx.fillStyle = IND_COLORS[i];
+                ctx.fillRect(n.x, n.y, nodeW, n.h);
+                ctx.fillStyle = '#101010';
+                ctx.textAlign = 'left';
+                ctx.fillText(n.name, n.x + nodeW + 6, n.y + Math.max(n.h / 2, 6) + 4);
+                ctx.fillStyle = '#7a8099';
+                ctx.fillText(n.val.toLocaleString(), n.x + nodeW + 6, n.y + Math.max(n.h / 2, 6) + 17);
+            });
+        }
+
+        // ── Choropleth ───────────────────────────────────────────────────────────────
+        function updateChoropleth() {
+            const f = Math.min(parseInt(document.getElementById('ch-from').value), parseInt(document.getElementById('ch-to').value));
+            const t = Math.max(parseInt(document.getElementById('ch-from').value), parseInt(document.getElementById('ch-to').value));
+            document.getElementById('ch-from-val').textContent = f;
+            document.getElementById('ch-to-val').textContent = t;
+            drawChoropleth(f, t, document.getElementById('ch-dept').value);
+        }
+
+        function drawChoropleth(f, t, dept) {
+            f = f ?? YEARS[0]; t = t ?? YEARS[YEARS.length - 1]; dept = dept ?? 'all';
+            const filtered = DATA.filter(d => d.year >= f && d.year <= t && (dept === 'all' || d.dept === dept));
+            const counts = {};
+            filtered.forEach(d => { if (d.state) counts[d.state] = (counts[d.state] || 0) + 1; });
+            const maxVal = Math.max(...Object.values(counts), 1);
+            const colorScale = d3.scaleSequential([0, maxVal], t => d3.interpolate('#ffffff', '#90191b')(t));
+
+            const barEl = document.getElementById('map-legend-bar');
+            barEl.innerHTML = '';
+            for (let i = 0; i <= 10; i++) {
+                const s = document.createElement('div');
+                s.style.flex = '1';
+                s.style.background = colorScale(i / 10 * maxVal);
+                barEl.appendChild(s);
+            }
+
+            const container = document.getElementById('map-container');
+            const tooltip = document.getElementById('tooltip');
+
+            const render = (topos) => {
+                container.innerHTML = '';
+                const W = container.clientWidth || 700;
+                const H = Math.round(W * 0.58);
+                const svg = d3.select(container).append('svg')
+                    .attr('viewBox', `0 0 ${W} ${H}`)
+                    .attr('width', '100%');
+
+                const projection = d3.geoNaturalEarth1().scale(W / 6.5).translate([W / 2, H / 2]);
+                const path = d3.geoPath(projection);
+
+                const allFeatures = topos.flatMap(({ topo, obj, features }) =>
+                    features || topojson.feature(topo, topo.objects[obj]).features
+                );
+
+                const g = svg.append('g');
+
+                svg.call(d3.zoom().scaleExtent([1, 12]).on('zoom', (event) => g.attr('transform', event.transform)));
+
+                g.append('rect')
+                    .attr('width', W).attr('height', H)
+                    .attr('fill', '#f9f9f9');
+
+                g.selectAll('path')
+                    .data(allFeatures)
+                    .join('path')
+                    .attr('d', path)
+                    .attr('fill', d => colorScale(counts[d.properties.name] || 0))
+                    .attr('stroke', 'rgba(0,0,0,0.85)')
+                    .attr('stroke-width', 0.4)
+                    .on('mousemove', (event, d) => {
+                        const name = d.properties.name;
+                        const n = counts[name] || 0;
+                        tooltip.style.display = 'block';
+                        tooltip.style.left = (event.clientX + 14) + 'px';
+                        tooltip.style.top = (event.clientY - 36) + 'px';
+                        tooltip.innerHTML = `<strong>${name}</strong><br>${n.toLocaleString()} alumni`;
+                    })
+                    .on('mouseleave', () => { tooltip.style.display = 'none'; });
+
+                svg.on('dblclick.zoom', null); // remove default dblclick zoom-in
+                svg.on('dblclick', () => svg.transition().duration(400).call(
+                    d3.zoom().transform, d3.zoomIdentity
+                ));
+
+            };
+
+            if (topoCache) { render(topoCache); return; }
+
+            Promise.all([
+                d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json'),
+                d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json').catch(() => null),
+                fetch('https://cdn.jsdelivr.net/npm/datamaps@0.5.10/src/js/data/ind.topo.json').then(r => r.json()),
+                fetch('https://cdn.jsdelivr.net/npm/datamaps@0.5.10/src/js/data/can.topo.json').then(r => r.json()),
+            ]).then(([us, world, ind, can]) => {
+                const EXCLUDE_IDS = new Set(['840', '356', '124', '010']); // USA, India, Canada, Antarctica
+                const worldFeatures = topojson.feature(world, world.objects.countries).features
+                    .filter(f => !EXCLUDE_IDS.has(String(f.id)));
+
+                // print(worldFeatures.map(f => f.properties.name).join(', '));
+                topoCache = [
+                    { features: worldFeatures },
+                    { topo: us, obj: 'states' },
+                    { topo: ind, obj: 'ind' },
+                    { topo: can, obj: 'can' },
+                ];
+                render(topoCache);
+            });
+        }
+    </script>
+</body>
+
+</html>
