@@ -22,61 +22,29 @@
     {
       "year": 2000,
       "gender": "Men",
-      "dept": "CS",
+      "dept": "EE",
       "deg": "BTech",
       "ind": "Tech & Software",
       "state": "California"
     },
     {
       "year": 2000,
-      "gender": "Women",
-      "dept": "EE",
-      "deg": "MTech",
-      "ind": "Finance",
-      "state": "New York"
-    },
-    {
-      "year": 2000,
       "gender": "Men",
-      "dept": "ME",
+      "dept": "CE",
       "deg": "BTech",
       "ind": "Manufacturing",
       "state": "Michigan"
     },
     {
-      "year": 2000,
-      "gender": "Women",
-      "dept": "CE",
-      "deg": "BTech",
-      "ind": "Government",
-      "state": "Texas"
-    },
-    {
-      "year": 2000,
-      "gender": "Men",
-      "dept": "CH",
-      "deg": "PhD",
-      "ind": "Energy",
-      "state": "Texas"
-    },
-    {
       "year": 2001,
       "gender": "Men",
-      "dept": "CS",
+      "dept": "CE",
       "deg": "BTech",
       "ind": "Tech & Software",
       "state": "Washington"
     },
     {
       "year": 2001,
-      "gender": "Women",
-      "dept": "CS",
-      "deg": "MTech",
-      "ind": "Consulting",
-      "state": "California"
-    },
-    {
-      "year": 2001,
       "gender": "Men",
       "dept": "EE",
       "deg": "BTech",
@@ -84,24 +52,16 @@
       "state": "California"
     },
     {
-      "year": 2001,
-      "gender": "Women",
-      "dept": "ME",
-      "deg": "BTech",
-      "ind": "Manufacturing",
-      "state": "Ohio"
-    },
-    {
       "year": 2002,
       "gender": "Men",
-      "dept": "CS",
+      "dept": "ME",
       "deg": "BTech",
       "ind": "Finance",
       "state": "New York"
     },
     {
       "year": 2002,
-      "gender": "Women",
+      "gender": "Men",
       "dept": "EE",
       "deg": "PhD",
       "ind": "Academia",
@@ -116,25 +76,17 @@
       "state": "Virginia"
     },
     {
-      "year": 2002,
-      "gender": "Non-binary",
-      "dept": "CS",
-      "deg": "MTech",
-      "ind": "Tech & Software",
-      "state": "California"
-    },
-    {
       "year": 2003,
       "gender": "Men",
-      "dept": "CH",
+      "dept": "CE",
       "deg": "BTech",
       "ind": "Energy",
       "state": "Texas"
     },
     {
       "year": 2003,
-      "gender": "Women",
-      "dept": "CS",
+      "gender": "Men",
+      "dept": "EE",
       "deg": "BTech",
       "ind": "Tech & Software",
       "state": "California"
@@ -148,24 +100,16 @@
       "state": "Indiana"
     },
     {
-      "year": 2003,
-      "gender": "Women",
-      "dept": "CE",
-      "deg": "BTech",
-      "ind": "Consulting",
-      "state": "Illinois"
-    },
-    {
       "year": 2004,
       "gender": "Men",
-      "dept": "CS",
+      "dept": "CE",
       "deg": "BTech",
       "ind": "Tech & Software",
       "state": "California"
     },
     {
       "year": 2004,
-      "gender": "Women",
+      "gender": "Men",
       "dept": "EE",
       "deg": "BTech",
       "ind": "Healthcare",
@@ -174,15 +118,7 @@
     {
       "year": 2004,
       "gender": "Men",
-      "dept": "CH",
-      "deg": "PhD",
-      "ind": "Energy",
-      "state": "Texas"
-    },
-    {
-      "year": 2004,
-      "gender": "Women",
-      "dept": "CS",
+      "dept": "ME",
       "deg": "MTech",
       "ind": "Finance",
       "state": "New York"
@@ -197,11 +133,11 @@
     },
     {
       "year": 2005,
-      "gender": "Women",
-      "dept": "CS",
+      "gender": "Men",
+      "dept": "CE",
       "deg": "BTech",
-      "ind": "Tech & Software",
-      "state": "Washington"
+      "ind": "Government",
+      "state": "Maharashtra"
     },
     {
       "year": 2005,
@@ -210,14 +146,6 @@
       "deg": "MTech",
       "ind": "Tech & Software",
       "state": "California"
-    },
-    {
-      "year": 2005,
-      "gender": "Non-binary",
-      "dept": "CE",
-      "deg": "BTech",
-      "ind": "Government",
-      "state": "Maryland"
     },
     {
       "year": 2006,
@@ -230,14 +158,14 @@
     {
       "year": 2006,
       "gender": "Men",
-      "dept": "CS",
+      "dept": "EE",
       "deg": "BTech",
       "ind": "Tech & Software",
       "state": "California"
     },
     {
       "year": 2006,
-      "gender": "Women",
+      "gender": "Men",
       "dept": "ME",
       "deg": "BTech",
       "ind": "Manufacturing",
@@ -253,7 +181,7 @@
     },
     {
       "year": 2007,
-      "gender": "Women",
+      "gender": "Men",
       "dept": "CS",
       "deg": "BTech",
       "ind": "Finance",
@@ -325,6 +253,14 @@
     },
     {
       "year": 2009,
+      "gender": "Men",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Construction",
+      "state": "Maharashtra"
+    },
+    {
+      "year": 2009,
       "gender": "Women",
       "dept": "CS",
       "deg": "MTech",
@@ -341,7 +277,7 @@
     },
     {
       "year": 2010,
-      "gender": "Women",
+      "gender": "Men",
       "dept": "EE",
       "deg": "BTech",
       "ind": "Tech & Software",
@@ -365,7 +301,7 @@
     },
     {
       "year": 2010,
-      "gender": "Non-binary",
+      "gender": "Men",
       "dept": "CS",
       "deg": "BTech",
       "ind": "Tech & Software",
@@ -393,11 +329,11 @@
       "dept": "ME",
       "deg": "BTech",
       "ind": "Manufacturing",
-      "state": "Michigan"
+      "state": "Tamil Nadu"
     },
     {
       "year": 2011,
-      "gender": "Women",
+      "gender": "Men",
       "dept": "EE",
       "deg": "PhD",
       "ind": "Academia",
@@ -409,7 +345,15 @@
       "dept": "CS",
       "deg": "BTech",
       "ind": "Consulting",
-      "state": "New York"
+      "state": "Maharshtra"
+    },
+    {
+      "year": 2011,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "Karnataka"
     },
     {
       "year": 2012,
@@ -429,7 +373,7 @@
     },
     {
       "year": 2012,
-      "gender": "Non-binary",
+      "gender": "Men",
       "dept": "CE",
       "deg": "BTech",
       "ind": "Government",
@@ -437,11 +381,19 @@
     },
     {
       "year": 2012,
-      "gender": "Women",
-      "dept": "ME",
+      "gender": "Men",
+      "dept": "PhD",
       "deg": "BTech",
       "ind": "Manufacturing",
-      "state": "Ohio"
+      "state": "Tamil Nadu"
+    },
+    {
+      "year": 2012,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Energy",
+      "state": "West Bengal"
     },
     {
       "year": 2013,
@@ -458,6 +410,22 @@
       "deg": "BTech",
       "ind": "Finance",
       "state": "New York"
+    },
+    {
+      "year": 2013,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Finance",
+      "state": "United Kingdom"
+    },
+    {
+      "year": 2013,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "MTech",
+      "ind": "Energy",
+      "state": "Karnataka"
     },
     {
       "year": 2013,
@@ -477,6 +445,22 @@
     },
     {
       "year": 2014,
+      "gender": "Women",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Consulting",
+      "state": "Maharashtra"
+    },
+    {
+      "year": 2014,
+      "gender": "Men",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Construction",
+      "state": "Maharashtra"
+    },
+    {
+      "year": 2014,
       "gender": "Men",
       "dept": "ME",
       "deg": "BTech",
@@ -485,7 +469,7 @@
     },
     {
       "year": 2014,
-      "gender": "Women",
+      "gender": "Men",
       "dept": "EE",
       "deg": "BTech",
       "ind": "Energy",
@@ -493,7 +477,7 @@
     },
     {
       "year": 2014,
-      "gender": "Non-binary",
+      "gender": "Men",
       "dept": "CS",
       "deg": "MTech",
       "ind": "Tech & Software",
@@ -525,11 +509,35 @@
     },
     {
       "year": 2015,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "PhD",
+      "ind": "Academia",
+      "state": "Switzerland"
+    },
+    {
+      "year": 2015,
+      "gender": "Men",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Government",
+      "state": "Maryland"
+    },
+    {
+      "year": 2015,
       "gender": "Women",
       "dept": "CS",
       "deg": "PhD",
       "ind": "Academia",
       "state": "Massachusetts"
+    },
+    {
+      "year": 2016,
+      "gender": "Women",
+      "dept": "CH",
+      "deg": "MTech",
+      "ind": "Energy",
+      "state": "Tamil Nadu"
     },
     {
       "year": 2016,
@@ -541,15 +549,24 @@
     },
     {
       "year": 2016,
-      "gender": "Women",
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "PhD",
+      "ind": "Tech & Software",
+      "state": "United Kingdom"
+    },
+
+    {
+      "year": 2016,
+      "gender": "Men",
       "dept": "ME",
-      "deg": "BTech",
-      "ind": "Manufacturing",
-      "state": "Michigan"
+      "deg": "MTech",
+      "ind": "Tech & Software",
+      "state": "Japan"
     },
     {
       "year": 2016,
-      "gender": "Non-binary",
+      "gender": "Men",
       "dept": "CS",
       "deg": "BTech",
       "ind": "Finance",
@@ -591,6 +608,22 @@
       "year": 2017,
       "gender": "Men",
       "dept": "CS",
+      "deg": "PhD",
+      "ind": "Tech & Software",
+      "state": "Karnataka"
+    },
+    {
+      "year": 2017,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "PhD",
+      "ind": "Academia",
+      "state": "Switzerland"
+    },
+    {
+      "year": 2017,
+      "gender": "Men",
+      "dept": "CS",
       "deg": "MTech",
       "ind": "Tech & Software",
       "state": "California"
@@ -606,14 +639,30 @@
     {
       "year": 2018,
       "gender": "Men",
-      "dept": "ME",
+      "dept": "EE",
       "deg": "BTech",
       "ind": "Manufacturing",
-      "state": "Indiana"
+      "state": "Tamil Nadu"
     },
     {
       "year": 2018,
-      "gender": "Non-binary",
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "MTech",
+      "ind": "Government",
+      "state": "Telangana"
+    },
+    {
+      "year": 2018,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "MTech",
+      "ind": "Tech & Software",
+      "state": "Haryana"
+    },
+    {
+      "year": 2018,
+      "gender": "Men",
       "dept": "CS",
       "deg": "BTech",
       "ind": "Tech & Software",
@@ -634,6 +683,22 @@
       "deg": "BTech",
       "ind": "Tech & Software",
       "state": "California"
+    },
+    {
+      "year": 2019,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "Karnataka"
+    },
+    {
+      "year": 2019,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "Haryana"
     },
     {
       "year": 2019,
@@ -677,8 +742,16 @@
     },
     {
       "year": 2020,
-      "gender": "Non-binary",
-      "dept": "EE",
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Manufacturing",
+      "state": "Michigan"
+    },
+    {
+      "year": 2020,
+      "gender": "Women",
+      "dept": "CS",
       "deg": "BTech",
       "ind": "Tech & Software",
       "state": "California"
@@ -687,9 +760,33 @@
       "year": 2020,
       "gender": "Men",
       "dept": "CE",
+      "deg": "BTech",
+      "ind": "Government",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "year": 2020,
+      "gender": "Men",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Energy",
+      "state": "California"
+    },
+    {
+      "year": 2020,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "California"
+    },
+    {
+      "year": 2020,
+      "gender": "Men",
+      "dept": "EE",
       "deg": "MTech",
       "ind": "Government",
-      "state": "Maryland"
+      "state": "Kerala"
     },
     {
       "year": 2021,
@@ -705,7 +802,23 @@
       "dept": "CH",
       "deg": "BTech",
       "ind": "Energy",
-      "state": "Texas"
+      "state": "Karnataka"
+    },
+    {
+      "year": 2021,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "BTech",
+      "ind": "Finance",
+      "state": "United Kingdom"
+    },
+    {
+      "year": 2021,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "PhD",
+      "ind": "Finance",
+      "state": "United Kingdom"
     },
     {
       "year": 2021,
@@ -714,6 +827,22 @@
       "deg": "BTech",
       "ind": "Consulting",
       "state": "Illinois"
+    },
+    {
+      "year": 2021,
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "MTech",
+      "ind": "Manufacturing",
+      "state": "Gujarat"
+    },
+    {
+      "year": 2021,
+      "gender": "Women",
+      "dept": "CE",
+      "deg": "BTech",
+      "ind": "Consulting",
+      "state": "Haryana"
     },
     {
       "year": 2021,
@@ -741,7 +870,39 @@
     },
     {
       "year": 2022,
-      "gender": "Non-binary",
+      "gender": "Men",
+      "dept": "EE",
+      "deg": "MTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2022,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "PhD",
+      "ind": "Energy",
+      "state": "France"
+    },
+    {
+      "year": 2022,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "MTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2022,
+      "gender": "Men",
+      "dept": "CS",
+      "deg": "MTech",
+      "ind": "Finance",
+      "state": "New York"
+    },
+    {
+      "year": 2022,
+      "gender": "Women",
       "dept": "CE",
       "deg": "BTech",
       "ind": "Government",
@@ -781,11 +942,43 @@
     },
     {
       "year": 2023,
+      "gender": "Men",
+      "dept": "CH",
+      "deg": "BTech",
+      "ind": "Energy",
+      "state": "Karnataka"
+    },
+    {
+      "year": 2023,
+      "gender": "Men",
+      "dept": "ME",
+      "deg": "PhD",
+      "ind": "Energy",
+      "state": "Maharashtra"
+    },
+    {
+      "year": 2023,
       "gender": "Women",
       "dept": "CS",
       "deg": "BTech",
       "ind": "Consulting",
       "state": "New York"
+    },
+    {
+      "year": 2023,
+      "gender": "Women",
+      "dept": "CE",
+      "deg": "PhD",
+      "ind": "Government",
+      "state": "Delhi"
+    },
+    {
+      "year": 2023,
+      "gender": "Non-binary",
+      "dept": "EE",
+      "deg": "BTech",
+      "ind": "Tech & Software",
+      "state": "Karnataka"
     }
   ]
 }

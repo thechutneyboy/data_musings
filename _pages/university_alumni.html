@@ -564,12 +564,12 @@ permalink: /university_alumni.html
         const DEPT_NAMES = { CS: 'Computer Science', EE: 'Electrical Engineering', ME: 'Mechanical Engineering', CE: 'Civil Engineering', CH: 'Chemical Engineering' };
         const GENDERS = ['Men', 'Women', 'Non-binary'];
         const DEGREES = ['BTech', 'MTech', 'PhD'];
-        const INDUSTRIES = ['Tech & Software', 'Finance', 'Manufacturing', 'Healthcare', 'Energy', 'Government', 'Academia', 'Consulting'];
+        const INDUSTRIES = ['Tech & Software', 'Finance', 'Manufacturing', 'Healthcare', 'Energy', 'Government', 'Academia', 'Consulting', 'Construction'];
 
-        const G_COLORS = ['#378add', '#d85a30', '#1d9e75'];
-        const D_COLORS = ['#378add', '#d85a30', '#1d9e75', '#ba7517', '#993556'];
-        const DEG_COLORS = ['#378add', '#d85a30', '#1d9e75'];
-        const IND_COLORS = ['#378add', '#d85a30', '#1d9e75', '#ba7517', '#993556', '#534ab7', '#5f5e5a', '#e24b4a'];
+        const G_COLORS = ['#5ba3d9', '#38bfa0', '#f0a05a'];
+        const D_COLORS = ['#5ba3d9', '#38bfa0', '#f0a05a', '#8b7fd4', '#e06b8b'];
+        const DEG_COLORS = ['#5ba3d9', '#38bfa0', '#f0a05a'];
+        const IND_COLORS = ['#378add', '#d85a30', '#1d9e75', '#ba7517', '#993556', '#534ab7', '#5f5e5a', '#e24b4a', '#1e2435'];
 
         // ── State ────────────────────────────────────────────────────────────────────
         let DATA = [];
@@ -684,6 +684,7 @@ permalink: /university_alumni.html
                             border: { color: 'rgba(255,255,255,0.08)' }
                         },
                         y: {
+                            min: 0,
                             stacked: true,
                             grid: { color: 'rgba(255,255,255,0.05)' },
                             ticks: { color: '#7a8099', font: { size: 11, family: 'DM Sans' }, callback: v => yMode === 'pct' ? v + '%' : v },
